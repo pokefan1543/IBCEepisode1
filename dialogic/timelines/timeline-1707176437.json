@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In this section of the tutorial, you will learn to shoot.\nTo shoot, left click if you are using a keyboard and mouse.\nTo aim or altfire, right click if you are using a keyboard and mouse.\nAll you have to do is get to the end of the hallwall without dying.\nGoodluck!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1707176437.json",
+		"name": "tutorial1.5"
+	}
+}

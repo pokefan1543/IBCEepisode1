@@ -1,0 +1,13 @@
+[gd_resource type="MeshTexture" load_steps=4 format=2]
+
+[ext_resource path="res://assets/textures/Whatever/container001-green.png" type="Texture" id=1]
+[ext_resource path="res://trip.tres" type="Material" id=2]
+
+[sub_resource type="SphereMesh" id=1]
+material = ExtResource( 2 )
+radius = 50.0
+height = 90.0
+
+[resource]
+mesh = SubResource( 1 )
+base_texture = ExtResource( 1 )

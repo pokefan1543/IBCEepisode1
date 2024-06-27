@@ -1,0 +1,71 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello?"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Kleopatra Pavlina Christodoulopoulou\nWelcome to the robot training simulation!\nI am Doctor Sim Bot, and I will be your guide in this military grade combat robot pilot training program.\nThis program is a simulation designed with your supercomputer in mind, so that you can get the best possible training for piloting your robot.\nYour robot's model name is:\n...\nAxel-1A.\nThis simulation is essentially a tutorial on how to pilot your robot.\nWith all of that out of the way, do you have any questions before we continue?"
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I think so?"
+		},
+		{
+			"change_timeline": "timeline-1671146358.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1709258446.json",
+		"name": "tutorial1"
+	}
+}

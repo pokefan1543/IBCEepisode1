@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fart-with-reverb.mp3-4c9d35831ec8daaf07438dc6c35bdbb6.mp3str"
+
+[deps]
+
+source_file="res://scripts/fart-with-reverb.mp3"
+dest_files=[ "res://.import/fart-with-reverb.mp3-4c9d35831ec8daaf07438dc6c35bdbb6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

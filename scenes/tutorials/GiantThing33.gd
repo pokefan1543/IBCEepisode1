@@ -1,0 +1,24 @@
+extends RigidBody
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
+func _ready():
+	Globals.tutorial = true
+# Called when the node enters the scene tree for the first time.
+func start_dialog():
+	var dialog = Dialogic.start("tutorial1.5")
+	dialog.pause_mode = PAUSE_MODE_PROCESS
+	get_parent().add_child(dialog)
+	dialog.connect("timeline_end",self,"end_dialog")
+	get_tree().paused = true
+
+func end_dialog(_data):
+	get_tree().paused = false
+
+
+func _on_FPS_grounded():
+	set_collision_layer_bit(1,true)
+	set_collision_layer_bit(1,true)

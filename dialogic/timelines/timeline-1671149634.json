@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In this section, you will learn to wall climb.\nIn order to do so, be on a wall and mash the jump key if you are using a keyboard.\nYou can climb as much as you want, and you can easily jump off of walls if you just turn away from the wall you're on.\nAll you have to do is climb up the rock wall and walk onto the metal platform.\nGoodluck!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1671149634.json",
+		"name": "tutorial2"
+	}
+}

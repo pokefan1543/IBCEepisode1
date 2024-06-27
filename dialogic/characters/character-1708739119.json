@@ -1,0 +1,21 @@
+{
+	"color": "#ff343434",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1708739119.json",
+	"mirror_portraits": false,
+	"name": "Dr. Sim Bot",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 500,
+	"offset_y": -150,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/sprites/Doctor.png"
+		}
+	],
+	"scale": 200,
+	"theme": ""
+}

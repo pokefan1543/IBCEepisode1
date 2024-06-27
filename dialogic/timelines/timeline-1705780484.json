@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1671146364.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your objective is to get rid of as much of the enemy prescence as possible\ncollect the trianglar prism shaped isorropian energy prism\nand find the exit."
+		},
+		{
+			"change_scene": "res://scenes/real_levels/level_select.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1705780484.json",
+		"name": "object"
+	}
+}

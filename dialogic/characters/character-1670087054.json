@@ -1,0 +1,21 @@
+{
+	"color": "#fffffb00",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1670087054.json",
+	"mirror_portraits": false,
+	"name": "Nehemiah Engelhart",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 255,
+	"offset_y": -190,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/sprites/nehemiahjrneutral-1.png.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

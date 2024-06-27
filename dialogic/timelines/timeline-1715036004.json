@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Entry 6: Enemies Part 1:\nSo far, with the data Kleopatra has collected so far, here are the types of demons that are normally encountered:\nChaos Pawns: These are posssesed corpses of fallen soldiers on our side. \nThey are stupid and slow and shoot without care, percision, or a fast pace. In large groups they can be overwhelming.\nJust keep your distance and keep moving and you'll be fine.\nChaos Soldiers: These are demons that show themselves as giant monsters with giant cannons on their backs. \nTheir aim isn't the best, they keep accidentally aiming very slightly downwards. Just keep your distance and keep moving.\nOnly then will you be fine.\nChaos Fiends: These are animalistic demons. They can tear through anything and can jump super high.\nDon't think your safe just because you are on high ground. Just keep moving and make sure to keep your distance around them."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1715036004.json",
+		"name": "codex6"
+	}
+}

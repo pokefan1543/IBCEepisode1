@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=12 format=2]
+
+[ext_resource path="res://CoolFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_Color.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_NormalGL.png" type="Texture" id=3]
+[ext_resource path="res://assets/textures/Whatever/Metal009_4K_NormalGL.jpg" type="Texture" id=7]
+[ext_resource path="res://assets/textures/Whatever/Metal009_4K_Color.jpg" type="Texture" id=9]
+[ext_resource path="res://new_meshtexture.tres" type="Texture" id=10]
+[ext_resource path="res://new_meshtexture1.tres" type="Texture" id=11]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 4096, 4096 )
+modulate_color = Color( 0, 0.584314, 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 9 )
+normal_map = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 4096, 4096 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 4096, 4096 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+normal_map = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 4096, 4096 )
+
+[resource]
+Button/fonts/font = ExtResource( 1 )
+Button/styles/disabled = null
+Button/styles/focus = SubResource( 1 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 3 )
+Button/styles/pressed = SubResource( 4 )
+CheckBox/fonts/font = ExtResource( 1 )
+CheckButton/fonts/font = ExtResource( 1 )
+CheckButton/icons/off = ExtResource( 11 )
+CheckButton/icons/on = ExtResource( 10 )
+CheckButton/icons/on_disabled = null
+RichTextLabel/fonts/normal_font = ExtResource( 1 )

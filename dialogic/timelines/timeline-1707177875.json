@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In this section, you will take advantage of your robot's thrusters to \"dash\" or \"boost\" in order to go faster temporally.\nIn order to \"dash\" or \"boost\" to increase your speed temporally \nPress the shift key if you are using a keyboard and mouse  (the default key for the action. This can be changed in the options menu)\nYou can \"dash\" or \"boost\" in the air and on the ground.\nAll you have to do is cross the gap and get to the end of the hallway.\nGoodluck!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1707177875.json",
+		"name": "tutorial2.5"
+	}
+}

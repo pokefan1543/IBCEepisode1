@@ -1,0 +1,142 @@
+{
+	"events": [
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "What do you need to ask?"
+		},
+		{
+			"choice": "Why are you a stock photo?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why are you a stock photo?"
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Valid question, ma'am.\nIt's because the United Humanitarian Republic doesn't have a part of its budget allocated to creating unique graphics for its computer programs.\nThey need as much money as possible allocated to many other more important areas.\nThis lack of budget though, means that the developers have to resort to ancient stock photos.\nThe developers and government officials did say though, that as long as everything works, then everything will be fine."
+		},
+		{
+			"choice": "Where are my children?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I really really miss my children. Do you know where they are?"
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ma'am, I am not designed to look into government databases."
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aw.\nOk."
+		},
+		{
+			"choice": "Nothing.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"definition": "1709258261-701",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "0"
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh. \nNothing.\nThank you!"
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're welcome.\nBooting the shooting part of the tutorial..."
+		},
+		{
+			"change_scene": "res://scenes/tutorials/Tut1.5.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Any other questions?"
+		},
+		{
+			"choice": "Yes.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1671146358.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "No.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1670016406.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh. \nNo. \nI don't think so.\nThank you!"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're welcome.\nBooting the shooting part of the tutorial..."
+		},
+		{
+			"change_scene": "res://scenes/tutorials/Tut1.5.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1671146358.json",
+		"name": "tutorialask"
+	}
+}

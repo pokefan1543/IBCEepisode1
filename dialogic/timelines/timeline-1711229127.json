@@ -1,0 +1,35 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In this section of the tutorial, you will learn to drop kick.\nDrop kicking allows you to reach the ground incredibly quickly.\nThe force of the drop kick can damage things.\nTo dropkick, just press the \"E\" key if you are using a keyboard (you can change that in the key bindings in settings).\nAll you have to do is somehow break these crates and maybe...Kill some of these enemies along the way.\n(Maybe you can do both at the same time).\nGoodluck!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1711229127.json",
+		"name": "tutorial1.7"
+	}
+}

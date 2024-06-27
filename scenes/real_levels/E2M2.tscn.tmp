@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/player_scenes/Revekka.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/Skies/Stormysky.tres" type="Environment" id=2]
+[ext_resource path="res://addons/qodot/src/nodes/qodot_map.gd" type="Script" id=3]
+[ext_resource path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" type="Resource" id=4]
+[ext_resource path="res://assets/textures/Whatever/Rocks013_2K_Color.tres" type="Material" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+
+[sub_resource type="ArrayMesh" id=2]
+surfaces/0 = {
+"aabb": AABB( -122, -1, -967, 1063, 17, 1131 ),
+"array_data": PoolByteArray( 0, 0, 244, 194, 0, 0, 128, 65, 0, 192, 113, 196, 127, 127, 127, 193, 160, 187, 0, 176, 0, 0, 244, 194, 0, 0, 128, 191, 0, 192, 113, 196, 127, 127, 127, 193, 160, 187, 0, 32, 0, 64, 107, 68, 0, 0, 128, 191, 0, 192, 113, 196, 127, 127, 127, 193, 90, 71, 0, 32, 0, 64, 107, 68, 0, 0, 128, 65, 0, 192, 113, 196, 127, 127, 127, 193, 90, 71, 0, 176, 0, 0, 244, 194, 0, 0, 128, 65, 0, 192, 113, 196, 129, 0, 0, 63, 142, 199, 0, 176, 0, 0, 244, 194, 0, 0, 128, 65, 0, 0, 36, 67, 129, 0, 0, 63, 32, 61, 0, 176, 0, 0, 244, 194, 0, 0, 128, 191, 0, 0, 36, 67, 129, 0, 0, 63, 32, 61, 0, 32, 0, 0, 244, 194, 0, 0, 128, 191, 0, 192, 113, 196, 129, 0, 0, 63, 142, 199, 0, 32, 0, 64, 107, 68, 0, 0, 128, 191, 0, 192, 113, 196, 0, 129, 0, 193, 142, 199, 90, 199, 0, 0, 244, 194, 0, 0, 128, 191, 0, 192, 113, 196, 0, 129, 0, 193, 142, 199, 160, 59, 0, 0, 244, 194, 0, 0, 128, 191, 0, 0, 36, 67, 0, 129, 0, 193, 32, 61, 160, 59, 0, 64, 107, 68, 0, 0, 128, 191, 0, 0, 36, 67, 0, 129, 0, 193, 32, 61, 90, 199, 0, 64, 107, 68, 0, 0, 128, 65, 0, 192, 113, 196, 0, 127, 0, 63, 142, 199, 90, 199, 0, 64, 107, 68, 0, 0, 128, 65, 0, 0, 36, 67, 0, 127, 0, 63, 32, 61, 90, 199, 0, 0, 244, 194, 0, 0, 128, 65, 0, 0, 36, 67, 0, 127, 0, 63, 32, 61, 160, 59, 0, 0, 244, 194, 0, 0, 128, 65, 0, 192, 113, 196, 0, 127, 0, 63, 142, 199, 160, 59, 0, 64, 107, 68, 0, 0, 128, 65, 0, 192, 113, 196, 127, 0, 0, 193, 142, 199, 0, 176, 0, 64, 107, 68, 0, 0, 128, 191, 0, 192, 113, 196, 127, 0, 0, 193, 142, 199, 0, 32, 0, 64, 107, 68, 0, 0, 128, 191, 0, 0, 36, 67, 127, 0, 0, 193, 32, 61, 0, 32, 0, 64, 107, 68, 0, 0, 128, 65, 0, 0, 36, 67, 127, 0, 0, 193, 32, 61, 0, 176, 0, 0, 244, 194, 0, 0, 128, 65, 0, 0, 36, 67, 0, 0, 127, 63, 160, 187, 0, 176, 0, 64, 107, 68, 0, 0, 128, 65, 0, 0, 36, 67, 0, 0, 127, 63, 90, 71, 0, 176, 0, 64, 107, 68, 0, 0, 128, 191, 0, 0, 36, 67, 0, 0, 127, 63, 90, 71, 0, 32, 0, 0, 244, 194, 0, 0, 128, 191, 0, 0, 36, 67, 0, 0, 127, 63, 160, 187, 0, 32 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0 ),
+"blend_shape_data": [  ],
+"format": 2194711,
+"index_count": 36,
+"material": ExtResource( 5 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 24
+}
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -122, 16, -967, -122, -1, -967, 941, -1, -967, 941, 16, -967, -122, 16, 164, -122, -1, 164, 941, -1, 164, 941, 16, 164 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 2 )
+
+[node name="QodotMap" type="Spatial" parent="."]
+script = ExtResource( 3 )
+map_file = "C:/Users/User/OneDrive/Documents/Noah Lanier's ManCave/IBCE2/E2M2.map"
+inverse_scale_factor = 16.0
+entity_fgd = ExtResource( 4 )
+base_texture_dir = "res://assets/textures"
+texture_file_extensions = PoolStringArray( "png" )
+worldspawn_layers = [  ]
+brush_clip_texture = "special/clip"
+face_skip_texture = "special/skip"
+texture_wads = [  ]
+material_file_extension = "tres"
+default_material = SubResource( 1 )
+uv_unwrap_texel_size = 1.0
+print_profiling_data = false
+use_trenchbroom_group_hierarchy = false
+tree_attach_batch_size = 16
+set_owner_batch_size = 16
+
+[node name="entity_0_worldspawn" type="StaticBody" parent="QodotMap"]
+
+[node name="entity_0_mesh_instance" type="MeshInstance" parent="QodotMap/entity_0_worldspawn"]
+use_in_baked_light = true
+mesh = SubResource( 2 )
+
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape" parent="QodotMap/entity_0_worldspawn"]
+shape = SubResource( 3 )
+
+[node name="FPS" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.49986, -0.0314987, 0, 0.0314987, 3.49986, 0, 0, 0, 0.003, 450.751, 47.1149, 0 )

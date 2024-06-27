@@ -1,0 +1,21 @@
+{
+	"color": "#ff8e8cff",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1670016406.json",
+	"mirror_portraits": false,
+	"name": "Kleopatra Christodoulopoulou",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 210,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://assets/sprites/Kleopatra.png"
+		}
+	],
+	"scale": 40,
+	"theme": ""
+}
