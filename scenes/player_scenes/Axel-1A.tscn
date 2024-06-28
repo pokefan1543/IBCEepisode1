@@ -967,7 +967,7 @@ bus = "Sound"
 [node name="ColorRect" type="ColorRect" parent="."]
 material = ExtResource( 36 )
 margin_left = -141.0
-margin_top = 76.0
+margin_top = 49.0
 margin_right = 854.0
 margin_bottom = 418.0
 
