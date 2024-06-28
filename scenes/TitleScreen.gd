@@ -2,14 +2,23 @@ extends Control
 
 var play = false
 
+func frameFreeze(timeScale, duration):
+	Engine.time_scale = timeScale
+	yield(get_tree().create_timer(duration * timeScale), "timeout")
+	Engine.time_scale = 1.0
+	
 func _ready():
+	$AnimationPlayer.play("logo")
+	frameFreeze(1, 2.0)
 	get_tree().paused = false
+	Globals.itemCount = 0
+	Globals.enemies = 0
+	Globals.defeats = 0
+	Globals.time = 0
+	$Button2.grab_focus()
 	Globals.tutorial = false
 	$Timer.start()
-	$Button2.grab_focus()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	$AnimationPlayer.play("logo")
-	$AudioStreamPlayer.play()
 	
 func _on_Button2_button_down():
 	$AudioStreamPlayer.play()
