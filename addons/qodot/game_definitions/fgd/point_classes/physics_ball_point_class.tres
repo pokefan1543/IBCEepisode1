@@ -1,7 +1,6 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd" type="Script" id=1]
-[ext_resource path="res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.tscn" type="PackedScene" id=2]
 
 [sub_resource type="GDScript" id=1]
 script/source = "class_name PhysicsBall
@@ -46,6 +45,5 @@ node_options = "----------------------------------------------------------------
 node_class = ""
 transient_node = false
 scene = "----------------------------------------------------------------"
-scene_file = ExtResource( 2 )
 scripting = "----------------------------------------------------------------"
 script_class = SubResource( 1 )

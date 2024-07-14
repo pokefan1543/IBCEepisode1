@@ -205,6 +205,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("Head/Camera/hand/CrosshairRayCast:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=25]
 resource_name = "Railgunfire"
@@ -839,13 +851,12 @@ anims/charge = SubResource( 38 )
 anims/shotgunfire = SubResource( 18 )
 
 [node name="CrosshairRayCast" type="RayCast" parent="Head/Camera/hand"]
-transform = Transform( 0.399942, 4.65661e-10, 0.0410688, -2.32831e-10, 0.6, -2.91038e-11, -0.00679955, 1.71297e-11, 2.41566, 0.5574, 0.0144001, -5.78165e-05 )
+transform = Transform( 0.400002, 0, 0, 0, 0.600004, 0, 0, 0, 2.41601, 0.195, 0.502, 0 )
 enabled = true
 cast_to = Vector3( 0, 0, -1000 )
 collision_mask = 6
 collide_with_areas = true
 debug_shape_custom_color = Color( 1, 0, 0, 1 )
-debug_shape_thickness = 5
 
 [node name="scope" type="Control" parent="Head/Camera/hand"]
 anchor_right = 1.0
@@ -974,10 +985,10 @@ margin_bottom = 418.0
 [node name="Healthbar2" parent="." instance=ExtResource( 3 )]
 
 [node name="Control" parent="." instance=ExtResource( 45 )]
-margin_left = -8.0
-margin_top = 1.0
-margin_right = 1.0
-margin_bottom = 1.0
+margin_left = -16.0
+margin_top = -12.0
+margin_right = -7.0
+margin_bottom = -12.0
 sway_left = Vector2( 130, 210 )
 sway_right = Vector2( 300, 210 )
 sway_normal = Vector2( 340, 210 )

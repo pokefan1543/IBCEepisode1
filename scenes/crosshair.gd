@@ -33,10 +33,10 @@ func _process(delta):
 			else:
 				$Face2.rect_position = $Face2.rect_position.linear_interpolate(sway_normal, sway_lerp * delta)
 				
-func _physics_process(delta):
-	if Input.is_action_just_pressed("fire2") and zoom != true:
-		$AnimationPlayer.play("Crosshairzoom")
-		zoom = true
-	if Input.is_action_just_released("fire2") and zoom == true:
-		$AnimationPlayer.play("Crosshairzoomout")
-		zoom = false
+#func _physics_process(delta):
+	#if Input.is_action_just_pressed("fire2") and zoom != true:
+		#$AnimationPlayer.play("Crosshairzoom")
+		#zoom = true
+	#if Input.is_action_just_released("fire2") and zoom == true:
+		#$AnimationPlayer.play("Crosshairzoomout")
+		#zoom = false

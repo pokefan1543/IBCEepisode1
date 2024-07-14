@@ -59,16 +59,16 @@ onready var _Viewport = get_viewport().get_size()
 onready var camera = $Head/Camera
 onready var hand = $Head/Camera/hand
 onready var anim_player = $Head/Camera/hand/AnimationPlayer
-onready var raycast = $Head/Camera/hand/Buster/RayCast
+onready var raycast = $Head/Camera/hand/CrosshairRayCast
 onready var Chaospawnhurt = $ChaosPawnHurt
 onready var text_timer = $text_timer
 onready var coll = $CollisionShape
-onready var ray = $Head/Camera/hand/Buster/RayCast
+onready var ray = $Head/Camera/hand/CrosshairRayCast
 onready var PulseRifle = $Head/Camera/hand/M9PulseRifleHR
 onready var AxelBuster = $Head/Camera/hand/Buster
 onready var pulseball = preload("res://scenes/PulseBall.tscn")
 onready var tazerball = preload("res://scenes/Tazerball.tscn")
-onready var aimcast2 = $Head/Camera/hand/Stormcloud/RayCast
+onready var aimcast2 = $Head/Camera/hand/CrosshairRayCast
 onready var pulsesound = $Head/Camera/hand/pulsefire
 onready var ray_container = $Head/Camera/hand/ShotgunRayContainer
 onready var shotgunmodel = $Head/Camera/hand/shotgun
@@ -453,21 +453,18 @@ func _physics_process(delta):
 		if h_input and dashing != true:
 			if not speed == 30 * Globals.speedMult and speed < 30 * Globals.speedMult:
 				speed += 10
-			if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
-				anim_player.queue("Weaponsway")
+			#if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
+				#anim_player.queue("Weaponsway")
 		elif h_input and f_input and dashing != true:
 			if not speed == 30 * Globals.speedMult and speed < 30 * Globals.speedMult:
 				speed += 10
-			if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
-				anim_player.queue("Weaponsway")
+			#if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
 		elif f_input and not h_input and dashing != true:
 			speed = 20
-			if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
-				anim_player.queue("Weaponsway")
+			#if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
 		elif dashing != true:
 			speed = 20
-			if not Input.is_action_pressed("fire") and shooting == false and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
-				anim_player.stop()
+			#if not Input.is_action_pressed("fire") and shooting == false and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
 		#jumping and gravity
 		if Input.is_action_pressed("move_right") and leanLeft != true and leanRight != true:
 			anim_player.play("Lean_Right")
