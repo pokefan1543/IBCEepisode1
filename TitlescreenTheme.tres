@@ -41,6 +41,7 @@ CheckButton/fonts/font = ExtResource( 1 )
 CheckButton/icons/off = ExtResource( 11 )
 CheckButton/icons/on = ExtResource( 10 )
 CheckButton/icons/on_disabled = null
+Label/fonts/font = ExtResource( 1 )
 ProgressBar/colors/font_color = Color( 0.94, 0.94, 0.94, 1 )
 ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 ProgressBar/fonts/font = ExtResource( 1 )

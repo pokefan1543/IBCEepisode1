@@ -16,7 +16,6 @@ func _ready():
 #	pass
 
 
-
 func _on_Fullscreen_toggled(button_pressed):
 	Globals.fullscreen = button_pressed
 	if Globals.fullscreen == true:
@@ -88,3 +87,7 @@ func _on_Button_button_down():
 
 func _on_sense_value_changed(value):
 	Globals.mouse_sense = value
+
+
+func _on_Control_focus_entered():
+	$AudioStreamPlayer.play()

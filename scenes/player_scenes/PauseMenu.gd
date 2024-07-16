@@ -34,3 +34,12 @@ func _on_Button_button_down():
 
 func _on_Button2_button_down():
 	get_tree().change_scene("res://scenes/real_levels/level_select.tscn")
+
+
+func _on_quit_button_down():
+	$Options.hide()
+	$quit.hide()
+
+func _on_Button3_button_down():
+	$Options.show()
+	$quit.show()

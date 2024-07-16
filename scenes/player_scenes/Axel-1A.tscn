@@ -851,7 +851,7 @@ anims/charge = SubResource( 38 )
 anims/shotgunfire = SubResource( 18 )
 
 [node name="CrosshairRayCast" type="RayCast" parent="Head/Camera/hand"]
-transform = Transform( 0.400002, 0, 0, 0, 0.600004, 0, 0, 0, 2.41601, 0.195, 0.502, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.195, 0.502, 0 )
 enabled = true
 cast_to = Vector3( 0, 0, -1000 )
 collision_mask = 6
