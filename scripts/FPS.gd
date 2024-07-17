@@ -91,6 +91,7 @@ func fire_shotgun():
 							r.cast_to.y = rand_range(spread, -spread)
 							if r.is_colliding():
 								if r.get_collider().is_in_group("enemy"):
+									health += 0.2
 									r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 									if r.get_collider().is_in_group("Chaospawn"):
 										Chaospawnhurt.play(0.001)
@@ -120,6 +121,7 @@ func fire_shotgun():
 								r.cast_to.y = rand_range(spread, -spread)
 								if r.is_colliding():
 									if r.get_collider().is_in_group("enemy"):
+										health += 0.2
 										r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 									if r.get_collider().is_in_group("Chaospawn"):
 										Chaospawnhurt.play(0.001)
@@ -143,6 +145,7 @@ func fire_shotgun():
 									r.cast_to.y = rand_range(spread, -spread)
 									if r.is_colliding():
 										if r.get_collider().is_in_group("enemy"):
+											health += 0.2
 											r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 										if r.get_collider().is_in_group("Chaospawn"):
 											Chaospawnhurt.play(0.001)
@@ -166,6 +169,7 @@ func fire_shotgun():
 									r.cast_to.y = rand_range(spread, -spread)
 									if r.is_colliding():
 										if r.get_collider().is_in_group("enemy"):
+											health += 0.2
 											r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 										if r.get_collider().is_in_group("Chaospawn"):
 											Chaospawnhurt.play(0.001)
@@ -218,6 +222,7 @@ func fire_shotgun():
 						#maybe use $Head/Camera/hand/railgun/RayCast instead
 						var target = $Head/Camera/hand/railgun/laser/RayCast.get_collider()
 						if target.is_in_group("enemy"):
+							health += 0.2
 							target.enemyhealth -= 500 * Globals.damageMult
 						if target.is_in_group("Chaospawn"):
 							Chaospawnhurt.play(0.001)
@@ -299,6 +304,7 @@ func fire():
 			if raycast.is_colliding():
 				var target = raycast.get_collider()
 				if target.is_in_group("enemy"):
+					health += 0.2
 					target.enemyhealth -= 5 * Globals.damageMult
 				if target.is_in_group("Chaospawn"):
 					Chaospawnhurt.play(0.001)
@@ -316,6 +322,7 @@ func fire():
 				if raycast.is_colliding():
 					var target = raycast.get_collider()
 					if target.is_in_group("enemy"):
+						health += 0.2
 						target.enemyhealth -= damage * Globals.damageMult
 					if target.is_in_group("Chaospawn"):
 						Chaospawnhurt.play(0.001)
@@ -608,11 +615,12 @@ func _on_Area_body_entered(body):
 		$Healthbar2/s/Console.add_text(" Abtained 25 .50 American Eagle rounds ")
 		$clip.play()
 	if body.is_in_group("medbox"):
-		health += 25
-		text_timer.start()
-		$Healthbar2/s/Console.add_text(" Abtained 25 health ")
-		body.queue_free()
-		$healthup.play()
+		if health != Globals.maxHealth:
+			health += 25
+			text_timer.start()
+			$Healthbar2/s/Console.add_text(" Abtained 25 health ")
+			body.queue_free()
+			$healthup.play()
 	if body.is_in_group("level2key"):
 		Globals.level2unlocked = true
 		text_timer.start()

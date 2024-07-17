@@ -20,7 +20,7 @@ func _ready():
 	print(Globals.enemies)
 	print("Globals.itemCount")
 	print(Globals.itemCount)
-	$ProgressBar.value = Globals.xp
+	$Container/ProgressBar.value = Globals.xp
 	
 func _physics_process(delta):
 	$defeatsText3.text = str(Globals.enemies)
@@ -28,17 +28,17 @@ func _physics_process(delta):
 	$itemsText.text = str(iDisplay)
 	$timeText.text = str(tDisplay)
 	$score2.text = str(sDisplay)
-	$Level.text = str(Globals.level)
-	$ProgressBar.max_value = Globals.level * 500 + 500
-	$nextLevel.text = str(Globals.level + 1)
+	$Container/Level.text = str(Globals.level)
+	$Container/ProgressBar.max_value = Globals.level * 500 + 500
+	$Container/nextLevel.text = str(Globals.level + 1)
 	if click == true and Input.is_action_just_pressed("fire"):
 		Globals.itemCount = 0
 		Globals.enemies = 0
 		Globals.defeats = 0
 		Globals.time = 0
 		get_tree().change_scene("res://scenes/real_levels/level_select.tscn")
-	if $ProgressBar.value == $ProgressBar.max_value:
-		$ProgressBar.value = 0
+	if $Container/ProgressBar.value == $Container/ProgressBar.max_value:
+		$Container/ProgressBar.value = 0
 		print(Globals.level)
 		Globals.level += 1
 		if Globals.level == 1:
@@ -112,8 +112,8 @@ func _on_Timer_timeout():
 		elif Nscore != 0:
 			Nscore -= 1
 			$AudioStreamPlayer4.play()
-			$ProgressBar.value += 1
-			Globals.xp = $ProgressBar.value
+			$Container/ProgressBar.value += 1
+			Globals.xp = $Container/ProgressBar.value
 			$Timer.start()
 		elif timerstart == false and timerstart2 == false:
 			timerstart = true

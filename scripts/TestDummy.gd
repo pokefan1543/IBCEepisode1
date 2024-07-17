@@ -5,7 +5,7 @@ var target = null
 var velocity = Vector3.ZERO
 var speed = 10
 var enemyhealth = 50
-var damage = 10
+var damage = 5
 var snap
 onready var gore = preload("res://scenes/Guts.tscn")
 onready var bullets = preload("res://scenes/bullets.tscn")

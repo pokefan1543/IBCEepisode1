@@ -19,6 +19,10 @@ func _ready():
 	$VideoPlayer.play()
 	$vidtim.start()
 func _physics_process(delta):
+	$Container/Level.text = str(Globals.level)
+	$Container/ProgressBar.max_value = Globals.level * 500 + 500
+	$Container/nextLevel.text = str(Globals.level + 1)
+	$Container/ProgressBar.value = Globals.xp
 	if $Popup/cheat.text == "asteroid":
 		Globals.level4unlocked = true
 		$AudioStreamPlayer.play()
