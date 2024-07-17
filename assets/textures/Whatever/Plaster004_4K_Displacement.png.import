@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Plaster004_4K_Displacement.png-21896cd7200dc8c3ee4974c8d67e208d.s3tc.stex"
-path.etc2="res://.import/Plaster004_4K_Displacement.png-21896cd7200dc8c3ee4974c8d67e208d.etc2.stex"
+path.s3tc="res://.import/Plaster004_4K_Displacement.png-bbe5496f6f9077d99404208685895134.s3tc.stex"
+path.etc2="res://.import/Plaster004_4K_Displacement.png-bbe5496f6f9077d99404208685895134.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Whatever/Plaster004_4K_Displacement.png"
-dest_files=[ "res://.import/Plaster004_4K_Displacement.png-21896cd7200dc8c3ee4974c8d67e208d.s3tc.stex", "res://.import/Plaster004_4K_Displacement.png-21896cd7200dc8c3ee4974c8d67e208d.etc2.stex" ]
+source_file="res://Assets/textures/Whatever/Plaster004_4K_Displacement.png"
+dest_files=[ "res://.import/Plaster004_4K_Displacement.png-bbe5496f6f9077d99404208685895134.s3tc.stex", "res://.import/Plaster004_4K_Displacement.png-bbe5496f6f9077d99404208685895134.etc2.stex" ]
 
 [params]
 

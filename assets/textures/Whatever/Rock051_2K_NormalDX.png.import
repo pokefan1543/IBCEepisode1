@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rock051_2K_NormalDX.png-fae4dad5d9c80b12cad11f1d4cd3f2d7.stex"
+path="res://.import/Rock051_2K_NormalDX.png-16c6f66303ebe99c84dee6d61a681391.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/Whatever/Rock051_2K_NormalDX.png"
-dest_files=[ "res://.import/Rock051_2K_NormalDX.png-fae4dad5d9c80b12cad11f1d4cd3f2d7.stex" ]
+source_file="res://Assets/textures/Whatever/Rock051_2K_NormalDX.png"
+dest_files=[ "res://.import/Rock051_2K_NormalDX.png-16c6f66303ebe99c84dee6d61a681391.stex" ]
 
 [params]
 

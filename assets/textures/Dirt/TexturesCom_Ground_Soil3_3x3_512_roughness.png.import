@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-c99eb1e365551e0f4d5dfa35c008134b.s3tc.stex"
-path.etc2="res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-c99eb1e365551e0f4d5dfa35c008134b.etc2.stex"
+path.s3tc="res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-8900d05f4e5bac72e0b958f394d3a134.s3tc.stex"
+path.etc2="res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-8900d05f4e5bac72e0b958f394d3a134.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Dirt/TexturesCom_Ground_Soil3_3x3_512_roughness.png"
-dest_files=[ "res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-c99eb1e365551e0f4d5dfa35c008134b.s3tc.stex", "res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-c99eb1e365551e0f4d5dfa35c008134b.etc2.stex" ]
+source_file="res://Assets/textures/Dirt/TexturesCom_Ground_Soil3_3x3_512_roughness.png"
+dest_files=[ "res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-8900d05f4e5bac72e0b958f394d3a134.s3tc.stex", "res://.import/TexturesCom_Ground_Soil3_3x3_512_roughness.png-8900d05f4e5bac72e0b958f394d3a134.etc2.stex" ]
 
 [params]
 

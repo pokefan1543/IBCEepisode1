@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Gravel020_2K_NormalGL.png-065b10a9f8b1dd534f58492a217cbccf.s3tc.stex"
-path.etc2="res://.import/Gravel020_2K_NormalGL.png-065b10a9f8b1dd534f58492a217cbccf.etc2.stex"
+path.s3tc="res://.import/Gravel020_2K_NormalGL.png-0fac8c36ecfd59e301d11a7e29cdb8b5.s3tc.stex"
+path.etc2="res://.import/Gravel020_2K_NormalGL.png-0fac8c36ecfd59e301d11a7e29cdb8b5.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Whatever/Gravel020_2K_NormalGL.png"
-dest_files=[ "res://.import/Gravel020_2K_NormalGL.png-065b10a9f8b1dd534f58492a217cbccf.s3tc.stex", "res://.import/Gravel020_2K_NormalGL.png-065b10a9f8b1dd534f58492a217cbccf.etc2.stex" ]
+source_file="res://Assets/textures/Whatever/Gravel020_2K_NormalGL.png"
+dest_files=[ "res://.import/Gravel020_2K_NormalGL.png-0fac8c36ecfd59e301d11a7e29cdb8b5.s3tc.stex", "res://.import/Gravel020_2K_NormalGL.png-0fac8c36ecfd59e301d11a7e29cdb8b5.etc2.stex" ]
 
 [params]
 

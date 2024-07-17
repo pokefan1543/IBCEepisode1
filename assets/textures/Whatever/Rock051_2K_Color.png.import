@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Rock051_2K_Color.png-e35f239843dd1bbe41bb804c0f0985ed.s3tc.stex"
-path.etc2="res://.import/Rock051_2K_Color.png-e35f239843dd1bbe41bb804c0f0985ed.etc2.stex"
+path.s3tc="res://.import/Rock051_2K_Color.png-1cf4e007edb6a157d72e40691628dd5b.s3tc.stex"
+path.etc2="res://.import/Rock051_2K_Color.png-1cf4e007edb6a157d72e40691628dd5b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Whatever/Rock051_2K_Color.png"
-dest_files=[ "res://.import/Rock051_2K_Color.png-e35f239843dd1bbe41bb804c0f0985ed.s3tc.stex", "res://.import/Rock051_2K_Color.png-e35f239843dd1bbe41bb804c0f0985ed.etc2.stex" ]
+source_file="res://Assets/textures/Whatever/Rock051_2K_Color.png"
+dest_files=[ "res://.import/Rock051_2K_Color.png-1cf4e007edb6a157d72e40691628dd5b.s3tc.stex", "res://.import/Rock051_2K_Color.png-1cf4e007edb6a157d72e40691628dd5b.etc2.stex" ]
 
 [params]
 

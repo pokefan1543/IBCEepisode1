@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/brushed-metal-texture-12.png-5aeb7272c454b85fa476a51dcd1b8607.s3tc.stex"
-path.etc2="res://.import/brushed-metal-texture-12.png-5aeb7272c454b85fa476a51dcd1b8607.etc2.stex"
+path.s3tc="res://.import/brushed-metal-texture-12.png-c32f09165241944458500c1fccaf0cb2.s3tc.stex"
+path.etc2="res://.import/brushed-metal-texture-12.png-c32f09165241944458500c1fccaf0cb2.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Whatever/brushed-metal-texture-12.png"
-dest_files=[ "res://.import/brushed-metal-texture-12.png-5aeb7272c454b85fa476a51dcd1b8607.s3tc.stex", "res://.import/brushed-metal-texture-12.png-5aeb7272c454b85fa476a51dcd1b8607.etc2.stex" ]
+source_file="res://Assets/textures/Whatever/brushed-metal-texture-12.png"
+dest_files=[ "res://.import/brushed-metal-texture-12.png-c32f09165241944458500c1fccaf0cb2.s3tc.stex", "res://.import/brushed-metal-texture-12.png-c32f09165241944458500c1fccaf0cb2.etc2.stex" ]
 
 [params]
 

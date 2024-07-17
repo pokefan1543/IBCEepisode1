@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/DiamondPlate008C_4K_Metalness.png-66de817ade7acca3b7d859f2365c6c63.s3tc.stex"
-path.etc2="res://.import/DiamondPlate008C_4K_Metalness.png-66de817ade7acca3b7d859f2365c6c63.etc2.stex"
+path.s3tc="res://.import/DiamondPlate008C_4K_Metalness.png-08bacf015610abe48ad4b3d378af96ea.s3tc.stex"
+path.etc2="res://.import/DiamondPlate008C_4K_Metalness.png-08bacf015610abe48ad4b3d378af96ea.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/metal/DiamondPlate008C_4K_Metalness.png"
-dest_files=[ "res://.import/DiamondPlate008C_4K_Metalness.png-66de817ade7acca3b7d859f2365c6c63.s3tc.stex", "res://.import/DiamondPlate008C_4K_Metalness.png-66de817ade7acca3b7d859f2365c6c63.etc2.stex" ]
+source_file="res://Assets/textures/metal/DiamondPlate008C_4K_Metalness.png"
+dest_files=[ "res://.import/DiamondPlate008C_4K_Metalness.png-08bacf015610abe48ad4b3d378af96ea.s3tc.stex", "res://.import/DiamondPlate008C_4K_Metalness.png-08bacf015610abe48ad4b3d378af96ea.etc2.stex" ]
 
 [params]
 

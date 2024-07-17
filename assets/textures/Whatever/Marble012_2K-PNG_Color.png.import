@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Marble012_2K-PNG_Color.png-d19616f96828442d713202a8fce4f32b.s3tc.stex"
-path.etc2="res://.import/Marble012_2K-PNG_Color.png-d19616f96828442d713202a8fce4f32b.etc2.stex"
+path.s3tc="res://.import/Marble012_2K-PNG_Color.png-5fac7ab854aba470741f0880272c3388.s3tc.stex"
+path.etc2="res://.import/Marble012_2K-PNG_Color.png-5fac7ab854aba470741f0880272c3388.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Whatever/Marble012_2K-PNG_Color.png"
-dest_files=[ "res://.import/Marble012_2K-PNG_Color.png-d19616f96828442d713202a8fce4f32b.s3tc.stex", "res://.import/Marble012_2K-PNG_Color.png-d19616f96828442d713202a8fce4f32b.etc2.stex" ]
+source_file="res://Assets/textures/Whatever/Marble012_2K-PNG_Color.png"
+dest_files=[ "res://.import/Marble012_2K-PNG_Color.png-5fac7ab854aba470741f0880272c3388.s3tc.stex", "res://.import/Marble012_2K-PNG_Color.png-5fac7ab854aba470741f0880272c3388.etc2.stex" ]
 
 [params]
 
