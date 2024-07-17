@@ -96,6 +96,7 @@ func _physics_process(delta):
 func _ready():
 	$SpotLightF.hide()
 	$SpotLightD.hide()
+	$Healthbar/s/ProgressBar.max_value = 4000
 func _process(delta):
 	match state:
 		IDLE:

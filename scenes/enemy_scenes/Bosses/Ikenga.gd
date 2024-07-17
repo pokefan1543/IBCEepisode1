@@ -44,6 +44,8 @@ var enemy_following = false
 var gravity_direction_and_speed = -100
 var up_vector3 = Vector3(0, 1, 0)
 var velocity = Vector3.FORWARD * speed
+func _ready():
+	$Healthbar/s/ProgressBar.max_value = 4000
 func _physics_process(delta):
 	if enemyhealth != 100:
 		$Healthbar/s/ProgressBar.value = enemyhealth
