@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Rock051_2K_NormalGL.png-f2ccd2ffd6739cc80df9e20627fb89de.s3tc.stex"
-path.etc2="res://.import/Rock051_2K_NormalGL.png-f2ccd2ffd6739cc80df9e20627fb89de.etc2.stex"
+path.s3tc="res://.import/Rock051_2K_NormalGL.png-cb7ba28aae6805e3ba371e8e15dea0d2.s3tc.stex"
+path.etc2="res://.import/Rock051_2K_NormalGL.png-cb7ba28aae6805e3ba371e8e15dea0d2.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Rock051_2K_NormalGL.png"
-dest_files=[ "res://.import/Rock051_2K_NormalGL.png-f2ccd2ffd6739cc80df9e20627fb89de.s3tc.stex", "res://.import/Rock051_2K_NormalGL.png-f2ccd2ffd6739cc80df9e20627fb89de.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Rock051_2K_NormalGL.png"
+dest_files=[ "res://.import/Rock051_2K_NormalGL.png-cb7ba28aae6805e3ba371e8e15dea0d2.s3tc.stex", "res://.import/Rock051_2K_NormalGL.png-cb7ba28aae6805e3ba371e8e15dea0d2.etc2.stex" ]
 
 [params]
 

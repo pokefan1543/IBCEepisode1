@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp-6683c20f12ae7d49f751b3b78a9a77b7.stex"
+path="res://.import/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp-732187d9ff8b294ca57c33fe5a031790.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp"
-dest_files=[ "res://.import/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp-6683c20f12ae7d49f751b3b78a9a77b7.stex" ]
+source_file="res://assets/textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp"
+dest_files=[ "res://.import/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp-732187d9ff8b294ca57c33fe5a031790.stex" ]
 
 [params]
 

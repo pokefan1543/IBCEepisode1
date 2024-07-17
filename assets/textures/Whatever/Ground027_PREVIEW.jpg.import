@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ground027_PREVIEW.jpg-1b56fd88e5b3b2db2e919c94982cf823.stex"
+path="res://.import/Ground027_PREVIEW.jpg-f219512dd79b065e092277dd745625ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Ground027_PREVIEW.jpg"
-dest_files=[ "res://.import/Ground027_PREVIEW.jpg-1b56fd88e5b3b2db2e919c94982cf823.stex" ]
+source_file="res://assets/textures/Whatever/Ground027_PREVIEW.jpg"
+dest_files=[ "res://.import/Ground027_PREVIEW.jpg-f219512dd79b065e092277dd745625ef.stex" ]
 
 [params]
 

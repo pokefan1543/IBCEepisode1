@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Rock051_2K_AmbientOcclusion.png-cc141b464a94a68e512646a5fbf08c3d.s3tc.stex"
-path.etc2="res://.import/Rock051_2K_AmbientOcclusion.png-cc141b464a94a68e512646a5fbf08c3d.etc2.stex"
+path.s3tc="res://.import/Rock051_2K_AmbientOcclusion.png-b3414cec9c33335173104fe11ca98709.s3tc.stex"
+path.etc2="res://.import/Rock051_2K_AmbientOcclusion.png-b3414cec9c33335173104fe11ca98709.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Rock051_2K_AmbientOcclusion.png"
-dest_files=[ "res://.import/Rock051_2K_AmbientOcclusion.png-cc141b464a94a68e512646a5fbf08c3d.s3tc.stex", "res://.import/Rock051_2K_AmbientOcclusion.png-cc141b464a94a68e512646a5fbf08c3d.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Rock051_2K_AmbientOcclusion.png"
+dest_files=[ "res://.import/Rock051_2K_AmbientOcclusion.png-b3414cec9c33335173104fe11ca98709.s3tc.stex", "res://.import/Rock051_2K_AmbientOcclusion.png-b3414cec9c33335173104fe11ca98709.etc2.stex" ]
 
 [params]
 

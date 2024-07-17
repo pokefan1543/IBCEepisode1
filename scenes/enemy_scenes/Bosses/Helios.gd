@@ -6,7 +6,7 @@ var cur_path_idx = 0
 var target = null
 var speed = 5
 var enemyhealth = 4000
-var damage = 10
+var damage = 0.5
 var attacktoggle = false
 var snap
 onready var nav = get_parent()

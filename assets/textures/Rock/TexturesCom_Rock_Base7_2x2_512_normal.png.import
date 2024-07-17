@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-75649c156724e88952abf0210f6a55c2.s3tc.stex"
-path.etc2="res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-75649c156724e88952abf0210f6a55c2.etc2.stex"
+path.s3tc="res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-9f73d31dfaf3ffbf2907be609cff7182.s3tc.stex"
+path.etc2="res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-9f73d31dfaf3ffbf2907be609cff7182.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Rock/TexturesCom_Rock_Base7_2x2_512_normal.png"
-dest_files=[ "res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-75649c156724e88952abf0210f6a55c2.s3tc.stex", "res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-75649c156724e88952abf0210f6a55c2.etc2.stex" ]
+source_file="res://assets/textures/Rock/TexturesCom_Rock_Base7_2x2_512_normal.png"
+dest_files=[ "res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-9f73d31dfaf3ffbf2907be609cff7182.s3tc.stex", "res://.import/TexturesCom_Rock_Base7_2x2_512_normal.png-9f73d31dfaf3ffbf2907be609cff7182.etc2.stex" ]
 
 [params]
 

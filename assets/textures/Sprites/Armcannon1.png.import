@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Armcannon1.png-e1e5fbca55e95f02f5ce19a4020a3faf.stex"
+path="res://.import/Armcannon1.png-b817a027f6356cb722570c10f05e71e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/textures/Sprites/Armcannon1.png"
-dest_files=[ "res://.import/Armcannon1.png-e1e5fbca55e95f02f5ce19a4020a3faf.stex" ]
+source_file="res://assets/textures/Sprites/Armcannon1.png"
+dest_files=[ "res://.import/Armcannon1.png-b817a027f6356cb722570c10f05e71e1.stex" ]
 
 [params]
 

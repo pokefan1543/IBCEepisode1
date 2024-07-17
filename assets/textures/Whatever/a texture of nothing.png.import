@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/a texture of nothing.png-aa7fb24a657a9bb38abdcf84bcad82e7.s3tc.stex"
-path.etc2="res://.import/a texture of nothing.png-aa7fb24a657a9bb38abdcf84bcad82e7.etc2.stex"
+path.s3tc="res://.import/a texture of nothing.png-8cd4c846f5c2e21c7a9f6ca1f75d454f.s3tc.stex"
+path.etc2="res://.import/a texture of nothing.png-8cd4c846f5c2e21c7a9f6ca1f75d454f.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/a texture of nothing.png"
-dest_files=[ "res://.import/a texture of nothing.png-aa7fb24a657a9bb38abdcf84bcad82e7.s3tc.stex", "res://.import/a texture of nothing.png-aa7fb24a657a9bb38abdcf84bcad82e7.etc2.stex" ]
+source_file="res://assets/textures/Whatever/a texture of nothing.png"
+dest_files=[ "res://.import/a texture of nothing.png-8cd4c846f5c2e21c7a9f6ca1f75d454f.s3tc.stex", "res://.import/a texture of nothing.png-8cd4c846f5c2e21c7a9f6ca1f75d454f.etc2.stex" ]
 
 [params]
 

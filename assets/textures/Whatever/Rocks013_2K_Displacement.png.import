@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Rocks013_2K_Displacement.png-a4cdb50de865ac99fbfd19f1496a3f6f.s3tc.stex"
-path.etc2="res://.import/Rocks013_2K_Displacement.png-a4cdb50de865ac99fbfd19f1496a3f6f.etc2.stex"
+path.s3tc="res://.import/Rocks013_2K_Displacement.png-b36499441d59997970bc8cece67e73ad.s3tc.stex"
+path.etc2="res://.import/Rocks013_2K_Displacement.png-b36499441d59997970bc8cece67e73ad.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Rocks013_2K_Displacement.png"
-dest_files=[ "res://.import/Rocks013_2K_Displacement.png-a4cdb50de865ac99fbfd19f1496a3f6f.s3tc.stex", "res://.import/Rocks013_2K_Displacement.png-a4cdb50de865ac99fbfd19f1496a3f6f.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Rocks013_2K_Displacement.png"
+dest_files=[ "res://.import/Rocks013_2K_Displacement.png-b36499441d59997970bc8cece67e73ad.s3tc.stex", "res://.import/Rocks013_2K_Displacement.png-b36499441d59997970bc8cece67e73ad.etc2.stex" ]
 
 [params]
 

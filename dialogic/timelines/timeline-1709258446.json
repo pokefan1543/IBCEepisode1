@@ -50,17 +50,41 @@
 			"character": "character-1708739119.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hello, Kleopatra Pavlina Christodoulopoulou\nWelcome to the robot training simulation!\nI am Doctor Sim Bot, and I will be your guide in this military grade combat robot pilot training program.\nThis program is a simulation designed with your supercomputer in mind, so that you can get the best possible training for piloting your robot.\nYour robot's model name is:\n...\nAxel-1A.\nThis simulation is essentially a tutorial on how to pilot your robot.\nWith all of that out of the way, do you have any questions before we continue?"
+			"text": "Hello, Kleopatra Megalou\nWelcome to the robot training simulation!\nI am Dr. Sim Bot, and I will be your guide in this military grade combat robot pilot training program.\nThis whole program is designed to make sure every pilot knows how to pilot their robot and that they know what they are doing.\nRemember that your specific objective is to gain intel on the location your robot is sent to and destory the enemy presence there.\nAlso, even if you already have expierence, it's always good to remember these 3 facts:\n1. You can switch what weapon you are using with the number keys if you are using a keyboard\n2. You can self destruct by pressing delete or backspace if you are using a keyboard\n3. There is no other objective besides ridding areas of enemy presence, \ncollecting the Isorropian energy prism (it's a trianglar prism), and finding a exit."
 		},
 		{
-			"character": "character-1670016406.json",
-			"event_id": "dialogic_001",
+			"character": "character-1708739119.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
 			"portrait": "",
-			"text": "I think so?"
+			"question": "Before we begin, are you new to using this program?"
+		},
+		{
+			"choice": "Yes.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
 			"change_timeline": "timeline-1671146358.json",
 			"event_id": "dialogic_020"
+		},
+		{
+			"choice": "No.",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1721180541.json",
+			"event_id": "dialogic_020"
+		},
+		{
+			"event_id": "dialogic_013"
 		}
 	],
 	"metadata": {

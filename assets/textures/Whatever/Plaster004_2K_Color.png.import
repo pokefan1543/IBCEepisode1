@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Plaster004_2K_Color.png-e2b13813681605299c570bfd884ec473.s3tc.stex"
-path.etc2="res://.import/Plaster004_2K_Color.png-e2b13813681605299c570bfd884ec473.etc2.stex"
+path.s3tc="res://.import/Plaster004_2K_Color.png-69c39562e5269f8b8fd9875c6d68a4d1.s3tc.stex"
+path.etc2="res://.import/Plaster004_2K_Color.png-69c39562e5269f8b8fd9875c6d68a4d1.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Plaster004_2K_Color.png"
-dest_files=[ "res://.import/Plaster004_2K_Color.png-e2b13813681605299c570bfd884ec473.s3tc.stex", "res://.import/Plaster004_2K_Color.png-e2b13813681605299c570bfd884ec473.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Plaster004_2K_Color.png"
+dest_files=[ "res://.import/Plaster004_2K_Color.png-69c39562e5269f8b8fd9875c6d68a4d1.s3tc.stex", "res://.import/Plaster004_2K_Color.png-69c39562e5269f8b8fd9875c6d68a4d1.etc2.stex" ]
 
 [params]
 

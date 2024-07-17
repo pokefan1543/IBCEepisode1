@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DiamondPlate008C_4K_NormalDX.png-34c678ec30f791acc5e2cca39699879a.stex"
+path="res://.import/DiamondPlate008C_4K_NormalDX.png-3ba4a0b3485a3a0c00dffae6762a5dc9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/textures/metal/DiamondPlate008C_4K_NormalDX.png"
-dest_files=[ "res://.import/DiamondPlate008C_4K_NormalDX.png-34c678ec30f791acc5e2cca39699879a.stex" ]
+source_file="res://assets/textures/metal/DiamondPlate008C_4K_NormalDX.png"
+dest_files=[ "res://.import/DiamondPlate008C_4K_NormalDX.png-3ba4a0b3485a3a0c00dffae6762a5dc9.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Marble012_2K-PNG_Roughness.png-24437d34c036f1f06b28af1dddeb89a5.s3tc.stex"
-path.etc2="res://.import/Marble012_2K-PNG_Roughness.png-24437d34c036f1f06b28af1dddeb89a5.etc2.stex"
+path.s3tc="res://.import/Marble012_2K-PNG_Roughness.png-ddffa7980dd85fbea01af074ebb53f28.s3tc.stex"
+path.etc2="res://.import/Marble012_2K-PNG_Roughness.png-ddffa7980dd85fbea01af074ebb53f28.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Marble012_2K-PNG_Roughness.png"
-dest_files=[ "res://.import/Marble012_2K-PNG_Roughness.png-24437d34c036f1f06b28af1dddeb89a5.s3tc.stex", "res://.import/Marble012_2K-PNG_Roughness.png-24437d34c036f1f06b28af1dddeb89a5.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Marble012_2K-PNG_Roughness.png"
+dest_files=[ "res://.import/Marble012_2K-PNG_Roughness.png-ddffa7980dd85fbea01af074ebb53f28.s3tc.stex", "res://.import/Marble012_2K-PNG_Roughness.png-ddffa7980dd85fbea01af074ebb53f28.etc2.stex" ]
 
 [params]
 

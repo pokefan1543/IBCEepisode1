@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Rock051_2K_Roughness.png-b649461794d2b9c8fb017821576a9d9c.s3tc.stex"
-path.etc2="res://.import/Rock051_2K_Roughness.png-b649461794d2b9c8fb017821576a9d9c.etc2.stex"
+path.s3tc="res://.import/Rock051_2K_Roughness.png-44af7c75f409b9910bcc9ed5c568d7d2.s3tc.stex"
+path.etc2="res://.import/Rock051_2K_Roughness.png-44af7c75f409b9910bcc9ed5c568d7d2.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Rock051_2K_Roughness.png"
-dest_files=[ "res://.import/Rock051_2K_Roughness.png-b649461794d2b9c8fb017821576a9d9c.s3tc.stex", "res://.import/Rock051_2K_Roughness.png-b649461794d2b9c8fb017821576a9d9c.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Rock051_2K_Roughness.png"
+dest_files=[ "res://.import/Rock051_2K_Roughness.png-44af7c75f409b9910bcc9ed5c568d7d2.s3tc.stex", "res://.import/Rock051_2K_Roughness.png-44af7c75f409b9910bcc9ed5c568d7d2.etc2.stex" ]
 
 [params]
 

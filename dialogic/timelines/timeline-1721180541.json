@@ -1,0 +1,76 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "What Do You Need Refreshing On?"
+		},
+		{
+			"choice": "Shooting",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://scenes/tutorials/Tut1.5.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Drop Kicking",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://scenes/tutorials/Tut1.7.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Wall Climbing",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://scenes/tutorials/Tut1.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Dashing",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://scenes/tutorials/Tut2.5.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Test Level",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://scenes/testlevels/testlevel.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1721180541.json",
+		"name": "tutorialsearch"
+	}
+}

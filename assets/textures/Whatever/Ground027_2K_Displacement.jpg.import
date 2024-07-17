@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Ground027_2K_Displacement.jpg-a06a1ee50068057c1e405e17e00ecd9e.s3tc.stex"
-path.etc2="res://.import/Ground027_2K_Displacement.jpg-a06a1ee50068057c1e405e17e00ecd9e.etc2.stex"
+path.s3tc="res://.import/Ground027_2K_Displacement.jpg-19d5546d9df3c9dfef59896a6f681489.s3tc.stex"
+path.etc2="res://.import/Ground027_2K_Displacement.jpg-19d5546d9df3c9dfef59896a6f681489.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Ground027_2K_Displacement.jpg"
-dest_files=[ "res://.import/Ground027_2K_Displacement.jpg-a06a1ee50068057c1e405e17e00ecd9e.s3tc.stex", "res://.import/Ground027_2K_Displacement.jpg-a06a1ee50068057c1e405e17e00ecd9e.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Ground027_2K_Displacement.jpg"
+dest_files=[ "res://.import/Ground027_2K_Displacement.jpg-19d5546d9df3c9dfef59896a6f681489.s3tc.stex", "res://.import/Ground027_2K_Displacement.jpg-19d5546d9df3c9dfef59896a6f681489.etc2.stex" ]
 
 [params]
 

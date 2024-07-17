@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Gravel020_2K_IdMask.png-307ebeb8da7d72ca6ee85dae3027e024.s3tc.stex"
-path.etc2="res://.import/Gravel020_2K_IdMask.png-307ebeb8da7d72ca6ee85dae3027e024.etc2.stex"
+path.s3tc="res://.import/Gravel020_2K_IdMask.png-467cae506ade443cce66a6aab6619427.s3tc.stex"
+path.etc2="res://.import/Gravel020_2K_IdMask.png-467cae506ade443cce66a6aab6619427.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Gravel020_2K_IdMask.png"
-dest_files=[ "res://.import/Gravel020_2K_IdMask.png-307ebeb8da7d72ca6ee85dae3027e024.s3tc.stex", "res://.import/Gravel020_2K_IdMask.png-307ebeb8da7d72ca6ee85dae3027e024.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Gravel020_2K_IdMask.png"
+dest_files=[ "res://.import/Gravel020_2K_IdMask.png-467cae506ade443cce66a6aab6619427.s3tc.stex", "res://.import/Gravel020_2K_IdMask.png-467cae506ade443cce66a6aab6619427.etc2.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Marble012_2K-PNG_Displacement.png-dd9f68cd31597b363f3f476f244d209e.s3tc.stex"
-path.etc2="res://.import/Marble012_2K-PNG_Displacement.png-dd9f68cd31597b363f3f476f244d209e.etc2.stex"
+path.s3tc="res://.import/Marble012_2K-PNG_Displacement.png-e4441c484570989d31e1961020687541.s3tc.stex"
+path.etc2="res://.import/Marble012_2K-PNG_Displacement.png-e4441c484570989d31e1961020687541.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Marble012_2K-PNG_Displacement.png"
-dest_files=[ "res://.import/Marble012_2K-PNG_Displacement.png-dd9f68cd31597b363f3f476f244d209e.s3tc.stex", "res://.import/Marble012_2K-PNG_Displacement.png-dd9f68cd31597b363f3f476f244d209e.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Marble012_2K-PNG_Displacement.png"
+dest_files=[ "res://.import/Marble012_2K-PNG_Displacement.png-e4441c484570989d31e1961020687541.s3tc.stex", "res://.import/Marble012_2K-PNG_Displacement.png-e4441c484570989d31e1961020687541.etc2.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Gravel020_2K_Displacement.png-da162ff9714b0a861897dc945055354f.s3tc.stex"
-path.etc2="res://.import/Gravel020_2K_Displacement.png-da162ff9714b0a861897dc945055354f.etc2.stex"
+path.s3tc="res://.import/Gravel020_2K_Displacement.png-f2091238602cdeabb30d0e5df00454ad.s3tc.stex"
+path.etc2="res://.import/Gravel020_2K_Displacement.png-f2091238602cdeabb30d0e5df00454ad.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Gravel020_2K_Displacement.png"
-dest_files=[ "res://.import/Gravel020_2K_Displacement.png-da162ff9714b0a861897dc945055354f.s3tc.stex", "res://.import/Gravel020_2K_Displacement.png-da162ff9714b0a861897dc945055354f.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Gravel020_2K_Displacement.png"
+dest_files=[ "res://.import/Gravel020_2K_Displacement.png-f2091238602cdeabb30d0e5df00454ad.s3tc.stex", "res://.import/Gravel020_2K_Displacement.png-f2091238602cdeabb30d0e5df00454ad.etc2.stex" ]
 
 [params]
 

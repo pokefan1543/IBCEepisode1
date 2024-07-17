@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-fb338328c26bfab917d2ebbac1de24cf.s3tc.stex"
-path.etc2="res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-fb338328c26bfab917d2ebbac1de24cf.etc2.stex"
+path.s3tc="res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-71c5b3be01a220291f4a5d1566fc53d3.s3tc.stex"
+path.etc2="res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-71c5b3be01a220291f4a5d1566fc53d3.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Rock/TexturesCom_Rock_Base7_2x2_512_roughness.png"
-dest_files=[ "res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-fb338328c26bfab917d2ebbac1de24cf.s3tc.stex", "res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-fb338328c26bfab917d2ebbac1de24cf.etc2.stex" ]
+source_file="res://assets/textures/Rock/TexturesCom_Rock_Base7_2x2_512_roughness.png"
+dest_files=[ "res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-71c5b3be01a220291f4a5d1566fc53d3.s3tc.stex", "res://.import/TexturesCom_Rock_Base7_2x2_512_roughness.png-71c5b3be01a220291f4a5d1566fc53d3.etc2.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Pipe002_2K_Roughness.png-24226618cce605a8b8a52f3bbca4be8f.s3tc.stex"
-path.etc2="res://.import/Pipe002_2K_Roughness.png-24226618cce605a8b8a52f3bbca4be8f.etc2.stex"
+path.s3tc="res://.import/Pipe002_2K_Roughness.png-d84a8dd2e1611cfb28865084851997af.s3tc.stex"
+path.etc2="res://.import/Pipe002_2K_Roughness.png-d84a8dd2e1611cfb28865084851997af.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/Pipe002_2K_Roughness.png"
-dest_files=[ "res://.import/Pipe002_2K_Roughness.png-24226618cce605a8b8a52f3bbca4be8f.s3tc.stex", "res://.import/Pipe002_2K_Roughness.png-24226618cce605a8b8a52f3bbca4be8f.etc2.stex" ]
+source_file="res://assets/textures/Whatever/Pipe002_2K_Roughness.png"
+dest_files=[ "res://.import/Pipe002_2K_Roughness.png-d84a8dd2e1611cfb28865084851997af.s3tc.stex", "res://.import/Pipe002_2K_Roughness.png-d84a8dd2e1611cfb28865084851997af.etc2.stex" ]
 
 [params]
 
