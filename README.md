@@ -61,7 +61,7 @@ Playable Character: Kleopatra Megalou (Κλεοπάτρα Μεγάλου) (on he
 
 Major Character: Tuomo Ahonen
 
-Secondary Characters: Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Joakim Engelhart Jr., Theseus “Perry” Petit, Patrick Petit, Idris bin Muhammad al-Bukhari, Klimentina Todorovski (Климентина Тодоровски)
+Secondary Characters: Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Joakim Engelhart Jr., Theseus “Perry” Petit, Patrick Petit,  Idris bin Muhammad al-Bukhari (إدريس بن محمد البخاري), Klimentina Todorovski (Климентина Тодоровски)
 
 Minibosses: Afrodisia “Maria” Megalou (Αφροδίσια «Μαρία» Μεγάλου), Esther Egts, Hippolyta 
 
@@ -81,13 +81,13 @@ Major Character: Maria Megalou (Μαρία Μεγάλου), Esther Egts, Tuomo A
 
 Number of major characters: 3
 
-Secondary Characters: Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Joakim Engelhart Jr., Theseus “Perry” Petit, Patrick Petit, Theofylaktos (Θεοφύλακτος), Gleb Volkonskiy (Глеб Волконский), Dámaris Kyriaki Acosta Trintezis, Klimentina Todorovski (Климентина Тодоровски)
+Secondary Characters:  Idris bin Muhammad al-Bukhari (إدريس بن محمد البخاري), Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Joakim Engelhart Jr., Theseus “Perry” Petit, Patrick Petit, Theofylaktos (Θεοφύλακτος), Gleb Volkonskiy (Глеб Волконский), Dámaris Kyriaki Acosta Trintezis, Klimentina Todorovski (Климентина Тодоровски)
 
 Minibosses: America McGee, Ajša Sadiković, Aali bin Jafar bin Ala ad-Din al-Tabari
 
 Main Boss: al-Uzza and al-Lat and Manat “The False Daughters of the Lord”
 
-Plot: Kleopatra and others crash land in the ruins of Sarajevo because a Islamic terrorist organization shot them down because their spaceship was a military one. They wander the wastelands of the Balkans to find Kleo’s missing children. Along the way, the crew have to defeat a giant isolated insane bounty hunter, a lofty leader of a Islamic and Islamist terrorist organization, and a powerful pagan priestess. 
+Plot: Kleopatra and others crash land in the ruins of Sarajevo because a Islamic terrorist organization shot them down because their spaceship was a military one. They wander the wastelands of the Balkans to find Kleo’s missing children. Along the way, the crew have to defeat a giant isolated insane bounty hunter, a powerful muslimah supersoldier, and a lofty leader of a Islamic and Islamist terrorist organization.
 
 Release Date Goal: Quarter 1-2 2027
 
@@ -97,7 +97,7 @@ Playable Character: Nehemiah A. Engelhart
 
 Major Characters: Josiah “Chrysostomus” Chacon, Hananiah Maksimović, Maria Megalou (Μαρία Μεγαλου), Hippolyta, Tuomo Ahonen 
 
-Secondary Characters: Chloe Chacon, Esther Egts, Jehudi Engelhart, Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Theofylaktos (Θεοφύλακτος), Dámaris Kyriaki Acosta Trintezis, Chrysanthe Demetriou, Mojsije Maksimović, Khawla bint Malik al-Asadi (خولة بنت مالك الأسدي), Athanasius Antibus, Klimentina Todorovski (Климентина Тодоровски)
+Secondary Characters:  Idris bin Muhammad al-Bukhari (إدريس بن محمد البخاري), Chloe Chacon, Esther Egts, Jehudi Engelhart, Idris bin Muhammad al-Bukhari Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Theofylaktos (Θεοφύλακτος), Dámaris Kyriaki Acosta Trintezis, Chrysanthe Demetriou, Mojsije Maksimović, Khawla bint Malik al-Asadi (خولة بنت مالك الأسدي), Athanasius Antibus, Klimentina Todorovski (Климентина Тодоровски)
 
 Minibosses: Persephone Demetriou and Aphrodite “The Whore Whose Sons Persecuted the Apostles”, Ares “The Embodiment of Brutal Armed Conflict”, Dionysus “The False Inebriation Deity of Erroneous Anastasis”, Andromeda “Medusa” and Caroline “Euryale” and Valentina “Stheno”, Kleopatra Megalou (Κλεοπάτρα Μεγάλου)
 
@@ -114,11 +114,7 @@ Playable Characters: Mojsije “Moses” Maksimović (He has special attacks tha
 
 Major Characters: Maria Engelhart (Μαρία Ενγκελχαρτ), Tuomo Ahonen, Josiah “Chrysostomus” Chacon, Nehemiah A. Engelhart, Kleopatra Engelhart (Κλεοπάτρα Ενγκελχαρτ), Ajša Sadiković
 
-Secondary Characters: Hippolyta Engelhart, Zaynab Engelhart, Theofylaktos Engelhart (Θεοφύλακτος Ενγκελχαρτ), Levi Egts, Khawla bint Malik al-Asadi (خولة بنت مالك الأسدي), Hananiah Maksimović, Esther Egts, Chloe Chacon, Theseus “Perry” Petit, Patrick Petit, Joakim Engelhart Jr., Augustina Engelhart, Priscilla Engelhart, Andromeda Engelhart, Caroline Engelhart, Valentina Engelhart, Abba Enoch Kingston, Joab Kingston, Absalom Kingston, Abner Kingston, Jehudi Engelhart, Ananías Tómasson, Perseas Pappas (Περσεας Παππάς), Joseph “Jojo” MacDuff, Joses Paternian De Santiago, Dámaris Kyriaki Engelhart, Athanasius Antibus, Zulaykha bint Asinat al-Gamil, Klimentina Todorovski (Климентина Тодоровски)
-
-Number of minor characters: 10
-
-Secondary character count: 29 
+Secondary Characters: Hippolyta Engelhart, Zaynab Engelhart, Theofylaktos Engelhart (Θεοφύλακτος Ενγκελχαρτ), Levi Egts, Khawla bint Malik al-Asadi (خولة بنت مالك الأسدي), Hananiah Maksimović, Esther Egts, Chloe Chacon, Theseus “Perry” Petit, Patrick Petit, Joakim Engelhart Jr., Augustina Engelhart, Priscilla Engelhart, Andromeda Engelhart, Caroline Engelhart, Valentina Engelhart, Abba Enoch Kingston, Joab Kingston, Absalom Kingston, Abner Kingston, Jehudi Engelhart, Ananías Tómasson, Perseas Pappas (Περσεας Παππάς), Joseph “Jojo” MacDuff, Joses Paternian De Santiago, Dámaris Kyriaki Engelhart, Athanasius Antibus, Zulaykha bint Asinat al-Gamil, Klimentina Todorovski (Климентина Тодоровски),  Idris bin Muhammad al-Bukhari (إدريس بن محمد البخاري)
 
 Minibosses: al-Uzza and al-Lat and Manat “The False Daughters of the Lord”, Min “The Hypersexual Manure Man”, Mysterious Armored Man (Optional Boss)
 
