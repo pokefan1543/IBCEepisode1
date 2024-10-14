@@ -1,9 +1,12 @@
 extends Control
+
 var play = false
+var save = SaveGame.new()
+
 func frameFreeze(timeScale, duration):
 	Engine.time_scale = timeScale
-	yield(get_tree().create_timer(duration * timeScale), "timeout")
 	Engine.time_scale = 1.0
+	
 func _ready():
 	$AnimationPlayer.play("Anim")
 	frameFreeze(1, 2.0)
@@ -18,6 +21,9 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$VideoPlayer.play()
 	$vidtim.start()
+	$LoadorSave.add_button("Load",false,"load")
+	$LoadorSave.add_button("Save",true,"save")
+	
 func _physics_process(delta):
 	$Container/Level.text = str(Globals.level)
 	$Container/ProgressBar.max_value = Globals.level * 500 + 500
@@ -158,3 +164,17 @@ func _on_objectivebutton_button_down():
 	get_parent().add_child(dialog)
 	dialog.connect("timeline_end",self,"end_dialog")
 	get_tree().paused = true
+
+
+
+func _on_saveload_pressed():
+	$LoadorSave.show()
+
+
+func _on_LoadorSave_custom_action(action):
+	if action == "save":
+		save.write_savegame()
+		$LoadorSave.hide()
+	if action == "load":
+		save.load_savegame()
+		$LoadorSave.hide()

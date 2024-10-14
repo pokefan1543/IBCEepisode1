@@ -1,6 +1,7 @@
 extends Control
 
 var play = false
+var save = SaveGame.new()
 
 func frameFreeze(timeScale, duration):
 	Engine.time_scale = timeScale
@@ -15,9 +16,17 @@ func _ready():
 	Globals.enemies = 0
 	Globals.defeats = 0
 	Globals.time = 0
+	if Globals.fullscreen == true:
+		OS.window_fullscreen = true
+		OS.window_borderless = true
+	else:
+		OS.window_fullscreen = false
+		OS.window_size = Vector2(640,480)
+		OS.window_borderless = false
 	$Button2.grab_focus()
 	Globals.tutorial = false
 	$Timer.start()
+	save.load_savesettings()
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 func _on_Button2_button_down():

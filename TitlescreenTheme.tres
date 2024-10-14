@@ -1,48 +1,103 @@
-[gd_resource type="Theme" load_steps=12 format=2]
+[gd_resource type="Theme" load_steps=21 format=2]
 
 [ext_resource path="res://CoolFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_Color.png" type="Texture" id=2]
-[ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_NormalGL.png" type="Texture" id=3]
-[ext_resource path="res://assets/textures/Whatever/Metal009_4K_NormalGL.jpg" type="Texture" id=7]
-[ext_resource path="res://assets/textures/Whatever/Metal009_4K_Color.jpg" type="Texture" id=9]
+[ext_resource path="res://assets/textures/Whatever/Electricty.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/Cross.png" type="Texture" id=3]
+[ext_resource path="res://CoolFont2.tres" type="DynamicFont" id=4]
+[ext_resource path="res://TitlescreenStyleBox.tres" type="StyleBox" id=5]
+[ext_resource path="res://assets/textures/Whatever/Gravel020_2K_Color.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/Whatever/Marble012_2K-PNG_Color.png" type="Texture" id=8]
 [ext_resource path="res://new_meshtexture.tres" type="Texture" id=10]
 [ext_resource path="res://new_meshtexture1.tres" type="Texture" id=11]
+[ext_resource path="res://assets/textures/Whatever/Gravel020_2K_NormalGL.png" type="Texture" id=12]
+[ext_resource path="res://assets/textures/Whatever/Marble012_2K-PNG_NormalGL.png" type="Texture" id=13]
+[ext_resource path="res://assets/textures/Whatever/Electricty2.png" type="Texture" id=14]
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+normal_map = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 2048, 2048 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 2 )
-normal_map = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 4096, 4096 )
+texture = ExtResource( 8 )
+normal_map = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 2048, 2048 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 modulate_color = Color( 0, 0.584314, 1, 1 )
 
 [sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 9 )
-normal_map = ExtResource( 7 )
-region_rect = Rect2( 0, 0, 4096, 4096 )
+texture = ExtResource( 8 )
+normal_map = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 2048, 2048 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color( 0.501961, 1, 0, 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 2 )
-normal_map = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 4096, 4096 )
+texture = ExtResource( 8 )
+normal_map = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 2048, 2048 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
 [sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 8 )
+normal_map = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 2048, 2048 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=7]
 texture = ExtResource( 2 )
-normal_map = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 4096, 4096 )
+region_rect = Rect2( 0, 0, 1269, 546 )
+modulate_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1269, 546 )
+modulate_color = Color( 1, 0.984314, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 1269, 546 )
 
 [resource]
-Button/fonts/font = ExtResource( 1 )
-Button/styles/disabled = null
+Button/colors/font_color = Color( 0.117647, 0.376471, 0, 1 )
+Button/colors/font_color_disabled = Color( 0.380392, 0, 0.603922, 0.2 )
+Button/colors/font_color_focus = Color( 0.870588, 0.729412, 0, 1 )
+Button/colors/font_color_hover = Color( 0.0352941, 0.27451, 0.466667, 1 )
+Button/colors/font_color_hover_pressed = Color( 0.321569, 0, 0.780392, 1 )
+Button/colors/font_color_pressed = Color( 0.627451, 0, 0, 1 )
+Button/fonts/font = ExtResource( 4 )
+Button/styles/disabled = SubResource( 5 )
 Button/styles/focus = SubResource( 1 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 4 )
-CheckBox/fonts/font = ExtResource( 1 )
+CheckBox/fonts/font = ExtResource( 4 )
 CheckButton/fonts/font = ExtResource( 1 )
 CheckButton/icons/off = ExtResource( 11 )
 CheckButton/icons/on = ExtResource( 10 )
 CheckButton/icons/on_disabled = null
+HSlider/icons/grabber = ExtResource( 3 )
+HSlider/icons/grabber_disabled = ExtResource( 3 )
+HSlider/icons/grabber_highlight = ExtResource( 3 )
+HSlider/styles/grabber_area = SubResource( 7 )
+HSlider/styles/grabber_area_highlight = SubResource( 8 )
+HSlider/styles/slider = SubResource( 6 )
 Label/fonts/font = ExtResource( 1 )
+PopupDialog/styles/panel = ExtResource( 5 )
 ProgressBar/colors/font_color = Color( 0.94, 0.94, 0.94, 1 )
 ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 ProgressBar/fonts/font = ExtResource( 1 )
 RichTextLabel/fonts/normal_font = ExtResource( 1 )
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 18
+WindowDialog/constants/close_v_ofs = 18
+WindowDialog/constants/scaleborder_size = 8
+WindowDialog/constants/title_height = 20
+WindowDialog/fonts/title_font = ExtResource( 1 )
+WindowDialog/styles/panel = ExtResource( 5 )

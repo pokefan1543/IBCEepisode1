@@ -7,12 +7,16 @@ const ACCEL_AIR = 25
 signal grounded
 export (PackedScene) var trail = null
 onready var accel = ACCEL_DEFAULT
+var Gunfire = false
 var shooting = false
 var gravity = 15
-var dashnum = 0
+var dashnum = false
+var dashpress = false
+var dashingtime = true
 var diving = false
 var ground = true
 var death = false
+var is_on_map = true 
 var health = Globals.maxHealth
 var M9_fire = true
 var counter = 3
@@ -20,7 +24,7 @@ var shotgundamage = 10
 var spread = 5
 var shotgun_fire = true
 var stormfire = true
-var jump = 12
+var jump = 16
 var dashcooldown = 0
 var damage = 25
 var jumping = false
@@ -30,6 +34,7 @@ var dashing = false
 var mouse_sense = Globals.mouse_sense
 var snap
 var soundnum = 0
+var jumpnum = 0
 var upgradeShotNum = 0
 var direction = Vector3()
 var velocity = Vector3()
@@ -91,7 +96,6 @@ func fire_shotgun():
 							r.cast_to.y = rand_range(spread, -spread)
 							if r.is_colliding():
 								if r.get_collider().is_in_group("enemy"):
-									health += 0.2
 									r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 									if r.get_collider().is_in_group("Chaospawn"):
 										Chaospawnhurt.play(0.001)
@@ -121,7 +125,6 @@ func fire_shotgun():
 								r.cast_to.y = rand_range(spread, -spread)
 								if r.is_colliding():
 									if r.get_collider().is_in_group("enemy"):
-										health += 0.2
 										r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 									if r.get_collider().is_in_group("Chaospawn"):
 										Chaospawnhurt.play(0.001)
@@ -145,7 +148,6 @@ func fire_shotgun():
 									r.cast_to.y = rand_range(spread, -spread)
 									if r.is_colliding():
 										if r.get_collider().is_in_group("enemy"):
-											health += 0.2
 											r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 										if r.get_collider().is_in_group("Chaospawn"):
 											Chaospawnhurt.play(0.001)
@@ -169,7 +171,6 @@ func fire_shotgun():
 									r.cast_to.y = rand_range(spread, -spread)
 									if r.is_colliding():
 										if r.get_collider().is_in_group("enemy"):
-											health += 0.2
 											r.get_collider().enemyhealth -= shotgundamage * Globals.damageMult
 										if r.get_collider().is_in_group("Chaospawn"):
 											Chaospawnhurt.play(0.001)
@@ -211,7 +212,7 @@ func fire_shotgun():
 					raildamage += 25
 					anim_player.play("charge")
 					if raildamage == 1000:
-						raildamage == 100
+						raildamage = 100
 				if Input.is_action_just_released("fire"):
 					Globals.boltammo -= 1
 					anim_player.stop()
@@ -222,7 +223,6 @@ func fire_shotgun():
 						#maybe use $Head/Camera/hand/railgun/RayCast instead
 						var target = $Head/Camera/hand/railgun/laser/RayCast.get_collider()
 						if target.is_in_group("enemy"):
-							health += 0.2
 							target.enemyhealth -= 500 * Globals.damageMult
 						if target.is_in_group("Chaospawn"):
 							Chaospawnhurt.play(0.001)
@@ -294,17 +294,34 @@ func fire():
 				pulsesound.play(0.001)
 				anim_player.play("M9Fire")
 				M9_fire = false
+	if Input.is_action_pressed("fire") and Gunfire == false and Globals.armupgrade == true and Globals.upgrade == false:
+		if current_weapon == 1 and Globals.bullets != 0:
+			shooting = true
+			Globals.bullets -= 1
+			if raycast.is_colliding():
+				var target = raycast.get_collider()
+				if target.is_in_group("enemy"):
+					target.enemyhealth -= 5 * Globals.damageMult
+				if target.is_in_group("Chaospawn"):
+					Chaospawnhurt.play(0.001)
+				if target.is_in_group("fiend"):
+					$fiendhurt.play()
+			$muzzletimer.start(0.1)
+			$Head/Camera/hand/Buster/Guntimer.start()
+			$Head/Camera/hand/Buster/muzzleflash.show()
+			$firesound.play(0.001)
+			anim_player.play("XBusterFire")
+			Gunfire = true
 	if Input.is_action_pressed("fire") and Globals.upgrade == true:
 		if current_weapon == 1:
 			shooting = true
 			Globals.upgradeShotNum += 1
-			$Healthbar2/s/Console.add_text(" " + str(Globals.upgradeShotNum))
-			if Globals.upgradeShotNum > 2500:
+			$Healthbar2/s/Console.add_text(" Powerup Ammo Left: " + str(2000 - Globals.upgradeShotNum))
+			if Globals.upgradeShotNum > 2000:
 				Globals.upgrade = false
 			if raycast.is_colliding():
 				var target = raycast.get_collider()
 				if target.is_in_group("enemy"):
-					health += 0.2
 					target.enemyhealth -= 5 * Globals.damageMult
 				if target.is_in_group("Chaospawn"):
 					Chaospawnhurt.play(0.001)
@@ -314,7 +331,7 @@ func fire():
 			$Head/Camera/hand/Buster/muzzleflash.show()
 			$firesound.play(0.001)
 			anim_player.play("XBusterFire")
-	if Input.is_action_just_pressed("fire") and Globals.upgrade == false:
+	if Input.is_action_just_pressed("fire") and Globals.upgrade == false and Globals.armupgrade == false:
 		if Globals.bullets != 0:
 			if current_weapon == 1:
 				shooting = true
@@ -322,7 +339,6 @@ func fire():
 				if raycast.is_colliding():
 					var target = raycast.get_collider()
 					if target.is_in_group("enemy"):
-						health += 0.2
 						target.enemyhealth -= damage * Globals.damageMult
 					if target.is_in_group("Chaospawn"):
 						Chaospawnhurt.play(0.001)
@@ -348,36 +364,39 @@ func _ready():
 	#hides the cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)		
 func dash(delta):
+	if is_on_floor() == true and not Input.is_action_pressed("dash"):
+		dashing = false
+		dashnum = false
+		dashpress = false
+		$dashTimer.stop()
+	if Input.is_action_pressed("dash"):
+		if dashpress == false and dashingtime == true:
+			dashing = true
+		if Input.is_action_just_pressed("jump") and is_on_floor() == true:
+			dashing = true
+			dashingtime = true 
+			$dashTimer.start()
 	if Input.is_action_just_pressed("dash"):
 		dashing = true
-		dashnum = 0 
-		while dashnum != 150 and speed != 100 and in_air == false and not is_on_wall():
-			speed += 0.008
-			dashing = true
-			in_air = false
-			dashnum += 1
-			_Camera.fov = lerp(_Camera.fov, fview["DASH"], ADS_LERP * delta)
-			$dash.play()
+		dashingtime = true
+		dashpress = true
+		$dashTimer.start()
+	if is_on_floor() == true and dashing == true:
+		speed = 50
+		move_and_slide_with_snap(movement, snap, Vector3.UP)
+	if dashingtime == false and is_on_floor():
+		dashing = false
+	if is_on_floor() == true:
+		emit_signal("grounded")
+	if dashing == true or dashnum == true:
+		if not is_on_wall() and not is_on_floor():
+			speed = 50
 			move_and_slide_with_snap(movement, snap, Vector3.UP)
-		if dashnum == 250:
-			_Camera.fov = lerp(_Camera.fov, fview["Default"], ADS_LERP * delta)
-		if is_on_floor():
-			in_air = false
-			emit_signal("grounded")
-			if Input.is_action_just_pressed("jump"):
-					speed = 100
-					in_air = true
-					move_and_slide_with_snap(movement, snap, Vector3.UP)
-		if not is_on_floor():
-			if not is_on_wall():
-				speed = 100
-				move_and_slide_with_snap(movement, snap, Vector3.UP)
-		if in_air == false and dashnum == 250:
-			dashnum = 0
-			speed = 20
-			in_air = false
-			dashing = false
-			
+		#elif is_on_floor() == true and dashing == false and dashnum == true:
+			#speed -= 20
+			#if speed == 20:
+				#dashnum = false
+				#dashpress = false
 func _input(event):
 	#get mouse input for camera rotation
 	if event is InputEventMouseMotion:
@@ -448,28 +467,30 @@ func _physics_process(delta):
 		if Globals.upgrade != true:
 			$Healthbar2/s/Ammocounter/Ammonum.text = str(Globals.currammo)
 		else:
-			$Healthbar2/s/Ammocounter/Ammonum.text = "∞"
+			$Healthbar2/s/Ammocounter/Ammonum.text = str(Globals.currammo)
 		#movement below
 		direction = Vector3.ZERO
 		var h_rot = global_transform.basis.get_euler().y
 		var f_input = Input.get_action_strength("move_backward") - Input.get_action_strength("move_forward")
 		var h_input = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+		var mf = Input.is_action_pressed("move_forward")  
+		var mb = Input.is_action_pressed("move_backward")
 		direction = Vector3(h_input, 0, f_input).rotated(Vector3.UP, h_rot).normalized()
 		if Input.is_action_just_pressed("fire2"):
 			anim_player.play("RESET")
-		if h_input and dashing != true:
+		if (mf or mb) and dashing == false:
 			if not speed == 30 * Globals.speedMult and speed < 30 * Globals.speedMult:
 				speed += 10
 			#if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
 				#anim_player.queue("Weaponsway")
-		elif h_input and f_input and dashing != true:
+		elif h_input and (mf or mb) and dashing == false:
 			if not speed == 30 * Globals.speedMult and speed < 30 * Globals.speedMult:
 				speed += 10
 			#if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
-		elif f_input and not h_input and dashing != true:
+		elif (mf or mb) and not h_input and dashing == false:
 			speed = 20
 			#if not Input.is_action_pressed("fire") and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
-		elif dashing != true:
+		elif dashing == false:
 			speed = 20
 			#if not Input.is_action_pressed("fire") and shooting == false and not Input.is_action_just_released("fire") and not Input.is_action_just_pressed("fire") and not Input.is_action_pressed("fire2") and not Input.is_action_just_released("fire2") and not Input.is_action_just_pressed("fire2"):
 		#jumping and gravity
@@ -488,7 +509,6 @@ func _physics_process(delta):
 		if is_on_floor():
 			snap = -get_floor_normal()
 			accel = ACCEL_DEFAULT
-			dashing = false
 			jumping = false
 			gravity_vec = Vector3.ZERO
 		elif is_on_wall():
@@ -501,13 +521,26 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			snap = Vector3.ZERO
 			jumping = true
-			if not speed == 60 * Globals.speedMult and not speed > 60 * Globals.speedMult and dashing != true:
+			if not speed == 60 * Globals.speedMult and not speed > 60 * Globals.speedMult and dashing == false:
 				speed += 10
 				jumping = true
 			gravity_vec = Vector3.UP * jump
+		if Input.is_action_just_pressed("jump") and Globals.legupgrade == true and jumpnum != 1:
+			snap = Vector3.ZERO
+			jumpnum += 1
+			jumping = true
+			if not speed == 60 * Globals.speedMult and not speed > 60 * Globals.speedMult and dashing == false:
+				speed += 10
+				jumping = true
+			gravity_vec = Vector3.UP * jump
+		if is_on_floor() and jumpnum != 0:
+			jumpnum = 0
+		if is_on_wall() and jumpnum != 0:
+			jumpnum = 0
 		if Input.is_action_just_pressed("jump") and is_on_wall():
-			gravity_vec = Vector3.UP * jump * 2
+			gravity_vec = Vector3.UP * jump * 1.5
 			speed == speed*-1
+			jumpnum = 0
 			$AudioStreamPlayer3.play()
 			jumping = true
 		if is_on_floor() and ground == true:
@@ -515,7 +548,7 @@ func _physics_process(delta):
 			ground = false
 			diving = false
 			gravity = 15
-		if not is_on_floor() and Input.is_action_just_pressed("dive"):
+		if not is_on_floor() == true and Input.is_action_just_pressed("dive"):
 			diving = true
 			gravity_vec = Vector3.DOWN * jump * 50
 			speed == speed*-100000
@@ -547,11 +580,133 @@ func _on_Deathscreen_reset():
 
 func _on_FPS_death():
 	speed = 0
+		
+func _on_stormtimer_timeout():
+	stormfire = true
 
-func _on_Area_body_entered(body):
+func _on_text_timer_timeout():
+	$Healthbar2/s/Console.clear()
+
+func _on_shotgun_timer_timeout():
+	shotgun_fire = true
+
+func _on_m9_timer_timeout():
+	M9_fire = true
+
+
+func _on_Level1_area_entered(area):
+	get_tree().change_scene("res://scenes/real_levels/E1M1.tscn")
+	$Healthbar2/s/Console.add_text(" Entered Level E1M1 ")
+
+
+
+func _on_EndofLevel_area_entered(area):
+	if Globals.level2unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M1 ")
+
+
+func _on_Level2_area_entered(area):
+	if Globals.level2unlocked == true:
+		get_tree().change_scene("res://scenes/real_levels/E1M2.tscn")
+		$Healthbar2/s/Console.add_text(" Entered Level E1M2 ")
+	else:
+		$Healthbar2/s/Console.add_text(" Sorry, you can't enter E1M2 yet ")
+
+func _on_end_area_entered(area):
+	if Globals.level3unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M2 ")
+
+
+func _on_lava_body_entered(body):
+	health = 0
+
+
+
+
+func _on_endit_body_entered(body):
+	if Globals.level4unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M3 ")
+
+
+func _on_level4quit_body_entered(body):
+	if Globals.level5unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M5 ")
+		
+func _on_Area_area_entered(area):
+	get_tree().change_scene("res://scenes/tutorials/tut1.tscn")
+
+
+func _on_death_area_entered(area):
+	health = 0
+
+
+func _on_railtimer_timeout():
+	railgunfire = true
+
+
+
+func _on_level5exitarea_area_entered(area):
+	if Globals.level6unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M5 ")
+	
+
+
+func _on_bossend_body_entered(body):
+	if Globals.level7unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M6 ")
+
+
+func _on_Ikenga_freeze():
+	freeze = !freeze
+
+
+func _on_kickDamageArea_body_entered(body):
+	if diving == true:
+		if body.is_in_group("enemy"):
+			body.enemyhealth -= damage * 2 * Globals.damageMult
+			if body.is_in_group("Chaospawn"):
+				Chaospawnhurt.play(0.001)
+			if body.is_in_group("fiend"):
+				$fiendhurt.play()
+			if body.is_in_group("dummy"):
+				body.kicked = true
+
+
+func _on_exitarea3_body_entered(body):
+	if Globals.level8unlocked == true:
+		get_tree().change_scene("res://scenes/Score_Screen.tscn")
+		$Healthbar2/s/Console.add_text(" Completed Level E1M8 ")
+
+
+
+
+func _on_burst_timer_timeout():
+	shotgun_fire = true
+
+
+func _on_manihate_area_entered(area):
+	get_tree().change_scene("res://scenes/tutorials/tut2.5.tscn")
+
+
+
+
+func _on_Guntimer_timeout():
+	Gunfire = false
+
+
+func _on_dashTimer_timeout():
+	dashingtime = false
+
+
+func _on_touch_body_entered(body):
 	Globals.itemCount += 1
 	if body.is_in_group("Tut"):
-		print("Tut is detected")
 		body.start_dialog()
 	if body.is_in_group("Non"):
 		body.start_dialog()
@@ -615,10 +770,17 @@ func _on_Area_body_entered(body):
 		$Healthbar2/s/Console.add_text(" Abtained 25 .50 American Eagle rounds ")
 		$clip.play()
 	if body.is_in_group("medbox"):
-		if health != Globals.maxHealth:
+		if health != Globals.maxHealth and health < Globals.maxHealth:
 			health += 25
 			text_timer.start()
 			$Healthbar2/s/Console.add_text(" Abtained 25 health ")
+			body.queue_free()
+			$healthup.play()
+	if body.is_in_group("medboxsmall"):
+		if health != Globals.maxHealth:
+			health += 2
+			text_timer.start()
+			$Healthbar2/s/Console.add_text(" Abtained 2 health ")
 			body.queue_free()
 			$healthup.play()
 	if body.is_in_group("level2key"):
@@ -674,121 +836,22 @@ func _on_Area_body_entered(body):
 		Globals.upgrade = true
 		text_timer.start()
 		health = Globals.maxHealth
-		$Healthbar2/s/Console.add_text(" Got the Axel-Buster Upgrade! ")
+		$Healthbar2/s/Console.add_text(" Got a Magnus-Buster Powerup! ")
 		$AudioStreamPlayer.play()
 		body.queue_free()
-func _on_stormtimer_timeout():
-	stormfire = true
-
-func _on_text_timer_timeout():
-	$Healthbar2/s/Console.clear()
-	print("cleared text")
-
-func _on_shotgun_timer_timeout():
-	shotgun_fire = true
-
-func _on_m9_timer_timeout():
-	M9_fire = true
-
-
-func _on_Level1_area_entered(area):
-	print("entered E1M1")
-	get_tree().change_scene("res://scenes/real_levels/E1M1.tscn")
-	$Healthbar2/s/Console.add_text(" Entered Level E1M1 ")
-
-
-
-func _on_EndofLevel_area_entered(area):
-	if Globals.level2unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M1 ")
-
-
-func _on_Level2_area_entered(area):
-	if Globals.level2unlocked == true:
-		print("entered E1M2")
-		get_tree().change_scene("res://scenes/real_levels/E1M2.tscn")
-		$Healthbar2/s/Console.add_text(" Entered Level E1M2 ")
-	else:
-		$Healthbar2/s/Console.add_text(" Sorry, you can't enter E1M2 yet ")
-
-func _on_end_area_entered(area):
-	if Globals.level3unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M2 ")
-
-
-func _on_lava_body_entered(body):
-	health = 0
-
-
-
-
-func _on_endit_body_entered(body):
-	if Globals.level4unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M3 ")
-
-
-func _on_level4quit_body_entered(body):
-	if Globals.level5unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M5 ")
-		
-func _on_Area_area_entered(area):
-	get_tree().change_scene("res://scenes/tutorials/tut1.tscn")
-
-
-func _on_death_area_entered(area):
-	health = 0
-
-
-func _on_railtimer_timeout():
-	railgunfire = true
-
-
-
-func _on_level5exitarea_area_entered(area):
-	if Globals.level6unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M5 ")
-	
-
-
-func _on_bossend_body_entered(body):
-	if Globals.level7unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M6 ")
-
-
-func _on_Ikenga_freeze():
-	freeze = !freeze
-
-
-func _on_kickDamageArea_body_entered(body):
-	if diving == true:
-		if body.is_in_group("enemy"):
-			print("Divekiced enemy")
-			body.enemyhealth -= damage * 2 * Globals.damageMult
-			if body.is_in_group("Chaospawn"):
-				Chaospawnhurt.play(0.001)
-			if body.is_in_group("fiend"):
-				$fiendhurt.play()
-			if body.is_in_group("dummy"):
-				body.kicked = true
-
-
-func _on_exitarea3_body_entered(body):
-	if Globals.level8unlocked == true:
-		get_tree().change_scene("res://scenes/Score_Screen.tscn")
-		$Healthbar2/s/Console.add_text(" Completed Level E1M8 ")
-
-
-
-
-func _on_burst_timer_timeout():
-	shotgun_fire = true
-
-
-func _on_manihate_area_entered(area):
-	get_tree().change_scene("res://scenes/tutorials/tut2.5.tscn")
+	if body.is_in_group("armupgrade"):
+		Globals.armupgrade = true
+		Globals.upgrade = true
+		text_timer.start()
+		health = Globals.maxHealth
+		$Healthbar2/s/Console.add_text(" Got the Magnus-Buster Upgrade! You can now shoot full auto all the time!")
+		$AudioStreamPlayer.play()
+		body.queue_free()
+	if body.is_in_group("legupgrade"):
+		Globals.legupgrade = true
+		text_timer.start()
+		health = Globals.maxHealth
+		$Healthbar2/s/Console.add_text(" Got the Feet Upgrade! You can jump twice now!")
+		$AudioStreamPlayer.play()
+		body.queue_free()
+		body.queue_free()

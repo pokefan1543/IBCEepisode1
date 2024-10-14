@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duel-1x.png-644c1d149b0bcecf9718108d5e73fef6.stex"
+path="res://.import/Cross2.png-1aa8e80291e00308575242a43a676e54.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/real_levels/duel-1x.png"
-dest_files=[ "res://.import/duel-1x.png-644c1d149b0bcecf9718108d5e73fef6.stex" ]
+source_file="res://assets/textures/Cross2.png"
+dest_files=[ "res://.import/Cross2.png-1aa8e80291e00308575242a43a676e54.stex" ]
 
 [params]
 

@@ -74,29 +74,11 @@ func _on_Timer2_timeout():
 	set_collision_mask_bit(1, false)
 	set_collision_mask_bit(1, false)
 	set_collision_mask_bit(3, false)
-	self.translation.x = 10000
 	remove_from_group("enemy")
 	$CollisionShape.hide()
+	$Timer.start()
 
 func _on_deathTimer_timeout():
-	var g = gore.instance()
-	var b = bullets.instance()
-	var g1 = gore.instance()
-	var g2 = gore.instance()
-	var g3 = gore.instance()
-	var g4 = gore.instance()
-	var g5 = gore.instance()
-	var g6 = gore.instance()
-	self.add_child(g)
-	b.set_as_toplevel(true)
-	self.add_child(b)
-	b.set_as_toplevel(true)
-	self.add_child(g1)
-	self.add_child(g2)
-	self.add_child(g3)
-	self.add_child(g4)
-	self.add_child(g5)
-	self.add_child(g6)
 	dead = true
 	$Timer2.start()
 	remove_from_group("enemy")
@@ -104,4 +86,4 @@ func _on_deathTimer_timeout():
 	$deathTimer.stop()
 
 func _on_Timer_timeout():
-	shoot = false
+	queue_free()

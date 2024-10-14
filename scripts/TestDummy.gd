@@ -9,6 +9,7 @@ var damage = 5
 var snap
 onready var gore = preload("res://scenes/Guts.tscn")
 onready var bullets = preload("res://scenes/bullets.tscn")
+onready var health = preload("res://scenes/medicboxsmall.tscn")
 onready var nav = get_parent()
 const ACCEL_DEFAULT = 7
 var movement = Vector3()
@@ -51,6 +52,7 @@ var up_vector3 = Vector3(0, 1, 0)
 var shootime = 0
 
 func _physics_process(delta):
+	remove_from_group("map")
 	if enemy_following == true and shoot != true and death != true:
 		$walk.show()
 		$shoot.hide()
@@ -94,7 +96,6 @@ func _on_sightrange_body_entered(body):
 				shoottimer.stop()
 
 func _on_Shoottimer_timeout():
-	print("enemy has shot")
 	shoot = true
 	$shoot/RootNode/AnimationPlayer.play("mixamo.com")
 	$walk.hide()
@@ -106,8 +107,8 @@ func _on_Shoottimer_timeout():
 			if target.health != 0 or target.health == -1:
 				target.health -= damage
 				playerhurtsound.play(0.0001)
-				print("player has ", target.health, " health left")
-				print("enemy hit player")
+				#print("player has ", target.health, " health left")
+				#print("enemy hit player")
 			if target.health == -1:
 					state = IDLE
 					shoottimer.stop()
@@ -116,7 +117,7 @@ func _on_Shoottimer_timeout():
 					Shootsound.stop()
 					timer.start()
 					$ALERTSOUND.stop()
-					print("I need to stop")	
+					#print("I need to stop")	
 		if target.health != 0 and target.health != -1:
 			Shootsound.play()
 	else:
@@ -137,6 +138,7 @@ func _on_Timer2_timeout():
 func _on_deathTimer_timeout():
 	var g = gore.instance()
 	var b = bullets.instance()
+	var h = health.instance()
 	var g1 = gore.instance()
 	var g2 = gore.instance()
 	var g3 = gore.instance()
@@ -145,8 +147,11 @@ func _on_deathTimer_timeout():
 	var g6 = gore.instance()
 	self.add_child(g)
 	b.set_as_toplevel(true)
+	h.set_as_toplevel(true)
 	self.add_child(b)
 	b.set_as_toplevel(true)
+	self.add_child(h)
+	h.set_as_toplevel(true)
 	self.add_child(g1)
 	self.add_child(g2)
 	self.add_child(g3)
@@ -175,6 +180,5 @@ func _ready():
 
 func _on_Timer3_timeout():
 	Globals.defeats += 1
-	print("Globals.defeats for testdummy:")
-	print(Globals.defeats)
+	#print(Globals.defeats)
 	queue_free()

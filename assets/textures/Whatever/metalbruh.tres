@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_Roughness.png" type="Texture" id=3]
 [ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_Displacement.png" type="Texture" id=4]
 [ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_AmbientOcclusion.png" type="Texture" id=5]
-[ext_resource path="res://assets/textures/metal/DiamondPlate008C_4K_Color.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/Whatever/Metal009_4K_RedColor.jpg" type="Texture" id=6]
 
 [resource]
 albedo_texture = ExtResource( 6 )

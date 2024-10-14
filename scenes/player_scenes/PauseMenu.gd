@@ -37,9 +37,12 @@ func _on_Button2_button_down():
 
 
 func _on_quit_button_down():
-	$Options.hide()
-	$quit.hide()
+	#$Options.hide()
+	#$quit.hide()
+	$Options/ConfirmationDialog.show()
+	$Options.quit = true 
 
 func _on_Button3_button_down():
 	$Options.show()
+	$Options.quit = false
 	$quit.show()

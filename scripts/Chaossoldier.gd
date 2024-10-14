@@ -76,7 +76,6 @@ func _process(_delta):
 
 func _on_Shoottimer_timeout():
 	if shoot2 == true:
-		print("enemy has shot")
 		shoot = true
 		$muzzleflash.show()
 		if raycast.is_colliding():
@@ -97,8 +96,6 @@ func _on_Timer_timeout():
 func _on_Timer2_timeout():
 	$Chaossolideranimated.show()
 	Globals.defeats += 1
-	print("Globals.defeats for chaossoldier:")
-	print(Globals.defeats)
 	$muzzleflash.show()
 	queue_free()
 

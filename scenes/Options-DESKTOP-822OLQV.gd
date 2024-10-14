@@ -3,21 +3,16 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var save = SaveGame.new()
+
 var balls = false
-var quit = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$ConfirmationDialog.add_button("Don't Save",true,"nosave")
 	$VBoxContainer/Vsync.grab_focus()
-	$VBoxContainer/Fullscreen.pressed = Globals.fullscreen
 	$VBoxContainer2/Master.value = AudioServer.get_bus_volume_db(0)
 	$VBoxContainer2/Soundfx.value = AudioServer.get_bus_volume_db(1)
 	$VBoxContainer2/Music.value = AudioServer.get_bus_volume_db(2)
 	Globals.inverted = $VBoxContainer/Invert.pressed
-	Globals.masterS = AudioServer.get_bus_volume_db(0)
-	Globals.soundFX = AudioServer.get_bus_volume_db(1)
-	Globals.music = AudioServer.get_bus_volume_db(2)
+	Globals.fullscreen = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -59,7 +54,9 @@ func _on_Soundfx_value_changed(value):
 
 
 func _on_Button4_pressed():
-	$ConfirmationDialog.show()
+	print("ACESSED TITLE SCREEN")
+	$AudioStreamPlayer.stop()
+	get_tree().change_scene("res://scenes/TitleScreen.tscn")
 
 
 func _on_Button_pressed():
@@ -89,28 +86,12 @@ func _on_Boomer_toggled(button_pressed):
 		Globals.boomer = false
 
 
+func _on_Button_button_down():
+	get_tree().change_scene("res://scenes/Gallery.tscn")
+
 
 func _on_sense_value_changed(value):
 	Globals.mouse_sense = value
 
 func _on_Invert_toggled(button_pressed):
 	Globals.inverted = button_pressed
-
-
-func _on_ConfirmationDialog_confirmed():
-	if quit == false:
-		save.write_savesettings()
-		$AudioStreamPlayer.stop()
-		get_tree().change_scene("res://scenes/TitleScreen.tscn")
-	if quit == true:
-		save.write_savesettings()
-		self.hide()
-
-
-func _on_ConfirmationDialog_custom_action(action):
-	if action == "nosave":
-		if quit == false:
-			$AudioStreamPlayer.stop()
-			get_tree().change_scene("res://scenes/TitleScreen.tscn")
-		if quit == true:
-			self.hide()

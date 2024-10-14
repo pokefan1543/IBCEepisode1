@@ -10,7 +10,6 @@ var enemies = 0
 #weapon variables
 var shotgun = false
 var railgun = false
-var Pulse = false
 var stormcloudshotgun = false
 
 #ammo variables
@@ -27,33 +26,6 @@ var inverted = false
 var vsync = true
 var fullscreen = true
 var boomer = true
-var masterS = -7
-var soundFX = 0.067261
-var music = 0
-
-#Keybinding variables
-var keyBind = 0
-var f1 = InputEventAction.new()
-var f2 = f1.set_action("fd")
-var f_key = f2
-var b1 = InputEventAction.new()
-var b2 = b1.set_action("bd")
-var b_key = b2
-var l1 = InputEventAction.new()
-var l2 = l1.set_action("ld")
-var l_key = l2
-var r1 = InputEventAction.new()
-var r2 = r1.set_action("rd") 
-var r_key = null
-var dive1 = InputEventAction.new()
-var dive2 = dive1.set_action("dived")
-var dive_key = null
-var dash1 = InputEventAction.new()
-var dash2 = dash1.set_action("dashd")
-var dash_key = null
-var j1 = InputEventAction.new()
-var j2 = j1.set_action("jd")
-var j_key = null
 
 #armor upgrade variables
 var legupgrade = false
@@ -85,6 +57,7 @@ var level8unlocked = false
 var tutorial = false
 var enterLevel = ""
 var current_scene = null
+var Pulse = false
 
 func _ready():
 	var root = get_tree().root

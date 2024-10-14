@@ -85,7 +85,6 @@ func set_texture_wads(new_texture_wads: Array) -> void:
 func _ready() -> void:
 	if not DEBUG:
 		return
-
 	if not Engine.is_editor_hint():
 		if verify_parameters():
 			build_map()
