@@ -10,6 +10,8 @@ var quit = false
 func _ready():
 	$ConfirmationDialog.add_button("Don't Save",true,"nosave")
 	$VBoxContainer/Vsync.grab_focus()
+	$VBoxContainer/Vsync.pressed = OS.vsync_enabled
+	Globals.vsync = OS.vsync_enabled
 	$VBoxContainer/Fullscreen.pressed = Globals.fullscreen
 	$VBoxContainer2/Master.value = AudioServer.get_bus_volume_db(0)
 	$VBoxContainer2/Soundfx.value = AudioServer.get_bus_volume_db(1)
@@ -37,10 +39,7 @@ func _on_Fullscreen_toggled(button_pressed):
 
 func _on_Vsync_toggled(button_pressed):
 	Globals.vsync = button_pressed
-	if Globals.vsync == true:
-		OS.vsync_enabled = true
-	else:
-		OS.vsync_enabled = false
+	OS.vsync_enabled = button_pressed
 
 
 func _on_Master_value_changed(value):
@@ -76,10 +75,6 @@ func _physics_process(delta):
 		$VBoxContainer/Fullscreen.pressed = false
 	else:
 		$VBoxContainer/Fullscreen.pressed = true
-	if Globals.vsync == false:
-		$VBoxContainer/Vsync.pressed = false
-	if Globals.vsync == true:
-		$VBoxContainer/Vsync.pressed = true
 	$sense2.text = str(Globals.mouse_sense)
 	
 func _on_Boomer_toggled(button_pressed):
