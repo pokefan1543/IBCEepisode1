@@ -14,6 +14,7 @@ In 2074 AD, despite the warnings of many previous prophets, nobody prevented a m
 ## Game Designer Collaboration Tutorial
 ### Preparation Videos
 For new game developers who have just joined this project, please watch this video about git: https://youtu.be/hwP7WQkmECE 
+
 Also for new game developers who have just joined this project, please watch this other video about git: https://youtu.be/mJ-qvsxPHpY (You don't have to watch the whole thing, but watch the parts that talk about thinks not talked about in the first video)
 
 ### Also, for new game developers who have just joined this project, here is a tutorial on how to get started with working on the game
