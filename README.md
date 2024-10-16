@@ -79,8 +79,6 @@ Playable Character: Kleopatra Megalou (Κλεοπάτρα Μεγάλου) (On he
 
 Major Character: Maria Megalou (Μαρία Μεγάλου), Esther Egts, Tuomo Ahonen
 
-Number of major characters: 3
-
 Secondary Characters:  Idris bin Muhammad al-Bukhari (إدريس بن محمد البخاري), Zaynab bint Ali bin Talib (زينب بنت علي بن طالب), Joakim Engelhart Jr., Theseus “Perry” Petit, Patrick Petit, Theofylaktos (Θεοφύλακτος), Gleb Volkonskiy (Глеб Волконский), Dámaris Kyriaki Acosta Trintezis, Klimentina Todorovski (Климентина Тодоровски)
 
 Minibosses: America McGee, Ajša Sadiković, Aali bin Jafar bin Ala ad-Din al-Tabari
