@@ -4,6 +4,7 @@ var is_paused = false setget set_is_paused
 
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
+		$quit.hide()
 		self.is_paused = !is_paused
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if Input.is_action_just_pressed("fire") or Input.is_action_just_pressed("fire2"):
@@ -46,3 +47,7 @@ func _on_Button3_button_down():
 	$Options.show()
 	$Options.quit = false
 	$quit.show()
+
+
+func _on_Options_quit():
+	$quit.hide()

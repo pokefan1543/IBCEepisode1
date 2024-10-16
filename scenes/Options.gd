@@ -6,12 +6,14 @@ extends Control
 var save = SaveGame.new()
 var balls = false
 var quit = false
+signal quit 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$ConfirmationDialog.add_button("Don't Save",true,"nosave")
 	$VBoxContainer/Vsync.grab_focus()
-	$VBoxContainer/Vsync.pressed = OS.vsync_enabled
-	Globals.vsync = OS.vsync_enabled
+	$VBoxContainer/Boomer.pressed = Globals.boomer
+	$VBoxContainer/Invert.pressed = Globals.inverted
+	$VBoxContainer/Vsync.pressed = Globals.vsync
 	$VBoxContainer/Fullscreen.pressed = Globals.fullscreen
 	$VBoxContainer2/Master.value = AudioServer.get_bus_volume_db(0)
 	$VBoxContainer2/Soundfx.value = AudioServer.get_bus_volume_db(1)
@@ -99,6 +101,7 @@ func _on_ConfirmationDialog_confirmed():
 		get_tree().change_scene("res://scenes/TitleScreen.tscn")
 	if quit == true:
 		save.write_savesettings()
+		emit_signal("quit")
 		self.hide()
 
 
@@ -108,4 +111,5 @@ func _on_ConfirmationDialog_custom_action(action):
 			$AudioStreamPlayer.stop()
 			get_tree().change_scene("res://scenes/TitleScreen.tscn")
 		if quit == true:
+			emit_signal("quit")
 			self.hide()

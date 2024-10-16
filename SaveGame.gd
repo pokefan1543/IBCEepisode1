@@ -7,12 +7,13 @@ const OPTION_SAVE_PATH = "user://settings.json"
 var version := 1
 
 var _file := File.new()
+var _file2 := File.new()
 
 func save_exists() -> bool:
 	return _file.file_exists(SAVE_GAME_PATH)
 
 func write_savesettings() -> void:
-	var error := _file.open(OPTION_SAVE_PATH, File.WRITE)
+	var error := _file2.open(OPTION_SAVE_PATH, File.WRITE)
 	if error != OK:
 		printerr("Could not open the file %s. Aborting save operation. Error code: %s" % [OPTION_SAVE_PATH, error])
 		return
@@ -35,8 +36,8 @@ func write_savesettings() -> void:
 		"filter": Globals.filter,
 	}
 	var json_string := JSON.print(data)
-	_file.store_string(json_string)
-	_file.close()
+	_file2.store_string(json_string)
+	_file2.close()
 	
 func write_savegame() -> void:
 	var error := _file.open(SAVE_GAME_PATH, File.WRITE)
@@ -106,13 +107,13 @@ func load_savegame() -> void:
 	Globals.currammo = data.currammo
 
 func load_savesettings() -> void:
-	var error := _file.open(OPTION_SAVE_PATH, File.READ)
+	var error := _file2.open(OPTION_SAVE_PATH, File.READ)
 	if error != OK:
 		printerr("Could not open the file %s. Aborting load operation. Error code %s" % [SAVE_GAME_PATH, error])
 		return 
 		
-	var content := _file.get_as_text()
-	_file.close()
+	var content := _file2.get_as_text()
+	_file2.close()
 	
 	var data: Dictionary = JSON.parse(content).result
 	Globals.masterS = data.master

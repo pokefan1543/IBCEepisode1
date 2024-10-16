@@ -399,9 +399,13 @@ func dash(delta):
 				#dashpress = false
 func _input(event):
 	#get mouse input for camera rotation
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and Globals.inverted == false:
 		rotate_y(deg2rad(-event.relative.x * mouse_sense))
 		head.rotate_x(deg2rad(-event.relative.y * mouse_sense))
+		head.rotation.x = clamp(head.rotation.x, deg2rad(-89), deg2rad(89))
+	if event is InputEventMouseMotion and Globals.inverted == true:
+		rotate_y(deg2rad(-event.relative.x * mouse_sense))
+		head.rotate_x(deg2rad(event.relative.y * mouse_sense))
 		head.rotation.x = clamp(head.rotation.x, deg2rad(-89), deg2rad(89))
 func crosshair():
 	if Crosshair.is_colliding():
