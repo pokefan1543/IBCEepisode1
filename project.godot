@@ -328,7 +328,7 @@ version_control_plugin_name="GitAPI"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/godot-version-management/plugin.cfg", "res://addons/measuring_tape/plugin.cfg", "res://addons/qodot/plugin.cfg", "res://addons/waterways/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/godot-version-management/plugin.cfg" )
 
 [global]
 
