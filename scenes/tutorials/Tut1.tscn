@@ -1,0 +1,107 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/player_scenes/Axel-1A.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tutorials/GiantThing2.gd" type="Script" id=2]
+[ext_resource path="res://assets/Weapons/Holy Shotgun.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://scenes/tutorials/GiantThing3.gd" type="Script" id=4]
+[ext_resource path="res://assets/textures/Whatever/Rock051_2K_Color.tres" type="Material" id=5]
+[ext_resource path="res://assets/textures/Whatever/metalbruh.tres" type="Material" id=6]
+[ext_resource path="res://Space.tres" type="Environment" id=7]
+[ext_resource path="res://music/Tut2Music.tscn" type="PackedScene" id=8]
+
+[sub_resource type="BoxShape3D" id=1]
+extents = Vector3( 3.70733, 1, 10.8542 )
+
+[sub_resource type="BoxShape3D" id=2]
+extents = Vector3( 20.0515, 0.537643, 29.0401 )
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124187, -0.0374341, -0.353056 )
+width = 7.73214
+depth = 24.3486
+
+[node name="CSGBox2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.3984, -19.8315 )
+width = 14.8007
+height = 50.0885
+depth = 14.6795
+material = ExtResource( 5 )
+
+[node name="CSGBox4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.3984, 11.3312 )
+width = 43.2737
+height = 50.0885
+depth = 14.6795
+material = ExtResource( 5 )
+
+[node name="CSGBox5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1959, 22.3984, 2.4554 )
+width = 17.4839
+height = 50.0885
+depth = 123.902
+material = ExtResource( 5 )
+
+[node name="CSGBox6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.977, 22.3984, 2.4554 )
+width = 17.4839
+height = 50.0885
+depth = 123.902
+material = ExtResource( 5 )
+
+[node name="CSGBox3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.603474, 45.8747, -37.2444 )
+width = 38.5305
+height = 14.6037
+depth = 27.0635
+material = ExtResource( 6 )
+
+[node name="FPS" parent="." instance=ExtResource( 1 )]
+transform = Transform3D( 0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 0.003, 0, 7.11766, 0 )
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." groups=["NPC", "Tut"]]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0610886, 59.0443, -22.7761 )
+visible = false
+mode = 1
+script = ExtResource( 2 )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -4.11128, -20.0447 )
+mesh = ExtResource( 3 )
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -61.6932, 26.6104 )
+shape = SubResource( 1 )
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D( 40.9947, 0, 0, 0, 1, 0, 0, 0, 11.931, 0, -1.47608, 0 )
+collision_layer = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325314, -0.330272, -11.3537 )
+shape = SubResource( 2 )
+
+[node name="RigidBody2" type="RigidBody3D" parent="." groups=["NPC", "Non"]]
+transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 118.517, -45.5736 )
+mode = 1
+script = ExtResource( 4 )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody2"]
+transform = Transform3D( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -4.11128, -20.0447 )
+mesh = ExtResource( 3 )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody2"]
+transform = Transform3D( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -66.4856, 9.57983 )
+shape = SubResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 7 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 8 )]
+
+[connection signal="area_entered" from="Area3D" to="FPS" method="_on_Area_area_entered"]

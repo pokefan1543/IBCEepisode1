@@ -1,0 +1,20 @@
+[gd_resource type="SpatialMaterial" load_steps=5 format=2]
+
+[ext_resource type="Texture" uid="uid://ctruampbrcrxv" path="res://textures/Whatever/Gravel020_2K_Displacement.png" id="1"]
+[ext_resource type="Texture" uid="uid://cr3hhh8l7grey" path="res://textures/Whatever/Gravel020_2K_Roughness.png" id="2"]
+[ext_resource type="Texture" uid="uid://dwq8riksm3es2" path="res://assets/textures/Whatever/Gravel020_2K_NormalGL.png" id="3"]
+[ext_resource type="Texture" path="res://assets/textures/Whatever/Ground027_2K_Color.jpg" id="4"]
+
+
+[resource]
+albedo_texture = ExtResource( 4 )
+roughness_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 1.47
+normal_texture = ExtResource( 3 )
+depth_enabled = true
+depth_scale = 16.0
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 1 )

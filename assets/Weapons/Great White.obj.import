@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhpejaps848to"
+path="res://.godot/imported/Great White.obj-76918e2038680daa9255636b20798665.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Great White.obj-76918e2038680daa9255636b20798665.mesh"]
+
+source_file="res://assets/Weapons/Great White.obj"
+dest_files=["res://.godot/imported/Great White.obj-76918e2038680daa9255636b20798665.mesh", "res://.godot/imported/Great White.obj-76918e2038680daa9255636b20798665.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

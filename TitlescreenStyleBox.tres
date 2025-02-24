@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=2]
+
+[ext_resource path="res://assets/textures/Medival_Metal/TexturesCom_Metal_Medieval1_1.1x1.1_512_normal.png" type="Texture2D" id=1]
+[ext_resource path="res://assets/textures/Medival_Metal/medival_metal.png" type="Texture2D" id=2]
+
+[resource]
+texture = ExtResource( 2 )
+normal_map = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 512, 512 )
+expand_margin_top = 21.0

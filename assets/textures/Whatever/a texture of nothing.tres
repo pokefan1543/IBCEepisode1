@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b0h3v3cedtnw1"]
+
+[ext_resource type="Texture2D" uid="uid://chq76o1n2a112" path="res://Assets/textures/Whatever/a texture of nothing.png" id="1"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture = ExtResource("1")

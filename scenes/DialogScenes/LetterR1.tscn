@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TitlescreenTheme.tres" type="Theme" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+func _ready():
+	var dialog = Dialogic.start(\"letter2\")
+	add_child(dialog)
+
+func _unhandled_input(event):
+	if Input.is_action_just_pressed(\"dash\"): #\"Dash\" is the f key
+		get_tree().change_scene_to_file(\"res://scenes/real_levels/E1M1.tscn\")
+	if Input.is_action_just_pressed(\"Q\"):
+		get_tree().change_scene_to_file(\"res://scenes/real_levels/level_select.tscn\")
+		
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="Control"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button2" type="Button" parent="Control/Control"]
+offset_right = 199.0
+offset_bottom = 72.0
+theme = ExtResource( 1 )
+text = "Press the Shift key to skip"
+
+[node name="Button" type="Button" parent="Control"]
+offset_left = 359.0
+offset_right = 933.0
+offset_bottom = 72.0
+theme = ExtResource( 1 )
+text = "Press the Q key to quit to level select"

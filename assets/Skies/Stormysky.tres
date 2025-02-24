@@ -1,0 +1,6 @@
+[gd_resource type="Sky" load_steps=2 format=2]
+
+[ext_resource path="res://assets/Mount4.png" type="Texture2D" id=1]
+
+[resource]
+panorama = ExtResource( 1 )

@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/M9PulseRifle.gd" type="Script" id=1]
+[ext_resource path="res://Shotgun texture.tres" type="Material" id=2]
+[ext_resource path="res://assets/Weapons/Holy Shotgun.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://assets/textures/Whatever/Pipe002_2K_Color.tres" type="Material" id=4]
+[ext_resource path="res://assets/textures/Whatever/brushed-metal-texture-12.tres" type="Material" id=5]
+[ext_resource path="res://assets/textures/Whatever/metalbruh.tres" type="Material" id=6]
+
+[sub_resource type="BoxShape3D" id=1]
+extents = Vector3( 73.4381, 90.9494, 361.589 )
+
+[node name="Shotgun" type="RigidBody3D" groups=["shotgun", "weapon"]]
+collision_layer = 7
+collision_mask = 3
+script = ExtResource( 1 )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.0111458, 0, 0.0850482, -1.67657 )
+shape = SubResource( 1 )
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D( -8.74228e-10, -0.02, -8.74228e-10, 0, -8.74228e-10, 0.02, -0.02, 8.74228e-10, 3.82137e-17, 0, 0, 0 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 5 )
+material/2 = ExtResource( 6 )
+material/3 = ExtResource( 4 )
+material/4 = ExtResource( 2 )
+material/5 = ExtResource( 2 )

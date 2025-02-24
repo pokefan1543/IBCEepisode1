@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource type="ArrayMesh" uid="uid://dfqflcoswj4su" path="res://assets/Weapons/Great White.res" id="1"]
+
+[node name="MeshInstance3D" type="MeshInstance3D"]
+transform = Transform3D( 0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0 )
+mesh = ExtResource( 1 )

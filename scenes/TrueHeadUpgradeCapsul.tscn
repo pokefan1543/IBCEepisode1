@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource type="Texture2D" uid="uid://d3lspuaw8eimo" path="res://assets/textures/metal/DiamondPlate008C_4K_Roughness.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b07tcr83nd6v3" path="res://assets/textures/metal/DiamondPlate008C_4K_Metalness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://38m2h3seabxn" path="res://assets/textures/metal/DiamondPlate008C_4K_NormalGL.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b16u5c81klr7a" path="res://assets/textures/metal/DiamondPlate008C_4K_AmbientOcclusion.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://eqlhu2xxfe0v" path="res://assets/textures/metal/DiamondPlate008C_4K_Displacement.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b5ik5bpbvx45n" path="res://assets/textures/Whatever/Metal009_4K_RedColor.png" id="6"]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[sub_resource type="StandardMaterial3D" id=3]
+albedo_color = Color( 0.243137, 0.596078, 0, 1 )
+albedo_texture = ExtResource( 6 )
+metallic = 1.0
+metallic_texture = ExtResource( 2 )
+roughness_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 3 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_texture = ExtResource( 4 )
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 5 )
+
+[sub_resource type="CapsuleShape3D" id=2]
+
+[node name="Headupgrade" type="RigidBody3D" groups=["trueupgrade", "upgrade"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["legupgrade"]]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource( 2 )

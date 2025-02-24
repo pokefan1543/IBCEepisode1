@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5x2wj41jgqw1"]
+
+[ext_resource type="Script" path="res://scripts/Deathscreen.gd" id="1"]
+[ext_resource type="VideoStream" path="res://assets/Videos/TV-Static(1).ogv" id="2_eee21"]
+
+[node name="Deathscreen" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Popup" type="Popup" parent="."]
+transparent_bg = true
+size = Vector2i(1280, 720)
+transparent = true
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Popup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource("2_eee21")
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Popup"]
+position = Vector2i(195, 165)
+size = Vector2i(253, 100)
+popup_window = true
+dialog_text = "Axel-1A has been terminated..."
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="confirmed" from="Popup/AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]

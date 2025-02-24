@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2gw7gfp7afxt"
+path="res://.godot/imported/alyssa did vocals for this yaaaay.wav-c9ec27f02c02e3cecc9d5515084d9b1c.sample"
+
+[deps]
+
+source_file="res://music/alyssa did vocals for this yaaaay.wav"
+dest_files=["res://.godot/imported/alyssa did vocals for this yaaaay.wav-c9ec27f02c02e3cecc9d5515084d9b1c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6q243e0oysw8"
+path="res://.godot/imported/SPACEY NINE INCH NAILS STYLE HARDSTYLE.wav-f9d8328558c4ae3781900c5d5bb91e52.sample"
+
+[deps]
+
+source_file="res://music/SPACEY NINE INCH NAILS STYLE HARDSTYLE.wav"
+dest_files=["res://.godot/imported/SPACEY NINE INCH NAILS STYLE HARDSTYLE.wav-f9d8328558c4ae3781900c5d5bb91e52.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

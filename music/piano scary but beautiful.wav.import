@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0hn53udct8hr"
+path="res://.godot/imported/piano scary but beautiful.wav-3d24a257af3975bf0c4292c1a043c14f.sample"
+
+[deps]
+
+source_file="res://music/piano scary but beautiful.wav"
+dest_files=["res://.godot/imported/piano scary but beautiful.wav-3d24a257af3975bf0c4292c1a043c14f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

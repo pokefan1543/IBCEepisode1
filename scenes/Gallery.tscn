@@ -1,0 +1,278 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://music/GalleryMusic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/AmazingArt/KleoFinal.png" type="Texture2D" id=2]
+[ext_resource path="res://sound/SELECT.wav" type="AudioStream" id=3]
+[ext_resource path="res://TitlescreenTheme.tres" type="Theme" id=4]
+[ext_resource path="res://scenes/Gallery.gd" type="Script" id=5]
+[ext_resource path="res://assets/AmazingArt/KleoDrawing.jpg" type="Texture2D" id=6]
+[ext_resource path="res://scenes/Codex.gd" type="Script" id=7]
+[ext_resource path="res://scenes/Codex7.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Codex8.gd" type="Script" id=9]
+[ext_resource path="res://scenes/Codex9.gd" type="Script" id=10]
+[ext_resource path="res://scenes/Codex3.gd" type="Script" id=11]
+[ext_resource path="res://scenes/Codex2.gd" type="Script" id=12]
+[ext_resource path="res://scenes/Codex4.gd" type="Script" id=13]
+[ext_resource path="res://scenes/Codex5.gd" type="Script" id=14]
+[ext_resource path="res://scenes/Codex6.gd" type="Script" id=15]
+
+[node name="Gallery" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1015.0
+offset_top = -831.0
+offset_right = -1015.0
+offset_bottom = -831.0
+script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 1 )]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -280.0
+offset_top = -1183.0
+offset_right = 1656.0
+offset_bottom = 1313.0
+texture = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1015.0
+offset_top = 832.0
+offset_right = 2951.0
+offset_bottom = 3328.0
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 1560.5
+offset_top = 1289.0
+offset_right = 1749.5
+offset_bottom = 1333.0
+custom_minimum_size = Vector2( 0.5, 0 )
+scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+text = "Quit"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1302.0
+offset_top = 1280.0
+offset_right = 1491.0
+offset_bottom = 1324.0
+custom_minimum_size = Vector2( 0.5, 0 )
+scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+text = "Next Image"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 1014.0
+offset_top = 1280.0
+offset_right = 1210.0
+offset_bottom = 1324.0
+custom_minimum_size = Vector2( 0.5, 0 )
+scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+text = "Previous Image"
+
+[node name="Title" type="RichTextLabel" parent="."]
+offset_left = 1374.0
+offset_top = 825.0
+offset_right = 1667.0
+offset_bottom = 910.0
+scale = Vector2( 0.96, 1 )
+theme = ExtResource( 4 )
+text = "Gallery, Audio Test. and Codex"
+scroll_active = false
+
+[node name="Words" type="RichTextLabel" parent="."]
+offset_left = 1374.0
+offset_top = 1054.0
+offset_right = 1667.0
+offset_bottom = 1139.0
+scale = Vector2( 0.96, 1 )
+theme = ExtResource( 4 )
+text = "Unlock entires 4-6 by completing level 4"
+scroll_active = false
+
+[node name="Words2" type="RichTextLabel" parent="."]
+offset_left = 1374.0
+offset_top = 1145.0
+offset_right = 1667.0
+offset_bottom = 1230.0
+scale = Vector2( 0.96, 1 )
+theme = ExtResource( 4 )
+text = "Unlock entires 7-9 by completing level 8"
+scroll_active = false
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="ImageTitle" type="RichTextLabel" parent="."]
+offset_left = 1112.0
+offset_top = 1279.0
+offset_right = 1310.0
+offset_bottom = 1347.0
+scale = Vector2( 0.55, 0.5 )
+theme = ExtResource( 4 )
+text = "Kleopatra's design (Final)"
+scroll_active = false
+
+[node name="Author" type="RichTextLabel" parent="."]
+offset_left = 1229.0
+offset_top = 1279.0
+offset_right = 1362.0
+offset_bottom = 1341.0
+scale = Vector2( 0.55, 0.55 )
+theme = ExtResource( 4 )
+text = "By: Claire Houser"
+scroll_active = false
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 1524.0
+offset_top = 908.0
+offset_right = 1654.0
+offset_bottom = 928.0
+custom_minimum_size = Vector2( 5, 5 )
+text = "Music Selection"
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 1560.0
+offset_top = 929.0
+offset_right = 1749.0
+offset_bottom = 973.0
+custom_minimum_size = Vector2( 0.5, 0 )
+scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+text = "Play Song"
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 1465.0
+offset_top = 929.0
+offset_right = 1654.0
+offset_bottom = 973.0
+custom_minimum_size = Vector2( 0.5, 0 )
+scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 4 )
+text = "Stop Song"
+
+[node name="StartingCodexes" type="VBoxContainer" parent="."]
+offset_left = 1378.0
+offset_top = 958.0
+offset_right = 1472.0
+offset_bottom = 1102.0
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Codex" type="Button" parent="StartingCodexes"]
+offset_right = 94.0
+offset_bottom = 29.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 1"
+script = ExtResource( 7 )
+
+[node name="Codex2" type="Button" parent="StartingCodexes"]
+offset_top = 33.0
+offset_right = 94.0
+offset_bottom = 62.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 2"
+script = ExtResource( 12 )
+
+[node name="Codex3" type="Button" parent="StartingCodexes"]
+offset_top = 66.0
+offset_right = 94.0
+offset_bottom = 95.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 3"
+script = ExtResource( 11 )
+
+[node name="E1M1Codexes" type="VBoxContainer" parent="."]
+offset_left = 1478.0
+offset_top = 958.0
+offset_right = 1572.0
+offset_bottom = 1102.0
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Codex4" type="Button" parent="E1M1Codexes"]
+offset_right = 94.0
+offset_bottom = 29.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 4"
+script = ExtResource( 13 )
+
+[node name="Codex5" type="Button" parent="E1M1Codexes"]
+offset_top = 33.0
+offset_right = 94.0
+offset_bottom = 62.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 5"
+script = ExtResource( 14 )
+
+[node name="Codex6" type="Button" parent="E1M1Codexes"]
+offset_top = 66.0
+offset_right = 94.0
+offset_bottom = 95.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 6"
+script = ExtResource( 15 )
+
+[node name="E1M2Codexes" type="VBoxContainer" parent="."]
+offset_left = 1579.0
+offset_top = 958.0
+offset_right = 1683.0
+offset_bottom = 1102.0
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Codex7" type="Button" parent="E1M2Codexes"]
+offset_right = 104.0
+offset_bottom = 29.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 7"
+script = ExtResource( 8 )
+
+[node name="Codex8" type="Button" parent="E1M2Codexes"]
+offset_top = 33.0
+offset_right = 104.0
+offset_bottom = 62.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 8"
+script = ExtResource( 9 )
+
+[node name="Codex9" type="Button" parent="E1M2Codexes"]
+offset_top = 66.0
+offset_right = 104.0
+offset_bottom = 95.0
+custom_minimum_size = Vector2( 0.5, 0 )
+theme = ExtResource( 4 )
+text = "Entry 9"
+script = ExtResource( 10 )
+
+[node name="Number" type="RichTextLabel" parent="."]
+offset_left = 1208.0
+offset_top = 1291.0
+offset_right = 1228.0
+offset_bottom = 1331.0
+scale = Vector2( 0.527, 0.527 )
+theme = ExtResource( 4 )
+text = "0"
+scroll_active = false
+
+[connection signal="button_down" from="Quit" to="." method="_on_Quit_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="Button4" to="." method="_on_Button4_button_down"]
+[connection signal="button_down" from="Button5" to="." method="_on_Button5_button_down"]
+[connection signal="button_down" from="StartingCodexes/Codex" to="." method="_on_Codex_button_down"]
+[connection signal="button_down" from="StartingCodexes/Codex2" to="." method="_on_Codex2_button_down"]
+[connection signal="button_down" from="StartingCodexes/Codex3" to="." method="_on_Codex3_button_down"]
+[connection signal="button_down" from="E1M1Codexes/Codex4" to="." method="_on_Codex4_button_down"]
+[connection signal="button_down" from="E1M1Codexes/Codex5" to="." method="_on_Codex5_button_down"]
+[connection signal="button_down" from="E1M1Codexes/Codex6" to="." method="_on_Codex6_button_down"]
+[connection signal="button_down" from="E1M2Codexes/Codex7" to="." method="_on_Codex7_button_down"]
+[connection signal="button_down" from="E1M2Codexes/Codex8" to="." method="_on_Codex8_button_down"]
+[connection signal="button_down" from="E1M2Codexes/Codex9" to="." method="_on_Codex9_button_down"]

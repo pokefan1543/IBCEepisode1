@@ -1,0 +1,99 @@
+[gd_resource type="Theme" load_steps=19 format=3 uid="uid://b383cb14jlcu3"]
+
+[ext_resource type="FontFile" path="res://CoolFont.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://bd68yqn0oe4rb" path="res://textures/Whatever/Electricty.png" id="2"]
+[ext_resource type="FontFile" uid="uid://btm5phrx3ksxu" path="res://CoolFont2.tres" id="4"]
+[ext_resource type="StyleBox" path="res://TitlescreenStyleBox.tres" id="5"]
+[ext_resource type="Texture2D" uid="uid://b2pe758wwqkno" path="res://textures/Whatever/Gravel020_2K_Color.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dxqj4dfme7va4" path="res://textures/Whatever/Marble012_2K-PNG_Color.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://cnajyy06isqf0" path="res://new_meshtexture.tres" id="10"]
+[ext_resource type="Texture2D" uid="uid://23h0mj3ge03r" path="res://new_meshtexture1.tres" id="11"]
+[ext_resource type="Texture2D" uid="uid://b7ptyavxcrf56" path="res://textures/Whatever/Electricty2.png" id="14"]
+
+[sub_resource type="StyleBoxTexture" id="5"]
+texture = ExtResource("6")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="StyleBoxTexture" id="1"]
+texture = ExtResource("8")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 2048, 2048)
+modulate_color = Color(0, 0.584314, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="2"]
+texture = ExtResource("8")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 2048, 2048)
+modulate_color = Color(0.501961, 1, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="3"]
+texture = ExtResource("8")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="StyleBoxTexture" id="4"]
+texture = ExtResource("8")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 2048, 2048)
+
+[sub_resource type="StyleBoxTexture" id="7"]
+texture = ExtResource("2")
+region_rect = Rect2(0, 0, 1269, 546)
+modulate_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="8"]
+texture = ExtResource("2")
+region_rect = Rect2(0, 0, 1269, 546)
+modulate_color = Color(1, 0.984314, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="6"]
+texture = ExtResource("14")
+region_rect = Rect2(0, 0, 1269, 546)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yc3qj"]
+texture = ExtResource("2")
+
+[resource]
+Button/colors/font_color = Color(0.117647, 0.376471, 0, 1)
+Button/colors/font_color_disabled = Color(0.380392, 0, 0.603922, 0.2)
+Button/colors/font_color_focus = Color(0.870588, 0.729412, 0, 1)
+Button/colors/font_color_hover = Color(0.0352941, 0.27451, 0.466667, 1)
+Button/colors/font_color_hover_pressed = Color(0.321569, 0, 0.780392, 1)
+Button/colors/font_color_pressed = Color(0.627451, 0, 0, 1)
+Button/fonts/font = ExtResource("4")
+Button/styles/disabled = SubResource("5")
+Button/styles/focus = SubResource("1")
+Button/styles/hover = SubResource("2")
+Button/styles/normal = SubResource("3")
+Button/styles/pressed = SubResource("4")
+CheckBox/fonts/font = ExtResource("4")
+CheckButton/fonts/font = ExtResource("1")
+CheckButton/icons/off = ExtResource("11")
+CheckButton/icons/on = ExtResource("10")
+CheckButton/icons/on_disabled = null
+HSlider/icons/grabber = null
+HSlider/icons/grabber_disabled = null
+HSlider/icons/grabber_highlight = null
+HSlider/styles/grabber_area = SubResource("7")
+HSlider/styles/grabber_area_highlight = SubResource("8")
+HSlider/styles/slider = SubResource("6")
+Label/fonts/font = ExtResource("1")
+Popup/styles/panel = ExtResource("5")
+ProgressBar/colors/font_color = Color(0.94, 0.94, 0.94, 1)
+ProgressBar/colors/font_color_shadow = Color(0, 0, 0, 1)
+ProgressBar/fonts/font = ExtResource("1")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_yc3qj")
+RichTextLabel/fonts/normal_font = ExtResource("1")
+Window/colors/title_color = Color(0, 0, 0, 1)
+Window/constants/close_h_ofs = 18
+Window/constants/close_v_ofs = 18
+Window/constants/scaleborder_size = 8
+Window/constants/title_height = 20
+Window/fonts/title_font = ExtResource("1")
+Window/styles/panel = ExtResource("5")
