@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chq76o1n2a112"
-path.s3tc="res://.godot/imported/a texture of nothing.png-aa7fb24a657a9bb38abdcf84bcad82e7.s3tc.ctex"
+path.s3tc="res://.godot/imported/a texture of nothing.png-8cd4c846f5c2e21c7a9f6ca1f75d454f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Whatever/a texture of nothing.png"
-dest_files=["res://.godot/imported/a texture of nothing.png-aa7fb24a657a9bb38abdcf84bcad82e7.s3tc.ctex"]
+source_file="res://assets/textures/Whatever/a texture of nothing.png"
+dest_files=["res://.godot/imported/a texture of nothing.png-8cd4c846f5c2e21c7a9f6ca1f75d454f.s3tc.ctex"]
 
 [params]
 

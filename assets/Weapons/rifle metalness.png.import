@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3lp8v62hd7x4"
-path.s3tc="res://.godot/imported/rifle metalness.png-65de19d4382aa6dabf887d9b317acb81.s3tc.ctex"
+path.s3tc="res://.godot/imported/rifle metalness.png-5ffd82e8c2615a9a92603d8442d518a9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Weapons/rifle metalness.png"
-dest_files=["res://.godot/imported/rifle metalness.png-65de19d4382aa6dabf887d9b317acb81.s3tc.ctex"]
+source_file="res://assets/Weapons/rifle metalness.png"
+dest_files=["res://.godot/imported/rifle metalness.png-5ffd82e8c2615a9a92603d8442d518a9.s3tc.ctex"]
 
 [params]
 

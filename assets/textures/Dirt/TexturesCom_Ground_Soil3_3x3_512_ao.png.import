@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqhd7bjcexsxp"
-path.s3tc="res://.godot/imported/TexturesCom_Ground_Soil3_3x3_512_ao.png-56205f22ea8af03f499144b98bc592d0.s3tc.ctex"
+path.s3tc="res://.godot/imported/TexturesCom_Ground_Soil3_3x3_512_ao.png-0dbf0f91b580d56faf171d2bbe12e887.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/textures/Dirt/TexturesCom_Ground_Soil3_3x3_512_ao.png"
-dest_files=["res://.godot/imported/TexturesCom_Ground_Soil3_3x3_512_ao.png-56205f22ea8af03f499144b98bc592d0.s3tc.ctex"]
+source_file="res://assets/textures/Dirt/TexturesCom_Ground_Soil3_3x3_512_ao.png"
+dest_files=["res://.godot/imported/TexturesCom_Ground_Soil3_3x3_512_ao.png-0dbf0f91b580d56faf171d2bbe12e887.s3tc.ctex"]
 
 [params]
 

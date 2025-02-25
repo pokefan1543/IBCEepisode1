@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_243ru"]
 [ext_resource type="Texture2D" uid="uid://08q7i0rno3tr" path="res://textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp" id="2"]
 [ext_resource type="Script" path="res://scenes/TitleScreen.gd" id="4"]
-[ext_resource type="Texture2D" uid="uid://bt13qihimji6r" path="res://2071159.webp" id="5"]
+[ext_resource type="Texture2D" uid="uid://bdmjxb36p3qr4" path="res://panorama_image (1).png" id="5"]
 [ext_resource type="PackedScene" path="res://music/TitleMusic.tscn" id="7"]
 [ext_resource type="AudioStream" uid="uid://dod8wfe1qjc7c" path="res://sound/SELECT.wav" id="8"]
 
@@ -483,35 +483,35 @@ expand_mode = 1
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 2
-offset_left = 127.0
-offset_top = 340.0
-offset_right = 490.0
-offset_bottom = 381.0
+offset_left = 157.0
+offset_top = 307.0
+offset_right = 520.0
+offset_bottom = 348.0
 text = "Options"
 
 [node name="Button5" type="Button" parent="."]
 layout_mode = 2
-offset_left = 102.0
-offset_top = 385.0
-offset_right = 518.0
-offset_bottom = 428.0
+offset_left = 127.0
+offset_top = 388.0
+offset_right = 543.0
+offset_bottom = 431.0
 text = "Gallery, Audio Test, and Codex"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 2
-offset_left = 71.0
-offset_top = 432.0
-offset_right = 555.0
-offset_bottom = 474.0
+offset_left = 96.0
+offset_top = 359.0
+offset_right = 580.0
+offset_bottom = 401.0
 text = "Quit"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 2
-offset_left = -1.0
-offset_top = -13.0
-offset_right = 703.0
-offset_bottom = 341.0
+offset_left = 851.0
+offset_top = 74.0
+offset_right = 1114.0
+offset_bottom = 298.0
 mouse_filter = 2
 texture = ExtResource("1")
 expand_mode = 1
@@ -520,10 +520,10 @@ expand_mode = 1
 z_index = 2
 z_as_relative = false
 layout_mode = 0
-offset_left = 175.0
-offset_top = 297.0
-offset_right = 435.0
-offset_bottom = 335.0
+offset_left = 205.0
+offset_top = 260.0
+offset_right = 465.0
+offset_bottom = 298.0
 pivot_offset = Vector2(-1183, -508)
 mouse_filter = 1
 text = "Start"
