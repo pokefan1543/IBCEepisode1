@@ -20,6 +20,10 @@ config/icon="res://Assets/Logo and Start Sceen/IBCE LOGO.png"
 config/windows_native_icon="res://IBCE LOGO.ico"
 config/build=1
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 Globals="*res://scripts/globals.gd"
@@ -64,6 +68,10 @@ collision=false
 export=false
 safe=false
 vsync=false
+
+[gui]
+
+theme/custom_font="res://Themes/Classic95/MS Sans Serif.ttf"
 
 [input]
 
@@ -206,7 +214,6 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
-environment/defaults/default_environment="res://default_env.tres"
 quality/directional_shadow/size=768
 lights_and_shadows/shadow_atlas/size=768
 quality/spatial_partitioning/render_tree_balance=1.0
