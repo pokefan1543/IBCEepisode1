@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpyi1br2pbw0p"
-path.s3tc="res://.godot/imported/rifle diffuse.png-9c198bf795f0ffd66b58b8038bb23de6.s3tc.ctex"
+path.s3tc="res://.godot/imported/rifle diffuse.png-1ec653b3cea0c4e307ece547e29d6826.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Weapons/rifle diffuse.png"
-dest_files=["res://.godot/imported/rifle diffuse.png-9c198bf795f0ffd66b58b8038bb23de6.s3tc.ctex"]
+source_file="res://Assets/Weapons/rifle diffuse.png"
+dest_files=["res://.godot/imported/rifle diffuse.png-1ec653b3cea0c4e307ece547e29d6826.s3tc.ctex"]
 
 [params]
 

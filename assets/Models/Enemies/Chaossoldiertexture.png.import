@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hehuh2epwati"
-path.s3tc="res://.godot/imported/Chaossoldiertexture.png-c80af5fdc2cde157b0e744b6d1628d65.s3tc.ctex"
+path.s3tc="res://.godot/imported/Chaossoldiertexture.png-bf57008537052d12c7e2056f53e096ca.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Models/Enemies/Chaossoldiertexture.png"
-dest_files=["res://.godot/imported/Chaossoldiertexture.png-c80af5fdc2cde157b0e744b6d1628d65.s3tc.ctex"]
+source_file="res://Assets/Models/Enemies/Chaossoldiertexture.png"
+dest_files=["res://.godot/imported/Chaossoldiertexture.png-bf57008537052d12c7e2056f53e096ca.s3tc.ctex"]
 
 [params]
 

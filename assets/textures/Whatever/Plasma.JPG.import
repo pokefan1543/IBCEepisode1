@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxf5ewapv3wib"
-path.s3tc="res://.godot/imported/Plasma.JPG-37b4678080537ed578d36ffc772ee5b0.s3tc.ctex"
+path.s3tc="res://.godot/imported/Plasma.JPG-45f42fe956846ef358db6273b395a9f6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Whatever/Plasma.JPG"
-dest_files=["res://.godot/imported/Plasma.JPG-37b4678080537ed578d36ffc772ee5b0.s3tc.ctex"]
+source_file="res://Assets/textures/Whatever/Plasma.JPG"
+dest_files=["res://.godot/imported/Plasma.JPG-45f42fe956846ef358db6273b395a9f6.s3tc.ctex"]
 
 [params]
 
