@@ -158,13 +158,6 @@ func _on_tutorialbutton_button_down():
 	get_tree().change_scene_to_file("res://scenes/tutorials/Introtut.tscn")
 
 
-func _on_objectivebutton_button_down():
-	var dialog = Dialogic.start("object")
-	dialog.process_mode = PROCESS_MODE_ALWAYS
-	get_parent().add_child(dialog)
-	dialog.connect("timeline_end", Callable(self, "end_dialog"))
-	get_tree().paused = true
-
 
 
 func _on_saveload_pressed():

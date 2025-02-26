@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://djscckxys5vqh" path="res://assets/textures/metal/DiamondPlate008C_4K_Metalness.png" id="9_ktksa"]
 [ext_resource type="Script" path="res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd" id="10"]
 [ext_resource type="Texture2D" uid="uid://cdopn8iuip35g" path="res://assets/textures/metal/DiamondPlate008C_4K_NormalGL.png" id="10_yghrt"]
-[ext_resource type="Resource" uid="uid://dcfboxovj4ka2" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="11"]
+[ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="11"]
 [ext_resource type="Texture2D" uid="uid://6xc2bk6gaode" path="res://assets/textures/metal/DiamondPlate008C_4K_Roughness.png" id="11_srpne"]
 [ext_resource type="PackedScene" path="res://music/E1M1Music.tscn" id="12"]
 [ext_resource type="Material" path="res://assets/textures/Rock/TexturesCom_Rock_Base7_2x2_512_albedo.tres" id="13"]
