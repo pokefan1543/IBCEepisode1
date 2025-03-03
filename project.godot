@@ -82,6 +82,10 @@ window/size/window_height_override=480
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=false
 
+[dotnet]
+
+project/assembly_name="Inbetween Chaos and Equilibrium"
+
 [editor]
 
 version_control_autoload_on_startup=true

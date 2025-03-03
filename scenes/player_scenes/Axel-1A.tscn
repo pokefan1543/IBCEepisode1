@@ -33,7 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://byv6uouxhqq0k" path="res://sound/Shotgunblast.wav" id="38"]
 [ext_resource type="Script" path="res://laser2.gd" id="39"]
 [ext_resource type="ArrayMesh" uid="uid://d37pon0smpo1w" path="res://assets/Weapons/RedRanger.obj" id="43"]
-[ext_resource type="PackedScene" path="res://scenes/player_scenes/PauseMenu.tscn" id="44"]
+[ext_resource type="PackedScene" uid="uid://b1c414ggp634" path="res://scenes/player_scenes/PauseMenu.tscn" id="44"]
 [ext_resource type="PackedScene" uid="uid://b2j8errhhoc8n" path="res://scenes/crosshair.tscn" id="45"]
 [ext_resource type="AudioStream" uid="uid://cjs2j4shxxj0l" path="res://sound/50AMERICANEAGLEFIRE.wav" id="46"]
 [ext_resource type="ArrayMesh" uid="uid://uo1cvw0qkscg" path="res://assets/Weapons/Stormcloud.obj" id="47"]
@@ -520,7 +520,7 @@ material = ExtResource("23_d3cvi")
 size = Vector3(2.66794, 2, 846.784)
 
 [node name="FPS" type="CharacterBody3D" groups=["Player", "player"]]
-transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 1, 0.0299196, 0.122104, -0.393696)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0299196, 0.122104, -0.393696)
 collision_mask = 7
 script = ExtResource("1")
 trail = ExtResource("5")
@@ -985,10 +985,6 @@ offset_top = 0.0
 
 [node name="Pausemenu" parent="." instance=ExtResource("44")]
 visible = false
-layout_mode = 3
-anchors_preset = 15
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("31")

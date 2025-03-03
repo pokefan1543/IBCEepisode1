@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://1u5fwdymjfm4" path="res://scenes/player_scenes/Axel-1A.tscn" id="1"]
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="2"]
-[ext_resource type="Resource" uid="uid://dcfboxovj4ka2" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="3"]
+[ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="3"]
 [ext_resource type="Material" path="res://assets/textures/Whatever/metalbruh.tres" id="4"]
 [ext_resource type="Material" path="res://assets/textures/Medival_Metal/medival_metal.tres" id="5"]
 [ext_resource type="Script" path="res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd" id="6"]
@@ -1295,7 +1295,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.452, -9.374, 1026.16)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 201.452, -9.374, 1017.56)
 
 [node name="FPS" parent="." instance=ExtResource("1")]
-transform = Transform3D(-4.37096e-08, 3.93655e-10, -0.003, 0.00900578, 0.99996, 0, 0.99996, -0.00900578, -1.31134e-10, 0, 8.24693, -21.4581)
+transform = Transform3D(-4.37096e-08, 3.93655e-10, -1, 0.00900577, 0.999959, 2.00267e-16, 0.999959, -0.00900577, -4.37114e-08, 0, 8.24693, -21.4581)
 
 [node name="RigidBody3D" parent="." groups=["level3key"] instance=ExtResource("13")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.957, 8.62465, -4.78611)
