@@ -455,13 +455,13 @@ _surfaces = [{
 [sub_resource type="ConvexPolygonShape3D" id="71"]
 points = PackedVector3Array(-10.5, 87.5, -68, -10.5, -87.5, -68, 10.5, -87.5, -68, 10.5, 87.5, -68, -10.5, 87.5, 68, -10.5, -87.5, 68, 10.5, -87.5, 68, 10.5, 87.5, 68)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("9")
 
 [node name="FPS" parent="." instance=ExtResource("4")]
-transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 1, -74.0262, 217.732, 18.9088)
+transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 0.003, -74.0262, 217.732, 18.9088)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1823.42, 349.535, -35.4619)
