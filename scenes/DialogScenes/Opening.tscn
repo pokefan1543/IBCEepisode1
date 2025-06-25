@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://8kt8lgi81qga"]
 
-[ext_resource path="res://scripts/Node2D.gd" type="Script" id=1]
-[ext_resource path="res://TitlescreenTheme.tres" type="Theme" id=2]
+[ext_resource type="Script" uid="uid://cueb4a2igpkr1" path="res://scripts/Node2D.gd" id="1"]
+[ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="2"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="Control" type="Control" parent="."]
 offset_right = 40.0
@@ -13,7 +13,7 @@ offset_bottom = 40.0
 [node name="Button" type="Button" parent="Control"]
 offset_right = 199.0
 offset_bottom = 72.0
-theme = ExtResource( 2 )
+theme = ExtResource("2")
 text = "Press the Shift key to skip"
 
 [node name="Control" type="Control" parent="Control"]
@@ -24,7 +24,7 @@ offset_bottom = 40.0
 offset_left = 359.0
 offset_right = 842.0
 offset_bottom = 72.0
-theme = ExtResource( 2 )
+theme = ExtResource("2")
 text = "Press the T key to enter a tutorial"
 
 [connection signal="mouse_entered" from="Control/Button" to="." method="_on_Button_mouse_entered"]

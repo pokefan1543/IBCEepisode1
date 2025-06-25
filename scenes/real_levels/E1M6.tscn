@@ -1,11 +1,11 @@
 [gd_scene load_steps=23 format=4 uid="uid://c1b720nbx1ttj"]
 
-[ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1"]
+[ext_resource type="Script" uid="uid://bbrdso5ydg53f" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1"]
 [ext_resource type="Resource" uid="uid://c36hv0o6g0udo" path="res://addons/qodot/game_definitions/fgd/qodot_fgd.tres" id="2"]
 [ext_resource type="Environment" uid="uid://cw254asc6dpdf" path="res://Space.tres" id="3"]
 [ext_resource type="Material" path="res://assets/textures/Rock/TexturesCom_Rock_Base7_2x2_512_albedo.tres" id="4"]
 [ext_resource type="Material" path="res://assets/textures/Whatever/Plasma.tres" id="5"]
-[ext_resource type="PackedScene" path="res://scenes/enemy_scenes/Bosses/Ikenga.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://dl36l5fj1h1n3" path="res://scenes/enemy_scenes/Bosses/Ikenga.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://1u5fwdymjfm4" path="res://scenes/player_scenes/Axel-1A.tscn" id="7"]
 [ext_resource type="PackedScene" path="res://scenes/Stormcloud Shotgun floor.tscn" id="8"]
 [ext_resource type="PackedScene" path="res://scenes/M9PulseRifle.tscn" id="9"]

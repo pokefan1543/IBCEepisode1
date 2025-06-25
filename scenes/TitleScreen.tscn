@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://7luqgy63alb6" path="res://IBCE Logo better.png" id="1"]
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_243ru"]
 [ext_resource type="Texture2D" uid="uid://08q7i0rno3tr" path="res://textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp" id="2"]
-[ext_resource type="Script" path="res://scenes/TitleScreen.gd" id="4"]
+[ext_resource type="Script" uid="uid://j1jmn4hrpeyq" path="res://scenes/TitleScreen.gd" id="4"]
 [ext_resource type="Texture2D" uid="uid://bdmjxb36p3qr4" path="res://panorama_image (1).png" id="5"]
-[ext_resource type="PackedScene" path="res://music/TitleMusic.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bos7qs65wifgh" path="res://music/TitleMusic.tscn" id="7"]
 [ext_resource type="AudioStream" uid="uid://dod8wfe1qjc7c" path="res://sound/SELECT.wav" id="8"]
 
 [sub_resource type="Animation" id="1"]
@@ -424,8 +424,8 @@ tracks/16/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u8rom"]
 _data = {
-"RESET": SubResource("1"),
-"logo": SubResource("2")
+&"RESET": SubResource("1"),
+&"logo": SubResource("2")
 }
 
 [node name="Control" type="Control"]

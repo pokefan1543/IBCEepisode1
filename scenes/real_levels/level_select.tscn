@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dym2s36qv2k03"]
 
-[ext_resource type="Script" path="res://scenes/real_levels/level_select.gd" id="1"]
-[ext_resource type="VideoStream" path="res://assets/Videos/vecteezy_futuristic-technology-retro-background-dynamic-retro_12154487_442(1).ogv" id="2"]
+[ext_resource type="Script" uid="uid://b0428tu8ha81v" path="res://scenes/real_levels/level_select.gd" id="1"]
+[ext_resource type="VideoStream" uid="uid://q250ljjye333" path="res://assets/Videos/vecteezy_futuristic-technology-retro-background-dynamic-retro_12154487_442(1).ogv" id="2"]
 [ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="3"]
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="3_k6wtu"]
 [ext_resource type="AudioStream" uid="uid://b7ge335l3m332" path="res://sound/heatlhup.wav" id="4"]
@@ -809,8 +809,8 @@ tracks/32/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nfdsi"]
 _data = {
-"Anim": SubResource("1"),
-"RESET": SubResource("2")
+&"Anim": SubResource("1"),
+&"RESET": SubResource("2")
 }
 
 [node name="Control" type="Control"]

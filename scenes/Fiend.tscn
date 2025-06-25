@@ -1,65 +1,65 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://d4mary8gect8o"]
 
-[ext_resource path="res://assets/Models/Enemies/Fiend.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://FiendTexture.tres" type="Material" id=2]
-[ext_resource path="res://scripts/fiend.gd" type="Script" id=3]
-[ext_resource path="res://sound/FIENDRAWR.wav" type="AudioStream" id=4]
-[ext_resource path="res://sound/Fiend hurt.wav" type="AudioStream" id=5]
+[ext_resource type="ArrayMesh" uid="uid://chatgblakalfc" path="res://assets/Models/Enemies/Fiend.obj" id="1"]
+[ext_resource type="Material" path="res://FiendTexture.tres" id="2"]
+[ext_resource type="Script" uid="uid://g2fhbaaac5ni" path="res://scripts/fiend.gd" id="3"]
+[ext_resource type="AudioStream" uid="uid://bjg1yfvut7ikg" path="res://sound/FIENDRAWR.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://ca3be5yunrqhm" path="res://sound/Fiend hurt.wav" id="5"]
 
-[sub_resource type="BoxShape3D" id=1]
-extents = Vector3( 1.42163, 2.02264, 3.57558 )
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(2.84326, 4.04528, 7.15116)
 
-[sub_resource type="BoxShape3D" id=2]
+[sub_resource type="BoxShape3D" id="2"]
 
-[sub_resource type="BoxShape3D" id=3]
-extents = Vector3( 153.537, 37.5689, 111.276 )
+[sub_resource type="BoxShape3D" id="3"]
+size = Vector3(307.074, 75.1378, 222.552)
 
 [node name="Fiend" type="CharacterBody3D" groups=["Enemy", "enemy", "fiend"]]
 collision_layer = 2
 collision_mask = 7
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="Fiend" type="MeshInstance3D" parent="."]
-transform = Transform3D( 0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.015831, -2.38419e-07, 0.0126724 )
-mesh = ExtResource( 1 )
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.015831, -2.38419e-07, 0.0126724)
+mesh = ExtResource("1")
 skeleton = NodePath("")
-material/0 = ExtResource( 2 )
-material/1 = ExtResource( 2 )
+material/0 = ExtResource("2")
+material/1 = ExtResource("2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["enemy"]]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.771609, -3.06645 )
-shape = SubResource( 1 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.771609, -3.06645)
+shape = SubResource("1")
 
 [node name="BITEAREA" type="Area3D" parent="."]
 collision_layer = 2
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BITEAREA"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0221566 )
-shape = SubResource( 2 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0221566)
+shape = SubResource("2")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 
 [node name="sightrange" type="Area3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.210256, 0, 0.0802832 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.210256, 0, 0.0802832)
 collision_layer = 2
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="sightrange"]
-shape = SubResource( 3 )
+shape = SubResource("3")
 
 [node name="Eyes" type="Node3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.657514, 1.22196 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.657514, 1.22196)
 
 [node name="Timer2" type="Timer" parent="."]
 
 [node name="rawr" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource("5")
 
 [node name="hurt" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [connection signal="body_entered" from="BITEAREA" to="." method="_on_BITEAREA_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,4 +1,1 @@
 extends RigidBody3D
-
-
-

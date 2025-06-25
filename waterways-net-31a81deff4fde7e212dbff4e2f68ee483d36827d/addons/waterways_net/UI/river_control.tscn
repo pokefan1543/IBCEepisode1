@@ -1,14 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://byf1163tiqujb"]
 
-[ext_resource type="Script" path="res://addons/waterways_net/UI/RiverControl.cs" id="1_miwrb"]
-[ext_resource type="Texture2D" uid="uid://dl2fd2kpkqfcs" path="res://addons/waterways_net/Icons/select.svg" id="3_c7fmo"]
-[ext_resource type="Texture2D" uid="uid://dnjok0de3mopo" path="res://addons/waterways_net/Icons/create.svg" id="4_cumdu"]
-[ext_resource type="Texture2D" uid="uid://cot00dv010gt2" path="res://addons/waterways_net/Icons/delete.svg" id="5_a4vrl"]
+[ext_resource type="Texture2D" uid="uid://dl2fd2kpkqfcs" path="res://waterways-net-31a81deff4fde7e212dbff4e2f68ee483d36827d/addons/waterways_net/Icons/select.svg" id="3_c7fmo"]
+[ext_resource type="Texture2D" uid="uid://dnjok0de3mopo" path="res://waterways-net-31a81deff4fde7e212dbff4e2f68ee483d36827d/addons/waterways_net/Icons/create.svg" id="4_cumdu"]
+[ext_resource type="Texture2D" uid="uid://cot00dv010gt2" path="res://waterways-net-31a81deff4fde7e212dbff4e2f68ee483d36827d/addons/waterways_net/Icons/delete.svg" id="5_a4vrl"]
+
+[sub_resource type="Resource" id="Resource_yahlb"]
+metadata/__load_path__ = "res://addons/waterways_net/UI/RiverControl.cs"
 
 [node name="RiverControl" type="HBoxContainer" node_paths=PackedStringArray("ConstraintButton", "RiverMenuButton", "LocalModeButton", "SelectButton", "RemoveButton", "AddButton")]
 offset_right = 128.0
 offset_bottom = 26.0
-script = ExtResource("1_miwrb")
+script = SubResource("Resource_yahlb")
 ConstraintButton = NodePath("Constraints")
 RiverMenuButton = NodePath("RiverMenu")
 LocalModeButton = NodePath("LocalMode")

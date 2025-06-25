@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://emy6i2lpqok2"]
 
 [ext_resource type="Texture2D" uid="uid://b0hlv37wo3ayp" path="res://assets/textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp" id="1"]
-[ext_resource type="Script" path="res://scenes/loading.gd" id="3"]
+[ext_resource type="Script" uid="uid://binsklhkjv0p2" path="res://scenes/loading.gd" id="3"]
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="3_1fkui"]
 [ext_resource type="AudioStream" uid="uid://c0o5uex6plcgc" path="res://sound/CHACHING.wav" id="4"]
 

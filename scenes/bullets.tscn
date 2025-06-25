@@ -1,19 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dtp15gkl002he"]
 
-[ext_resource path="res://assets/textures/Whatever/brushed-metal-texture-12.tres" type="Material" id=1]
+[ext_resource type="Material" path="res://assets/textures/Whatever/brushed-metal-texture-12.tres" id="1"]
 
-[sub_resource type="BoxShape3D" id=1]
-extents = Vector3( 0.373062, 0.624735, 0.840756 )
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(0.746124, 1.24947, 1.68151)
 
-[sub_resource type="BoxMesh" id=2]
-size = Vector3( 0.961, 1.248, 1.685 )
+[sub_resource type="BoxMesh" id="2"]
+size = Vector3(0.961, 1.248, 1.685)
 
 [node name="bulletammo" type="RigidBody3D" groups=["bullets", "item"]]
 mode = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["bullet", "bullets"]]
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource( 2 )
-material/0 = ExtResource( 1 )
+mesh = SubResource("2")
+material/0 = ExtResource("1")

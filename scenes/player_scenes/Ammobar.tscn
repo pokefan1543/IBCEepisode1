@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://1ytlul1mpvli"]
 
-[ext_resource type="Texture2D" uid="uid://cvw1n3ma1mcj8" path="res://assets/textures/Sprites/New Piskel-1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://8abbid1tfxn7" path="res://assets/textures/Sprites/New Piskel-1.png" id="1"]
 [ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="2"]
 [ext_resource type="Theme" uid="uid://dreogtmxe0c5o" path="res://HUDTHING.tres" id="3"]
-[ext_resource type="Script" path="res://scenes/player_scenes/Ammobar.gd" id="6"]
+[ext_resource type="Script" uid="uid://cupwp253n6bdo" path="res://scenes/player_scenes/Ammobar.gd" id="6"]
 
 [sub_resource type="Animation" id="40"]
 resource_name = "Crosshairzoom"
@@ -18,9 +18,9 @@ length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fjflc"]
 _data = {
-"Crosshairzoom": SubResource("40"),
-"Crosshairzoomout": SubResource("2"),
-"RESET": SubResource("3")
+&"Crosshairzoom": SubResource("40"),
+&"Crosshairzoomout": SubResource("2"),
+&"RESET": SubResource("3")
 }
 
 [node name="Healthbar" type="Control"]

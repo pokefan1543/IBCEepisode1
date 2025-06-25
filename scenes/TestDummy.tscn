@@ -1,6 +1,6 @@
 [gd_scene load_steps=60 format=4 uid="uid://b3mrcwe2h2uww"]
 
-[ext_resource type="Script" path="res://scripts/TestDummy.gd" id="1"]
+[ext_resource type="Script" uid="uid://baqd4vodv15sk" path="res://scripts/TestDummy.gd" id="1"]
 [ext_resource type="AudioStream" uid="uid://dtismxxahj4e3" path="res://sound/Chaospawndeath.wav" id="2"]
 [ext_resource type="AudioStream" uid="uid://cgna55l4jifcb" path="res://sound/PULSEFIRE.wav" id="3"]
 [ext_resource type="AudioStream" uid="uid://b25xtuiyy6vxf" path="res://sound/AXELHURT.wav" id="4"]
@@ -98,9 +98,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7krmd"]
 _data = {
-"Armature|mixamocom|Layer0": SubResource("11"),
-"RESET": SubResource("18"),
-"sceneshoot": SubResource("19")
+&"Armature|mixamocom|Layer0": SubResource("11"),
+&"RESET": SubResource("18"),
+&"sceneshoot": SubResource("19")
 }
 
 [sub_resource type="ArrayMesh" id="1"]
@@ -355,7 +355,7 @@ length = 1.33333
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mw2j3"]
 _data = {
-"mixamo.com": SubResource("15")
+&"mixamo.com": SubResource("15")
 }
 
 [sub_resource type="ArrayMesh" id="23"]
@@ -610,7 +610,7 @@ length = 1.95833
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b8rmq"]
 _data = {
-"mixamo.com": SubResource("37")
+&"mixamo.com": SubResource("37")
 }
 
 [sub_resource type="ArrayMesh" id="38"]
@@ -865,7 +865,7 @@ length = 0.0333333
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l36rn"]
 _data = {
-"mixamo.com": SubResource("52")
+&"mixamo.com": SubResource("52")
 }
 
 [node name="TestDummy" type="CharacterBody3D" groups=["Chaospawn", "dummy", "enemy"]]

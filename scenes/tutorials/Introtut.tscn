@@ -1,23 +1,23 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://obl2lhbr41c8"]
 
-[ext_resource path="res://scenes/tutorials/GiantThing.gd" type="Script" id=1]
-[ext_resource path="res://assets/Weapons/Holy Shotgun.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://scenes/player_scenes/Axel-1A.tscn" type="PackedScene" id=3]
-[ext_resource path="res://music/Tut1Music.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Space.tres" type="Environment" id=5]
+[ext_resource type="Script" uid="uid://dwylk4d5cqb3v" path="res://scenes/tutorials/GiantThing.gd" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://bxy0cbb34bmxd" path="res://assets/Weapons/Holy Shotgun.obj" id="2"]
+[ext_resource type="PackedScene" uid="uid://1u5fwdymjfm4" path="res://scenes/player_scenes/Axel-1A.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://d12frjv6h6pxj" path="res://music/Tut1Music.tscn" id="4"]
+[ext_resource type="Environment" uid="uid://cw254asc6dpdf" path="res://Space.tres" id="5"]
 
-[sub_resource type="BoxShape3D" id=1]
-extents = Vector3( 10.2924, 0.347472, 9.01439 )
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(20.5848, 0.694944, 18.0288)
 
 [node name="Node3D" type="Node3D"]
 
-[node name="FPS" parent="." instance=ExtResource( 3 )]
+[node name="FPS" parent="." instance=ExtResource("3")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0281359, -6.17602, -15.7214 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0281359, -6.17602, -15.7214)
 width = 119.121
 depth = 81.2644
 
@@ -25,20 +25,20 @@ depth = 81.2644
 mass = 65535.0
 continuous_cd = true
 contact_monitor = true
-script = ExtResource( 1 )
+script = ExtResource("1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GiantThing"]
-transform = Transform3D( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -4.11128, -20.0447 )
-mesh = ExtResource( 2 )
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -4.11128, -20.0447)
+mesh = ExtResource("2")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GiantThing"]
-transform = Transform3D( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255, -3.79131, -18.919 )
-shape = SubResource( 1 )
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255, -3.79131, -18.919)
+shape = SubResource("1")
 
-[node name="AudioStreamPlayer" parent="." instance=ExtResource( 4 )]
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("4")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 5 )
+environment = ExtResource("5")
 
 [connection signal="body_entered" from="GiantThing" to="FPS" method="_on_GiantThing_body_entered"]

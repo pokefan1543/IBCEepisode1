@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://b2j8errhhoc8n"]
 
-[ext_resource type="Texture2D" uid="uid://c8mjpn5eo3oq3" path="res://scenes/crosshair.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://berdqmt7fdin" path="res://scenes/crosshair.png" id="1"]
 [ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="2"]
-[ext_resource type="Script" path="res://scenes/crosshair.gd" id="4"]
+[ext_resource type="Script" uid="uid://dn1wav7qg5n52" path="res://scenes/crosshair.gd" id="4"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Crosshairzoom"
@@ -125,9 +125,9 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ms2up"]
 _data = {
-"Crosshairzoom": SubResource("1"),
-"Crosshairzoomout": SubResource("2"),
-"RESET": SubResource("3")
+&"Crosshairzoom": SubResource("1"),
+&"Crosshairzoomout": SubResource("2"),
+&"RESET": SubResource("3")
 }
 
 [node name="Control" type="Control"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=65 format=3 uid="uid://1u5fwdymjfm4"]
 
-[ext_resource type="Script" path="res://scripts/FPS.gd" id="1"]
+[ext_resource type="Script" uid="uid://dcg04hov3jyok" path="res://scripts/FPS.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://705nne83ss3i" path="res://assets/Muzzleflash/muzzleflash.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://1ytlul1mpvli" path="res://scenes/player_scenes/Ammobar.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cv6oq55re2fd1" path="res://scenes/Railgunfloor.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://scenes/Trail.tscn" id="5"]
-[ext_resource type="Script" path="res://scripts/hand.gd" id="6"]
+[ext_resource type="Script" uid="uid://dwlbgwft04eia" path="res://scripts/hand.gd" id="6"]
 [ext_resource type="AudioStream" uid="uid://of08oifsikc2" path="res://sound/SOLDIERHURT2.wav" id="7"]
 [ext_resource type="PackedScene" uid="uid://b1eo0aqoeiw60" path="res://scenes/player_scenes/HealthBar.tscn" id="8"]
 [ext_resource type="PackedScene" uid="uid://b5x2wj41jgqw1" path="res://scenes/player_scenes/Deathscreen.tscn" id="10"]
@@ -25,13 +25,13 @@
 [ext_resource type="Texture2D" uid="uid://d18mwqjwm2h8b" path="res://assets/New Project.png" id="28"]
 [ext_resource type="AudioStream" uid="uid://ebubvv3tfvis" path="res://sound/railgunFire.wav" id="29"]
 [ext_resource type="PackedScene" path="res://scenes/MeshInstance.tscn" id="30"]
-[ext_resource type="Script" path="res://scenes/player_scenes/stopwatchnode.gd" id="31"]
+[ext_resource type="Script" uid="uid://2ptmsh2cc71d" path="res://scenes/player_scenes/stopwatchnode.gd" id="31"]
 [ext_resource type="AudioStream" uid="uid://b3i5wcpad3pe2" path="res://sound/dash.wav" id="33"]
 [ext_resource type="AudioStream" uid="uid://fw1utcg6ia0c" path="res://sound/jumpland.wav" id="34"]
 [ext_resource type="AudioStream" uid="uid://cxwe3heebo7vu" path="res://sound/FEET4.wav" id="35"]
 [ext_resource type="AudioStream" uid="uid://76mdjyd3xgsw" path="res://sound/charge.wav" id="37"]
 [ext_resource type="AudioStream" uid="uid://byv6uouxhqq0k" path="res://sound/Shotgunblast.wav" id="38"]
-[ext_resource type="Script" path="res://laser2.gd" id="39"]
+[ext_resource type="Script" uid="uid://b61hiffjv1stk" path="res://laser2.gd" id="39"]
 [ext_resource type="ArrayMesh" uid="uid://d37pon0smpo1w" path="res://assets/Weapons/RedRanger.obj" id="43"]
 [ext_resource type="PackedScene" uid="uid://b1c414ggp634" path="res://scenes/player_scenes/PauseMenu.tscn" id="44"]
 [ext_resource type="PackedScene" uid="uid://b2j8errhhoc8n" path="res://scenes/crosshair.tscn" id="45"]
@@ -493,19 +493,19 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wsmr2"]
 _data = {
-"Lean_BackL": SubResource("32"),
-"Lean_BackR": SubResource("33"),
-"Lean_Left": SubResource("34"),
-"Lean_Right": SubResource("35"),
-"M9Fire": SubResource("17"),
-"RESET": SubResource("13"),
-"Railgunfire": SubResource("25"),
-"ShotgunBlast": SubResource("31"),
-"Stormcloud_fire": SubResource("22"),
-"Weaponsway": SubResource("11"),
-"XBusterFire": SubResource("10"),
-"charge": SubResource("38"),
-"shotgunfire": SubResource("18")
+&"Lean_BackL": SubResource("32"),
+&"Lean_BackR": SubResource("33"),
+&"Lean_Left": SubResource("34"),
+&"Lean_Right": SubResource("35"),
+&"M9Fire": SubResource("17"),
+&"RESET": SubResource("13"),
+&"Railgunfire": SubResource("25"),
+&"ShotgunBlast": SubResource("31"),
+&"Stormcloud_fire": SubResource("22"),
+&"Weaponsway": SubResource("11"),
+&"XBusterFire": SubResource("10"),
+&"charge": SubResource("38"),
+&"shotgunfire": SubResource("18")
 }
 
 [sub_resource type="BoxShape3D" id="16"]

@@ -1,51 +1,50 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://nohu4urygej0"]
 
-[ext_resource path="res://Assets/env_a.tres" type="Environment" id=7]
+[sub_resource type="SphereMesh" id="1"]
 
-[sub_resource type="SphereMesh" id=1]
-
-[sub_resource type="StandardMaterial3D" id=2]
+[sub_resource type="StandardMaterial3D" id="2"]
 metallic = 1.0
 metallic_specular = 1.0
 roughness = 0.32
 
-[sub_resource type="StandardMaterial3D" id=3]
-albedo_color = Color( 1, 0, 0, 1 )
+[sub_resource type="StandardMaterial3D" id="3"]
+albedo_color = Color(1, 0, 0, 1)
 emission_enabled = true
-emission = Color( 1, 0, 0, 1 )
-emission_energy = 9.43
-emission_operator = 0
-emission_on_uv2 = false
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 9.43
 
-[sub_resource type="SphereMesh" id=4]
+[sub_resource type="SphereMesh" id="4"]
 radius = 0.1
 height = 0.2
+
+[sub_resource type="Resource" id="Resource_sgp6g"]
+metadata/__load_path__ = "res://Assets/env_a.tres"
 
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance4" type="MeshInstance3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89841, 1.26893, 4.02662 )
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89841, 1.26893, 4.02662)
+mesh = SubResource("1")
+material/0 = SubResource("2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D( 0.993512, 0.0824056, 0.0783782, 0.0176624, -0.792619, 0.609461, 0.112347, -0.604123, -0.788932, 0, 2.95047, 0 )
-light_color = Color( 0.843137, 0.513726, 0.313726, 1 )
+transform = Transform3D(0.993512, 0.0824056, 0.0783782, 0.0176624, -0.792619, 0.609461, 0.112347, -0.604123, -0.788932, 0, 2.95047, 0)
+light_color = Color(0.843137, 0.513726, 0.313726, 1)
 light_energy = 1.299
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415186, 2.16944, 7.01796 )
-light_color = Color( 1, 0.709804, 0.592157, 1 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.415186, 2.16944, 7.01796)
+light_color = Color(1, 0.709804, 0.592157, 1)
 light_energy = 2.0
 omni_range = 8.071
 omni_attenuation = 2.92817
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="OmniLight3D"]
-material_override = SubResource( 3 )
-mesh = SubResource( 4 )
+material_override = SubResource("3")
+mesh = SubResource("4")
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 7 )
+environment = SubResource("Resource_sgp6g")

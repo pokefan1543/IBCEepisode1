@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_2dkrp"]
 [ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="2"]
-[ext_resource type="Script" path="res://scenes/Options.gd" id="3"]
+[ext_resource type="Script" uid="uid://dwyqjlr7b8swf" path="res://scenes/Options.gd" id="3"]
 [ext_resource type="Texture2D" uid="uid://dgef72m8njmnl" path="res://test.png" id="3_gjo5n"]
-[ext_resource type="PackedScene" path="res://music/OptionsMusic.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dt8d2mgj7n7jf" path="res://music/OptionsMusic.tscn" id="4"]
 [ext_resource type="AudioStream" uid="uid://c0o5uex6plcgc" path="res://sound/CHACHING.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://dod8wfe1qjc7c" path="res://sound/SELECT.wav" id="7"]
 

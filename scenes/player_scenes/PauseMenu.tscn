@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1c414ggp634"]
 
 [ext_resource type="Texture2D" uid="uid://criq1jwasawoy" path="res://assets/textures/Whatever/brushed-metal-texture-12.png" id="1"]
-[ext_resource type="Script" path="res://scenes/player_scenes/PauseMenu.gd" id="3"]
+[ext_resource type="Script" uid="uid://cn5r4c6gxs41p" path="res://scenes/player_scenes/PauseMenu.gd" id="3"]
 [ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="3_2wdof"]
 [ext_resource type="PackedScene" uid="uid://b5ohtlw85p7ne" path="res://scenes/Options.tscn" id="4"]
 

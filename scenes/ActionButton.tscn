@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bmwqd43egd8wc"]
 
-[ext_resource path="res://Button.gd" type="Script" id=1]
-[ext_resource path="res://TitlescreenTheme.tres" type="Theme" id=2]
+[ext_resource type="Script" uid="uid://cqwjvumc7mod8" path="res://Button.gd" id="1"]
+[ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="2"]
 
 [node name="Button" type="Button"]
 offset_right = 12.0
 offset_bottom = 20.0
-theme = ExtResource( 2 )
-script = ExtResource( 1 )
+theme = ExtResource("2")
+script = ExtResource("1")

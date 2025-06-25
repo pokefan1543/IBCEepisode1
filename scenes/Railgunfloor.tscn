@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cv6oq55re2fd1"]
 
-[ext_resource type="PackedScene" path="res://scenes/MeshInstance.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://doq7uw34y3yq1" path="res://scenes/MeshInstance.tscn" id="1"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(9.11832, 4.1842, 18.3145)

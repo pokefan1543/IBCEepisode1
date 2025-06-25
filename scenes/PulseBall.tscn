@@ -1,14 +1,14 @@
 [gd_scene load_steps=13 format=3 uid="uid://bd4fvocljl8sv"]
 
-[ext_resource type="Script" path="res://scripts/PulseBall.gd" id="1"]
+[ext_resource type="Script" uid="uid://bfyrifho1noft" path="res://scripts/PulseBall.gd" id="1"]
 [ext_resource type="Material" path="res://Pulseballreal.tres" id="2"]
-[ext_resource type="AudioStream" uid="uid://b7ihnppgpk0ka" path="res://sound/Fiend hurt.wav" id="3"]
-[ext_resource type="AudioStream" uid="uid://dur60b0xhvy65" path="res://sound/ChaosPawnHurt.wav" id="4"]
-[ext_resource type="AudioStream" uid="uid://dy6oib7n34d73" path="res://sound/SOLDIERHURt.wav" id="5"]
-[ext_resource type="AudioStream" uid="uid://b8loo0g472rpk" path="res://sound/SOLDIERHURT2.wav" id="6"]
-[ext_resource type="AudioStream" uid="uid://b8uv3l48cgwil" path="res://sound/PAWNHURT2.wav" id="7"]
-[ext_resource type="AudioStream" uid="uid://s4ip10u2g7cj" path="res://sound/SOLDIERHURT3.wav" id="8"]
-[ext_resource type="AudioStream" uid="uid://knxfpqrj7ccw" path="res://sound/PAWNHURT3.wav" id="9"]
+[ext_resource type="AudioStream" uid="uid://ca3be5yunrqhm" path="res://sound/Fiend hurt.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://bite5x5vq870a" path="res://sound/ChaosPawnHurt.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://b13yp3a3q53p3" path="res://sound/SOLDIERHURt.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://of08oifsikc2" path="res://sound/SOLDIERHURT2.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://cqkg755hxrapf" path="res://sound/PAWNHURT2.wav" id="7"]
+[ext_resource type="AudioStream" uid="uid://ld8vbt6ff7fi" path="res://sound/SOLDIERHURT3.wav" id="8"]
+[ext_resource type="AudioStream" uid="uid://du6rqqa48ubg7" path="res://sound/PAWNHURT3.wav" id="9"]
 
 [sub_resource type="SphereMesh" id="3"]
 material = ExtResource("2")

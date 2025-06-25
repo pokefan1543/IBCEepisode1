@@ -1,59 +1,59 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://dl36l5fj1h1n3"]
 
-[ext_resource path="res://assets/Models/Enemies/Ikenga.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://scenes/IkegaBall.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/Models/Enemies/Ikenga.tres" type="Material" id=3]
-[ext_resource path="res://scenes/enemy_scenes/Bosses/Ikenga.gd" type="Script" id=4]
-[ext_resource path="res://scenes/player_scenes/BossHealthBar.tscn" type="PackedScene" id=5]
+[ext_resource type="ArrayMesh" uid="uid://b11oouuh76lyx" path="res://assets/Models/Enemies/Ikenga.obj" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/IkegaBall.tscn" id="2"]
+[ext_resource type="Material" path="res://assets/Models/Enemies/Ikenga.tres" id="3"]
+[ext_resource type="Script" uid="uid://dicrlgl1jgxla" path="res://scenes/enemy_scenes/Bosses/Ikenga.gd" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/player_scenes/BossHealthBar.tscn" id="5"]
 
-[sub_resource type="BoxShape3D" id=1]
-extents = Vector3( 4.31619, 13.9058, 3.11802 )
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(8.63238, 27.8116, 6.23604)
 
-[sub_resource type="SphereShape3D" id=2]
+[sub_resource type="SphereShape3D" id="2"]
 radius = 271.281
 
 [node name="Ikenga" type="CharacterBody3D" groups=["ChaosPawn", "Chaospawn", "Enemy", "chaospawn", "enemy"]]
 collision_layer = 7
 collision_mask = 7
-script = ExtResource( 4 )
+script = ExtResource("4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317248, -7.71793, 0 )
-shape = SubResource( 1 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317248, -7.71793, 0)
+shape = SubResource("1")
 
 [node name="Ikenga" type="MeshInstance3D" parent="."]
-transform = Transform3D( -4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0, 0, 0 )
-mesh = ExtResource( 1 )
-material/0 = ExtResource( 3 )
-material/1 = ExtResource( 3 )
-material/2 = ExtResource( 3 )
+transform = Transform3D(-4.37114e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.37114e-09, 0, 0, 0)
+mesh = ExtResource("1")
+material/0 = ExtResource("3")
+material/1 = ExtResource("3")
+material/2 = ExtResource("3")
 
-[node name="IkegaBall" parent="Ikenga" instance=ExtResource( 2 )]
-transform = Transform3D( -2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 119.444, -150, 0.345 )
+[node name="IkegaBall" parent="Ikenga" instance=ExtResource("2")]
+transform = Transform3D(-2.18557e-05, 0, 500, 0, 500, 0, -500, 0, -2.18557e-05, 119.444, -150, 0.345)
 
-[node name="IkegaBall2" parent="Ikenga" instance=ExtResource( 2 )]
-transform = Transform3D( 500, 0, 5.45697e-12, 0, 500, 0, -5.45697e-12, 0, 500, -1.64, -150, 110.84 )
+[node name="IkegaBall2" parent="Ikenga" instance=ExtResource("2")]
+transform = Transform3D(500, 0, 5.45697e-12, 0, 500, 0, -5.45697e-12, 0, 500, -1.64, -150, 110.84)
 
-[node name="IkegaBall4" parent="Ikenga" instance=ExtResource( 2 )]
-transform = Transform3D( -500, 0, 7.54979e-05, 0, 500, 0, -7.54979e-05, 0, -500, -2.144, -150, -116.829 )
+[node name="IkegaBall4" parent="Ikenga" instance=ExtResource("2")]
+transform = Transform3D(-500, 0, 7.54979e-05, 0, 500, 0, -7.54979e-05, 0, -500, -2.144, -150, -116.829)
 
-[node name="IkegaBall3" parent="Ikenga" instance=ExtResource( 2 )]
-transform = Transform3D( -2.18557e-05, 0, -500, 0, 500, 0, 500, 0, -2.18557e-05, -107.009, -150, -24.7659 )
+[node name="IkegaBall3" parent="Ikenga" instance=ExtResource("2")]
+transform = Transform3D(-2.18557e-05, 0, -500, 0, 500, 0, 500, 0, -2.18557e-05, -107.009, -150, -24.7659)
 
 [node name="SightRange" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SightRange"]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.589104, -1.80475, 0.352966 )
-shape = SubResource( 2 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.589104, -1.80475, 0.352966)
+shape = SubResource("2")
 
 [node name="JumpTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
 [node name="Eyes" type="Node3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.29725, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.29725, 0)
 
-[node name="Healthbar" parent="." instance=ExtResource( 5 )]
+[node name="Healthbar" parent="." instance=ExtResource("5")]
 offset_top = 65.0
 offset_bottom = 65.0
 

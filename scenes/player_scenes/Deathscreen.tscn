@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5x2wj41jgqw1"]
 
-[ext_resource type="Script" path="res://scripts/Deathscreen.gd" id="1"]
-[ext_resource type="VideoStream" path="res://assets/Videos/TV-Static(1).ogv" id="2_eee21"]
+[ext_resource type="Script" uid="uid://dxmh22eyo2l3f" path="res://scripts/Deathscreen.gd" id="1"]
+[ext_resource type="VideoStream" uid="uid://ca1via2fc7a4n" path="res://assets/Videos/TV-Static(1).ogv" id="2_eee21"]
 
 [node name="Deathscreen" type="Control"]
 process_mode = 3

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dyeecw228vic8"]
 
-[ext_resource path="res://assets/New Project.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://d18mwqjwm2h8b" path="res://assets/New Project.png" id="1"]
 
 [node name="scope" type="Control"]
 anchor_right = 1.0
@@ -14,5 +14,5 @@ offset_bottom = 40.0
 [node name="TextureRect" type="TextureRect" parent="Popup"]
 offset_right = 40.0
 offset_bottom = 40.0
-scale = Vector2( 4, 3 )
-texture = ExtResource( 1 )
+scale = Vector2(4, 3)
+texture = ExtResource("1")

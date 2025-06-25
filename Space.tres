@@ -1,10 +1,16 @@
-[gd_resource type="Environment" load_steps=2 format=3 uid="uid://cw254asc6dpdf"]
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://cw254asc6dpdf"]
 
-[sub_resource type="Sky" id="1"]
+[ext_resource type="Texture2D" uid="uid://b4wd6pnsib8ge" path="res://assets/HDR_asteroid_field.hdr" id="1_3kw5l"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j2rvc"]
+panorama = ExtResource("1_3kw5l")
+
+[sub_resource type="Sky" id="Sky_hmf2i"]
+sky_material = SubResource("PanoramaSkyMaterial_j2rvc")
 
 [resource]
 background_mode = 2
-sky = SubResource("1")
+sky = SubResource("Sky_hmf2i")
 sky_custom_fov = 30.0
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 16.0
@@ -15,4 +21,7 @@ glow_levels/4 = 1.0
 glow_levels/6 = 1.0
 glow_levels/7 = 1.0
 fog_enabled = true
-fog_depth_end = 385.8
+fog_aerial_perspective = 0.957
+fog_depth_curve = 1.27456
+fog_depth_begin = 0.0
+fog_depth_end = 1615.8
