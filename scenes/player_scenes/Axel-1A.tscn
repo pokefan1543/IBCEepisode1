@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://705nne83ss3i" path="res://assets/Muzzleflash/muzzleflash.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://1ytlul1mpvli" path="res://scenes/player_scenes/Ammobar.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cv6oq55re2fd1" path="res://scenes/Railgunfloor.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/Trail.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://brfjdasasicna" path="res://scenes/Trail.tscn" id="5"]
 [ext_resource type="Script" uid="uid://dwlbgwft04eia" path="res://scripts/hand.gd" id="6"]
 [ext_resource type="AudioStream" uid="uid://of08oifsikc2" path="res://sound/SOLDIERHURT2.wav" id="7"]
 [ext_resource type="PackedScene" uid="uid://b1eo0aqoeiw60" path="res://scenes/player_scenes/HealthBar.tscn" id="8"]
@@ -24,7 +24,7 @@
 [ext_resource type="Material" path="res://scenes/player_scenes/BUSTER.tres" id="27"]
 [ext_resource type="Texture2D" uid="uid://d18mwqjwm2h8b" path="res://assets/New Project.png" id="28"]
 [ext_resource type="AudioStream" uid="uid://ebubvv3tfvis" path="res://sound/railgunFire.wav" id="29"]
-[ext_resource type="PackedScene" path="res://scenes/MeshInstance.tscn" id="30"]
+[ext_resource type="PackedScene" uid="uid://doq7uw34y3yq1" path="res://scenes/MeshInstance.tscn" id="30"]
 [ext_resource type="Script" uid="uid://2ptmsh2cc71d" path="res://scenes/player_scenes/stopwatchnode.gd" id="31"]
 [ext_resource type="AudioStream" uid="uid://b3i5wcpad3pe2" path="res://sound/dash.wav" id="33"]
 [ext_resource type="AudioStream" uid="uid://fw1utcg6ia0c" path="res://sound/jumpland.wav" id="34"]
@@ -509,7 +509,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="16"]
-size = Vector3(2, 2, 1.016)
+size = Vector3(1.48438, 1.40601, 0.914917)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wb8pb"]
 material = ExtResource("23_d3cvi")
@@ -517,10 +517,9 @@ material = ExtResource("23_d3cvi")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_52tf1"]
 
 [sub_resource type="BoxShape3D" id="30"]
-size = Vector3(2.66794, 2, 846.784)
 
 [node name="FPS" type="CharacterBody3D" groups=["Player", "player"]]
-transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 1, 0.0299196, 0.122104, -0.393696)
+transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 1, 0, 0, 0)
 collision_mask = 7
 script = ExtResource("1")
 trail = ExtResource("5")
@@ -819,7 +818,7 @@ collision_mask = 6
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3D/hand"]
 root_node = NodePath("../../../..")
 libraries = {
-"": SubResource("AnimationLibrary_wsmr2")
+&"": SubResource("AnimationLibrary_wsmr2")
 }
 
 [node name="CrosshairRayCast" type="RayCast3D" parent="Head/Camera3D/hand"]
@@ -865,8 +864,6 @@ process_mode = 3
 light_mask = 31
 offset_right = -2.0
 offset_bottom = -436.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="firesound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("46")
@@ -882,7 +879,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 7, 0, 1, 0)
 collision_mask = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="touch"]
-transform = Transform3D(1, 0, 0, 0, 2.128, 0, 0, 0, 315.774, 0, 0, 0)
+transform = Transform3D(1, 4.787e-07, 0, -4.787e-07, 1, 0, 0, 0, 0.999999, 0.00390627, 0.0330809, -0.0425415)
 shape = SubResource("16")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="touch"]
@@ -953,7 +950,7 @@ bus = &"Sound"
 collision_mask = 6
 
 [node name="kickDamageBox" type="CollisionShape3D" parent="kickDamageArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999998, -0.0159676, -1.77418, 30.5265)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999998, 0, 0, 0)
 shape = SubResource("30")
 
 [node name="burst_timer" type="Timer" parent="."]
@@ -971,8 +968,6 @@ offset_left = -16.0
 offset_top = -12.0
 offset_right = -7.0
 offset_bottom = -12.0
-grow_horizontal = 2
-grow_vertical = 2
 sway_left = Vector2(130, 210)
 sway_right = Vector2(300, 210)
 sway_normal = Vector2(340, 210)

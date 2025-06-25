@@ -88,5 +88,5 @@ scroll_active = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_fjflc")
+&"": SubResource("AnimationLibrary_fjflc")
 }

@@ -950,7 +950,7 @@ text = "press a number on the keyboard to access each level. press q to quit and
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_nfdsi")
+&"": SubResource("AnimationLibrary_nfdsi")
 }
 
 [node name="buzzer" type="AudioStreamPlayer" parent="."]
