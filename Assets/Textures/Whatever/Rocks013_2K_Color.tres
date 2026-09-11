@@ -1,0 +1,20 @@
+[gd_resource type="SpatialMaterial" load_steps=5 format=2]
+
+[ext_resource type="Texture" uid="uid://boc26tj587rk3" path="res://assets/Textures/Whatever/Rocks013_2K_Roughness.png" id="1"]
+[ext_resource type="Texture" uid="uid://cc7on4p5nxn" path="res://assets/Textures/Whatever/Rocks013_2K_NormalGL.png" id="2"]
+[ext_resource type="Texture" uid="uid://bnihl034tvhej" path="res://assets/Textures/Whatever/Rocks013_2K_Color.png" id="3"]
+[ext_resource type="Texture" uid="uid://cusu6rmxtlrqn" path="res://assets/Textures/Whatever/Rocks013_2K_Displacement.png" id="4"]
+
+
+[resource]
+albedo_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 4 )

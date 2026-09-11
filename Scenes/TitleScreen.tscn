@@ -1,0 +1,286 @@
+[gd_scene load_steps=11 format=3 uid="uid://h7tvinlfiy03"]
+
+[ext_resource type="Texture2D" uid="uid://7luqgy63alb6" path="res://IBCE Logo better.png" id="1"]
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_243ru"]
+[ext_resource type="Texture2D" uid="uid://08q7i0rno3tr" path="res://textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp" id="2"]
+[ext_resource type="Script" uid="uid://j1jmn4hrpeyq" path="res://scenes/TitleScreen.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://bos7qs65wifgh" path="res://music/TitleMusic.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://b5ohtlw85p7ne" path="res://scenes/Options.tscn" id="7_66w26"]
+[ext_resource type="AudioStream" uid="uid://dod8wfe1qjc7c" path="res://sound/SELECT.wav" id="8"]
+
+[sub_resource type="Animation" id="1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(263, 224)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(851, 74)]
+}
+
+[sub_resource type="Animation" id="2"]
+resource_name = "logo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:pivot_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextureRect:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TextureRect:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(100, 100), Vector2(704, 354)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TextureRect:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -13)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u8rom"]
+_data = {
+&"RESET": SubResource("1"),
+&"logo": SubResource("2")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_243ru")
+script = ExtResource("4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_u8rom")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("7")]
+bus = &"Master"
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 214.0
+offset_bottom = 160.0
+scale = Vector2(3, 3)
+texture = ExtResource("2")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 2
+offset_left = 851.0
+offset_top = 74.0
+offset_right = 1114.0
+offset_bottom = 298.0
+mouse_filter = 2
+texture = ExtResource("1")
+expand_mode = 1
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.509804)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -13.0
+offset_right = 635.0
+offset_bottom = 490.0
+color = Color(0.129412, 0.101961, 0.14902, 1)
+
+[node name="options" parent="." instance=ExtResource("7_66w26")]
+visible = false
+layout_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.1
+anchor_bottom = 0.063
+offset_left = 192.0
+offset_top = 320.0
+offset_right = 392.0
+offset_bottom = 449.76
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+z_index = 2
+z_as_relative = false
+layout_mode = 2
+mouse_filter = 1
+text = "Start"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Gallery, Audio Test, and Codex"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 192.0
+offset_top = 136.0
+offset_right = 448.0
+offset_bottom = 202.0
+
+[node name="normal" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Grace Be With You"
+
+[node name="DifT" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 40.0
+offset_top = 58.0
+offset_right = 602.0
+offset_bottom = 97.0
+disabled = true
+text = "Select Your Difficulty!"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button4" to="." method="_on_Button4_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button5" to="." method="_on_Button5_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_Button3_button_down"]
+[connection signal="button_down" from="VBoxContainer2/normal" to="." method="_on_normal_button_down"]

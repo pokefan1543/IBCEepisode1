@@ -1,0 +1,23 @@
+[gd_resource type="SpatialMaterial" load_steps=6 format=2]
+
+[ext_resource type="Texture" uid="uid://codwj0vr2uvdt" path="res://assets/Textures/Whatever/Pipe002_2K_Displacement.png" id="1"]
+[ext_resource type="Texture" uid="uid://bpdpluib6kag3" path="res://assets/Textures/Whatever/Pipe002_2K_Roughness.png" id="2"]
+[ext_resource type="Texture" uid="uid://wql08p8wgvlk" path="res://assets/Textures/Whatever/Pipe002_2K_Metalness.png" id="3"]
+[ext_resource type="Texture" uid="uid://e5xf0lyxbtqq" path="res://assets/Textures/Whatever/Pipe002_2K_Color.png" id="4"]
+[ext_resource type="Texture" uid="uid://c144ads4y3n86" path="res://assets/Textures/Whatever/Pipe002_2K_NormalGL.png" id="5"]
+
+
+[resource]
+albedo_texture = ExtResource( 4 )
+metallic_specular = 1.0
+metallic_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 2 )
+normal_enabled = true
+normal_scale = 2.23
+normal_texture = ExtResource( 5 )
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 1 )

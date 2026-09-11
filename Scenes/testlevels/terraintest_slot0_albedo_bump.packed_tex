@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "res://Assets/textures/Dirt/TexturesCom_Ground_Soil3_3x3_512_height.png",
+		"rgb": "res://Assets/textures/Dirt/TexturesCom_Ground_Soil3_3x3_512_albedo.png"
+	}
+}

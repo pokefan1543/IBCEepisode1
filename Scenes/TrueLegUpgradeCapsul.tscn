@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddfxfqjwn148q"]
+
+[sub_resource type="CapsuleMesh" id="1"]
+
+[sub_resource type="CapsuleShape3D" id="2"]
+
+[node name="Legupgrade" type="RigidBody3D" groups=["legupgrade"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["legupgrade"]]
+mesh = SubResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("2")

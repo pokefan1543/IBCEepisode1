@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://o51vu15rl1jt"]
+
+[ext_resource type="Script" uid="uid://ccqbh8vaqp2r2" path="res://scripts/RevLetter3.gd" id="1"]
+[ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Control" type="Control" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+offset_right = 199.0
+offset_bottom = 72.0
+theme = ExtResource("2")
+text = "Press the Shift key to skip"
+
+[node name="Button2" type="Button" parent="Control"]
+offset_left = 359.0
+offset_right = 980.0
+offset_bottom = 72.0
+theme = ExtResource("2")
+text = "Press the Q key to quit to level select"

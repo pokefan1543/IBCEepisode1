@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtp15gkl002he"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_61nf3"]
+size = Vector3(0.961, 1.248, 1.685)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_umb5x"]
+size = Vector3(0.746124, 1.24947, 1.68151)
+
+[node name="CharacterBody3D" type="CharacterBody3D" groups=["bullet", "bullets"]]
+collision_layer = 2
+collision_mask = 7
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["bullet", "bullets"]]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_61nf3")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["bullet", "bullets"]]
+shape = SubResource("BoxShape3D_umb5x")
