@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://67eousd6smdp"
+path="res://.godot/imported/E1M1.map-150f3249f9ac20a016dae28838c584ac.tres"
+
+[deps]
+
+source_file="res://Scenes/tutorials/E1M1.map"
+dest_files=["res://.godot/imported/E1M1.map-150f3249f9ac20a016dae28838c584ac.tres"]
+
+[params]
+

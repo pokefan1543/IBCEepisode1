@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dreogtmxe0c5o"]
+
+[sub_resource type="StyleBoxTexture" id="3"]
+region_rect = Rect2(0, 0, 1200, 675)
+
+[sub_resource type="StyleBoxTexture" id="2"]
+region_rect = Rect2(0, 0, 1200, 675)
+
+[resource]
+RichTextLabel/styles/focus = SubResource("3")
+RichTextLabel/styles/normal = SubResource("2")

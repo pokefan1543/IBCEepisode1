@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://v1jyepi60et0"]
+
+[ext_resource type="PackedScene" uid="uid://c75p3xyoopajf" path="res://assets/Models/Bosses/Helios.fbx" id="1"]
+[ext_resource type="Material" uid="uid://b0h3v3cedtnw1" path="res://assets/Textures/Whatever/a texture of nothing.tres" id="3"]
+
+
+[sub_resource type="Sky" id="1"]
+radiance_size = 0
+
+[sub_resource type="Environment" id="2"]
+background_mode = 2
+sky = SubResource("1")
+
+[sub_resource type="BoxShape3D" id="3"]
+size = Vector3(0.356584, 1.97109, 0.613392)
+
+[sub_resource type="Animation" id="4"]
+resource_name = "New Anim"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.20898, 2.12971, 0.514853), Vector3(1.89875, 2.30409, -0.344474), Vector3(-4.8294, 0.54776, -1.56915), Vector3(-7.48085, 1.76117, -0.0175071), Vector3(-4.8869, 0.643385, 1.72347), Vector3(-3.21234, 0.643385, -0.043026), Vector3(-4.80431, 4.74514, -0.0421885), Vector3(-4.80431, 4.74514, -0.0421885), Vector3(-0.810765, 1.58207, -0.0421885), Vector3(-0.847, 1.42, -2.56)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.1, 2, 3, 4, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.837489, 81.4938, -5.58172), Vector3(-3.63643, 82.26, -25.0159), Vector3(-15.9847, 98.5647, -27.4692), Vector3(28.842, 165.04, -38.6266), Vector3(-11.0878, -81.164, -45.156), Vector3(13.1723, 3.87276, 39.6612), Vector3(11.1708, 82.457, 17.2295), Vector3(-79.1602, -0.19207, 109.463), Vector3(-79.16, -360, 109.463), Vector3(-12.494, 450, 21.895), Vector3(0, 90, 0)]
+}
+
+[sub_resource type="Animation" id="5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.20898, 2.12971, 0.514853)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.837489, 81.4938, -5.58172)]
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47543, -0.362507, -0.363464)
+width = 27.8128
+depth = 38.9133
+material = ExtResource("3")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(0.0205236, 0, 0.999789, 0, 1, 0, -0.999789, 0, 0.0205236, -4.97705, 0, 0)
+
+[node name="Helios" parent="RigidBody3D" instance=ExtResource("1")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03611, 0)
+shape = SubResource("3")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.148621, 4.93601e-08, 0.988894, -0.097255, 0.995152, 0.0146164, -0.9841, -0.0983472, 0.147901, 3.20898, 2.12971, 0.514853)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/New Anim" = SubResource("4")
+anims/RESET = SubResource("5")

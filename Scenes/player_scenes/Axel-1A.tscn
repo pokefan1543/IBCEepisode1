@@ -1,0 +1,934 @@
+[gd_scene format=3 uid="uid://1u5fwdymjfm4"]
+
+[ext_resource type="Script" uid="uid://dcg04hov3jyok" path="res://Scripts/FPS.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://705nne83ss3i" path="res://Assets/Models/Muzzleflash/muzzleflash.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://1ytlul1mpvli" path="res://Scenes/player_scenes/Ammobar.tscn" id="3"]
+[ext_resource type="Script" uid="uid://bl8shsx0erycj" path="res://Scripts/Player State Machine Scripts/state_machine.gd" id="3_yb171"]
+[ext_resource type="PackedScene" uid="uid://cv6oq55re2fd1" path="res://Scenes/Railgunfloor.tscn" id="4"]
+[ext_resource type="Script" uid="uid://do435rby6fokq" path="res://Scripts/Player State Machine Scripts/idle_state.gd" id="4_exjem"]
+[ext_resource type="PackedScene" uid="uid://brfjdasasicna" path="res://Scenes/Trail.tscn" id="5"]
+[ext_resource type="Script" uid="uid://cp6624baj5wpi" path="res://Scripts/Player State Machine Scripts/running_state.gd" id="5_5hipt"]
+[ext_resource type="Script" uid="uid://dwlbgwft04eia" path="res://Scripts/hand.gd" id="6"]
+[ext_resource type="Script" uid="uid://b05akuqu47ng0" path="res://Scripts/Player State Machine Scripts/airborne_state.gd" id="6_o5f31"]
+[ext_resource type="AudioStream" uid="uid://of08oifsikc2" path="res://Sound/SOLDIERHURT2.wav" id="7"]
+[ext_resource type="Script" uid="uid://5je0ley73gst" path="res://Scripts/Player State Machine Scripts/dashing_state.gd" id="7_56c4m"]
+[ext_resource type="PackedScene" uid="uid://b1eo0aqoeiw60" path="res://Scenes/player_scenes/HealthBar.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://b5x2wj41jgqw1" path="res://Scenes/player_scenes/Deathscreen.tscn" id="10"]
+[ext_resource type="ArrayMesh" uid="uid://das77wca2wbda" path="res://Assets/Models/Muzzleflash/muzzleflash.obj" id="11"]
+[ext_resource type="AudioStream" uid="uid://pmwqewbh3uy5" path="res://Sound/PulseSound.wav" id="12_dm7xn"]
+[ext_resource type="AudioStream" uid="uid://cgna55l4jifcb" path="res://Sound/PULSEFIRE.wav" id="13"]
+[ext_resource type="ArrayMesh" uid="uid://bxy0cbb34bmxd" path="res://Assets/Models/Weapons/Holy Shotgun.obj" id="15"]
+[ext_resource type="AudioStream" uid="uid://bytcuyx1fj56e" path="res://Sound/Shotgunfire.wav" id="16"]
+[ext_resource type="AudioStream" uid="uid://yudj8etyapm2" path="res://Sound/Stormcloud fire.wav" id="19"]
+[ext_resource type="AudioStream" uid="uid://c0o5uex6plcgc" path="res://Sound/CHACHING.wav" id="20"]
+[ext_resource type="AudioStream" uid="uid://dqfkh3cp7etvp" path="res://Sound/clip.wav" id="21"]
+[ext_resource type="AudioStream" uid="uid://deums5wvcga45" path="res://Sound/button.wav" id="22"]
+[ext_resource type="AudioStream" uid="uid://b7ge335l3m332" path="res://Sound/heatlhup.wav" id="23"]
+[ext_resource type="Material" path="res://Assets/Models/RedFabricMat.material" id="23_d3cvi"]
+[ext_resource type="AudioStream" uid="uid://dvw2bjjxxfhar" path="res://Sound/Get_Isorropia_Key.wav" id="24"]
+[ext_resource type="AudioStream" uid="uid://ca3be5yunrqhm" path="res://Sound/Fiend hurt.wav" id="26"]
+[ext_resource type="Material" path="res://Rifle texture.tres" id="27"]
+[ext_resource type="Texture2D" uid="uid://c1b0xeo4c4hyv" path="res://Assets/Textures/Sprites/Cross.png" id="28"]
+[ext_resource type="AudioStream" uid="uid://ebubvv3tfvis" path="res://Sound/railgunFire.wav" id="29"]
+[ext_resource type="PackedScene" uid="uid://doq7uw34y3yq1" path="res://Scenes/MeshInstance.tscn" id="30"]
+[ext_resource type="Script" uid="uid://2ptmsh2cc71d" path="res://Scenes/player_scenes/stopwatchnode.gd" id="31"]
+[ext_resource type="AudioStream" uid="uid://b3i5wcpad3pe2" path="res://Sound/dash.wav" id="33"]
+[ext_resource type="AudioStream" uid="uid://fw1utcg6ia0c" path="res://Sound/jumpland.wav" id="34"]
+[ext_resource type="AudioStream" uid="uid://cxwe3heebo7vu" path="res://Sound/FEET4.wav" id="35"]
+[ext_resource type="AudioStream" uid="uid://76mdjyd3xgsw" path="res://Sound/charge.wav" id="37"]
+[ext_resource type="AudioStream" uid="uid://byv6uouxhqq0k" path="res://Sound/Shotgunblast.wav" id="38"]
+[ext_resource type="Script" uid="uid://b61hiffjv1stk" path="res://Scripts/laser2.gd" id="39"]
+[ext_resource type="ArrayMesh" uid="uid://d37pon0smpo1w" path="res://Assets/Models/Weapons/RedRanger.obj" id="43"]
+[ext_resource type="PackedScene" uid="uid://b1c414ggp634" path="res://Scenes/player_scenes/PauseMenu.tscn" id="44"]
+[ext_resource type="Texture2D" uid="uid://cme7ve71j2krx" path="res://Assets/Textures/Cross-Potent-Heraldry.png" id="44_56c4m"]
+[ext_resource type="ArrayMesh" uid="uid://uo1cvw0qkscg" path="res://Assets/Models/Weapons/Stormcloud.obj" id="47"]
+[ext_resource type="ArrayMesh" uid="uid://dhpejaps848to" path="res://Assets/Models/Weapons/Great White.obj" id="48"]
+
+[sub_resource type="CapsuleMesh" id="4"]
+material = ExtResource("27")
+radius = 2.0
+height = 4.0
+radial_segments = 24
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="19"]
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_is_srgb = true
+albedo_texture = ExtResource("2")
+
+[sub_resource type="StandardMaterial3D" id="39"]
+albedo_color = Color(0.54902, 0.482353, 0.482353, 1)
+metallic = 1.0
+metallic_specular = 1.0
+metallic_texture_channel = 3
+roughness = 0.45
+
+[sub_resource type="SphereMesh" id="8"]
+material = SubResource("39")
+radial_segments = 12
+rings = 1
+
+[sub_resource type="StandardMaterial3D" id="20"]
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.713726, 0.223529, 0.223529, 1)
+albedo_texture = ExtResource("2")
+
+[sub_resource type="StandardMaterial3D" id="21"]
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_is_srgb = true
+albedo_color = Color(0.215686, 0.960784, 0.286275, 1)
+albedo_texture = ExtResource("2")
+
+[sub_resource type="BoxMesh" id="37"]
+
+[sub_resource type="Animation" id="32"]
+resource_name = "Lean_BackL"
+length = 0.1
+
+[sub_resource type="Animation" id="33"]
+resource_name = "Lean_BackR"
+length = 0.1
+
+[sub_resource type="Animation" id="34"]
+resource_name = "Lean_Left"
+length = 0.1
+
+[sub_resource type="Animation" id="35"]
+resource_name = "Lean_Right"
+length = 0.1
+
+[sub_resource type="Animation" id="17"]
+resource_name = "M9Fire"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.461, -0.461), Vector3(0, -0.461, -0.425), Vector3(0, -0.461, -0.461)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(2, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/Camera3D:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(20, 0, 10), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="13"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.277, -0.543, -1.405)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/Camera3D/hand:rifle_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.085, -0.4, -0.727)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/Camera3D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/Camera3D:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/Camera3D/hand:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="25"]
+resource_name = "Railgunfire"
+length = 0.81
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.461, -0.727), Vector3(0, 0.508, 2.841), Vector3(0, -0.461, -0.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(60, 0, 0), Vector3(8, 0, 0)]
+}
+
+[sub_resource type="Animation" id="31"]
+resource_name = "ShotgunBlast"
+length = 0.71
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.461, -0.727), Vector3(0, -0.461, 0.301), Vector3(0, -0.461, -0.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(60, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="22"]
+resource_name = "Stormcloud_fire"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.461, -0.727), Vector3(0, -0.461, 0.232), Vector3(0, -0.461, -0.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(70, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="11"]
+resource_name = "Weaponsway"
+length = 0.5
+loop_mode = 1
+
+[sub_resource type="Animation" id="10"]
+length = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.277, -0.543, -1.405), Vector3(0.277, -0.543, -0.85), Vector3(0.277, -0.543, -1.405)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.261799, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="38"]
+resource_name = "charge"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.461, -0.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 20), Vector3(0, 0, 0), Vector3(0, 0, -20), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="18"]
+resource_name = "shotgunfire"
+length = 0.07
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/hand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.07),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.461, -0.727), Vector3(0, -0.461, 1), Vector3(0, -0.461, -0.727)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/hand:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.07),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(30, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wsmr2"]
+_data = {
+&"Lean_BackL": SubResource("32"),
+&"Lean_BackR": SubResource("33"),
+&"Lean_Left": SubResource("34"),
+&"Lean_Right": SubResource("35"),
+&"M9Fire": SubResource("17"),
+&"RESET": SubResource("13"),
+&"Railgunfire": SubResource("25"),
+&"ShotgunBlast": SubResource("31"),
+&"Stormcloud_fire": SubResource("22"),
+&"Weaponsway": SubResource("11"),
+&"XBusterFire": SubResource("10"),
+&"charge": SubResource("38"),
+&"shotgunfire": SubResource("18")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dtop0"]
+size = Vector3(3, 3, 3)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wb8pb"]
+material = ExtResource("23_d3cvi")
+height = 1.829
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_52tf1"]
+
+[sub_resource type="BoxShape3D" id="30"]
+size = Vector3(1, 0.777008, 1)
+
+[node name="FPS" type="CharacterBody3D" unique_id=1379426211 groups=["Player", "player"]]
+transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 1, 0, 0, 0)
+collision_layer = 4
+collision_mask = 3
+floor_constant_speed = true
+floor_max_angle = 0.83775806
+floor_snap_length = 0.3
+platform_wall_layers = 255
+script = ExtResource("1")
+trail = ExtResource("5")
+
+[node name="DashCooldown" type="Timer" parent="." unique_id=1003000693]
+wait_time = 0.2
+one_shot = true
+
+[node name="DashDuration" type="Timer" parent="." unique_id=594042593]
+wait_time = 0.8
+one_shot = true
+
+[node name="StateMachine" type="Node" parent="." unique_id=2052946434 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_yb171")
+initial_state = NodePath("Airborne")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1704151794]
+script = ExtResource("4_exjem")
+metadata/_custom_type_script = "uid://cr30huk7f2rp6"
+
+[node name="Running" type="Node" parent="StateMachine" unique_id=1210338878]
+script = ExtResource("5_5hipt")
+metadata/_custom_type_script = "uid://cr30huk7f2rp6"
+
+[node name="Airborne" type="Node" parent="StateMachine" unique_id=974638323]
+script = ExtResource("6_o5f31")
+metadata/_custom_type_script = "uid://cr30huk7f2rp6"
+
+[node name="Dashing" type="Node" parent="StateMachine" unique_id=670692800]
+script = ExtResource("7_56c4m")
+metadata/_custom_type_script = "uid://cr30huk7f2rp6"
+
+[node name="Head" type="Node3D" parent="." unique_id=1210943505]
+transform = Transform3D(0.5, 2.32831e-09, 0, -2.32831e-09, 0.5, 0, 0, 0, 0.5, 0.001, 1.47, -0.437)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=801780448]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+keep_aspect = 0
+fov = 100.0
+near = 0.001
+far = 1000.0
+
+[node name="hand" type="Node3D" parent="Head/Camera3D" unique_id=1735245547]
+auto_translate_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277, -0.543, -1.405)
+script = ExtResource("6")
+camera_path = NodePath("..")
+sway_left = Vector3(0, 0.2, 0)
+sway_right = Vector3(0, -0.2, 0)
+sway_up = Vector3(0.2, 0, 0)
+sway_down = Vector3(-0.2, 0, 0)
+default_position = Vector3(-0.085, -0.5, -1.3)
+ads_position = Vector3(-1.2, 0, -4)
+buster_position = Vector3(-0.2, -0.5, 0)
+shotgun_position = Vector3(0, -0.461, -0.727)
+shotgun_aim_position = Vector3(-0.6, -0.3, -1.727)
+rifle_aim_position = Vector3(-2.4, -0.619, -0.552)
+rifle_position = Vector3(-0.085, -0.4, -0.727)
+railgun_position = Vector3(0.7, -0.861, 1)
+railgun_aim_position = Vector3(-1.2, 0.2, 0.3)
+
+[node name="Buster" type="MeshInstance3D" parent="Head/Camera3D/hand" unique_id=1255388041]
+transform = Transform3D(-1.31134e-08, 0, -0.171, 0, 0.165, 0, 0.3, 0, -7.47463e-09, 0.469, 0.003, 0.276)
+mesh = SubResource("4")
+
+[node name="muzzleflash" type="MeshInstance3D" parent="Head/Camera3D/hand/Buster" unique_id=211216352]
+transform = Transform3D(-4.28409e-08, -3.30482e-11, 1, -1.1021e-24, 1, 1.71497e-10, -1, -3.72529e-09, -5.40167e-08, -2.63398, -0.0110173, -0.0507574)
+material_override = SubResource("19")
+mesh = ExtResource("11")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/hand/Buster/muzzleflash" unique_id=1307481778]
+transform = Transform3D(5, -1.11693e-08, 8.34465e-07, 3.72444e-09, 3.33333, 2.83016e-10, 1.86265e-09, -6.16934e-12, 0.827813, 0, 0, 0)
+light_color = Color(1, 0.74902, 0, 1)
+light_energy = 4.0
+light_specular = 3.0
+omni_range = 200.0
+
+[node name="firesound" type="AudioStreamPlayer2D" parent="Head/Camera3D/hand/Buster/muzzleflash" unique_id=1906099635]
+stream = ExtResource("12_dm7xn")
+volume_db = 24.0
+
+[node name="Buster" type="MeshInstance3D" parent="Head/Camera3D/hand/Buster" unique_id=59292870]
+transform = Transform3D(-1.7145e-08, 0, -0.25683, 0, 0.363432, 0, 0.392233, 0, -1.12264e-08, -1.9651, 0.0133963, 0.0371977)
+mesh = SubResource("4")
+
+[node name="muzzle" type="MeshInstance3D" parent="Head/Camera3D/hand/Buster/Buster" unique_id=1367386689]
+transform = Transform3D(-1.49651, 0, 0, 0, -0.338762, 0, 0, 0, -0.754516, 0.0385375, -0.0120974, 1.92161)
+mesh = SubResource("8")
+skeleton = NodePath("../..")
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D/hand/Buster" unique_id=1969180265]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -0.00056982, 0.0185449, 0.0415978)
+target_position = Vector3(0, 0, -5)
+collision_mask = 6
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 5
+
+[node name="Guntimer" type="Timer" parent="Head/Camera3D/hand/Buster" unique_id=1137067252]
+wait_time = 0.1
+
+[node name="M9PulseRifleHR" type="RigidBody3D" parent="Head/Camera3D/hand" unique_id=677486225]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.658, 0, -0.678)
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/hand/M9PulseRifleHR" unique_id=936226305]
+transform = Transform3D(-0.01, 0, 7.27596e-11, 7.27596e-11, 8.91648e-18, 0.01, -1.11022e-15, 0.01, 1.99502e-17, 0.462, -0.844, -0.041)
+mesh = ExtResource("43")
+
+[node name="muzzleflash" type="MeshInstance3D" parent="Head/Camera3D/hand/M9PulseRifleHR" unique_id=341986105]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 5.55112e-16, 7.54979e-08, 0, -0.5, 0.056, 0.005, 1.899)
+material_override = SubResource("20")
+mesh = ExtResource("11")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/hand/M9PulseRifleHR/muzzleflash" unique_id=537749924]
+light_color = Color(0.92549, 0.188235, 0.188235, 1)
+light_energy = 4.0
+omni_range = 200.0
+
+[node name="m9_timer" type="Timer" parent="Head/Camera3D/hand/M9PulseRifleHR" unique_id=721515940]
+wait_time = 0.05
+
+[node name="muzzle" type="Node3D" parent="Head/Camera3D/hand/M9PulseRifleHR" unique_id=1364540289]
+transform = Transform3D(1, 0, 0, -1.67639e-23, 1, 0, 1.56319e-13, 0, 1, -0.00572276, -0.0320514, 1.66656)
+
+[node name="pulsefire" type="AudioStreamPlayer" parent="Head/Camera3D/hand" unique_id=757369441]
+stream = ExtResource("13")
+volume_db = 10.0
+
+[node name="shotgun" type="MeshInstance3D" parent="Head/Camera3D/hand" unique_id=1143937564]
+transform = Transform3D(-0.01, 8.74228e-10, -2.91038e-11, -2.91038e-11, -4.37114e-10, 0.01, 8.74228e-10, 0.01, 4.37114e-10, 0.52, -0.177, 0.453)
+visible = false
+mesh = ExtResource("15")
+skeleton = NodePath("../ShotgunRayContainer")
+
+[node name="shotgun" type="AudioStreamPlayer" parent="Head/Camera3D/hand/shotgun" unique_id=1448319153]
+stream = ExtResource("16")
+volume_db = 24.0
+
+[node name="shotgun_timer" type="Timer" parent="Head/Camera3D/hand/shotgun" unique_id=609267465]
+wait_time = 0.2
+
+[node name="muzzleflash" type="Node3D" parent="Head/Camera3D/hand/shotgun" unique_id=1471266331]
+transform = Transform3D(25, 1.93715e-07, 2.78678e-06, 2.78677e-06, -2.32773e-06, 56.877, 2.98023e-07, -15, 3.00603e-07, -11.7044, 73.809, 51.8394)
+visible = false
+
+[node name="muzzleflash" type="MeshInstance3D" parent="Head/Camera3D/hand/shotgun/muzzleflash" unique_id=124332096]
+transform = Transform3D(0.99996, -0.00899964, -2.13163e-14, 0.00899964, 0.99996, 2.13163e-14, 0, 2.84217e-14, 1, 1.259, 0.290888, -1.96158)
+material_override = SubResource("19")
+mesh = ExtResource("11")
+skeleton = NodePath("../../../ShotgunRayContainer")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/hand/shotgun/muzzleflash/muzzleflash" unique_id=3920653]
+transform = Transform3D(4, 1.49011e-08, 1.44951e-12, -7.45061e-09, 4, -1.62004e-12, -2.84217e-14, 2.84217e-14, 4.00001, 0, 0, 0)
+light_color = Color(1, 0.866667, 0, 1)
+light_energy = 4.0
+light_specular = 16.0
+omni_range = 200.0
+
+[node name="muzzleflash2" type="Node3D" parent="Head/Camera3D/hand/shotgun" unique_id=2012602652]
+transform = Transform3D(25, 1.93715e-07, 2.78678e-06, 2.78677e-06, -2.32773e-06, 56.877, 2.98023e-07, -15, 3.00603e-07, -5.92148, 73.809, 41.656)
+visible = false
+
+[node name="muzzleflash" type="MeshInstance3D" parent="Head/Camera3D/hand/shotgun/muzzleflash2" unique_id=756423873]
+transform = Transform3D(0.99996, -0.00899964, -2.13163e-14, 0.00899964, 0.99996, 2.13163e-14, 0, 2.84217e-14, 1, 1.259, 0.290888, -1.96158)
+material_override = SubResource("19")
+mesh = ExtResource("11")
+skeleton = NodePath("../../../ShotgunRayContainer")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/hand/shotgun/muzzleflash2/muzzleflash" unique_id=2079024479]
+transform = Transform3D(4, 1.49011e-08, 1.44951e-12, -7.45061e-09, 4, -1.62004e-12, -2.84217e-14, 2.84217e-14, 4.00001, 0, 0, 0)
+light_color = Color(1, 0.866667, 0, 1)
+light_energy = 4.0
+light_specular = 16.0
+omni_range = 200.0
+
+[node name="muzzleflash3" type="Node3D" parent="Head/Camera3D/hand/shotgun" unique_id=1909226112]
+transform = Transform3D(25, 1.93715e-07, 2.78678e-06, 2.78677e-06, -2.32773e-06, 56.877, 2.98023e-07, -15, 3.00605e-07, -17.828, 73.809, 41.5489)
+visible = false
+
+[node name="muzzleflash" type="MeshInstance3D" parent="Head/Camera3D/hand/shotgun/muzzleflash3" unique_id=1410605619]
+transform = Transform3D(0.99996, -0.00899964, -2.13163e-14, 0.00899964, 0.99996, 2.13163e-14, 0, 2.84217e-14, 1, 1.259, 0.290888, -1.96158)
+material_override = SubResource("19")
+mesh = ExtResource("11")
+skeleton = NodePath("../../../ShotgunRayContainer")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/hand/shotgun/muzzleflash3/muzzleflash" unique_id=1736690103]
+transform = Transform3D(4.0001, 0.0383979, -6.32214e-07, -7.45063e-09, 6.66649, 1.07551e-06, -5.68434e-14, 0, 1.75818, 0, 0, 0)
+light_color = Color(1, 0.866667, 0, 1)
+light_energy = 4.0
+light_specular = 16.0
+omni_range = 200.0
+
+[node name="Stormcloud" type="MeshInstance3D" parent="Head/Camera3D/hand" unique_id=1465277421]
+transform = Transform3D(-0.02, 3.01992e-09, 5.82077e-11, -5.82077e-11, -8.74228e-10, -0.02, -3.01992e-09, -0.02, 8.74228e-10, 0.66, 0.307, -1.20762)
+visible = false
+mesh = ExtResource("47")
+
+[node name="stormtimer" type="Timer" parent="Head/Camera3D/hand/Stormcloud" unique_id=779419527]
+wait_time = 0.5
+
+[node name="stormflash" type="Node3D" parent="Head/Camera3D/hand/Stormcloud" unique_id=1274498634]
+transform = Transform3D(100, 1.19208e-07, 1.81899e-12, -1.81899e-12, -4.37114e-06, -100, -1.1921e-07, 100, -4.37114e-06, -82.1449, 0.142494, 80.1432)
+
+[node name="flash" type="Node3D" parent="Head/Camera3D/hand/Stormcloud/stormflash" unique_id=776860697]
+transform = Transform3D(0.99996, 0.00899964, 0, -0.00899964, 0.99996, 0, 0, 0, 1, 0.257, -0.255, 1.798)
+
+[node name="muzzleflash" type="MeshInstance3D" parent="Head/Camera3D/hand/Stormcloud/stormflash/flash" unique_id=481193000]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 1.7053e-13, 1, 0.678005, -0.251797, -3.07347)
+material_override = SubResource("21")
+mesh = ExtResource("11")
+skeleton = NodePath("../../ShotgunRayContainer")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Head/Camera3D/hand/Stormcloud/stormflash/flash/muzzleflash" unique_id=154714548]
+transform = Transform3D(1, -3.55271e-15, 0, 3.55271e-15, 1, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+light_color = Color(0.0784314, 1, 0, 1)
+light_energy = 4.0
+light_specular = 16.0
+omni_range = 200.0
+
+[node name="ShotgunRayContainer" type="Node3D" parent="Head/Camera3D/hand/Stormcloud/stormflash" unique_id=688576190]
+transform = Transform3D(0.0089996, -0.999961, 0, 0.999961, 0.0089996, 0, 0, 0, 1, 0.810947, 0.0372857, -2.23614)
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D/hand/Stormcloud" unique_id=1750986950]
+transform = Transform3D(-5, 7.45058e-09, 0.000850717, 7.45058e-09, 5, -9.09495e-11, -0.000850717, -9.16324e-11, -5, -3.065, -2.38419e-07, -35.1609)
+target_position = Vector3(0, 0, 200)
+collision_mask = 6
+
+[node name="tazerfire" type="AudioStreamPlayer" parent="Head/Camera3D/hand" unique_id=1303023630]
+stream = ExtResource("19")
+volume_db = -1.0
+
+[node name="muzzlestorm" type="Node3D" parent="Head/Camera3D/hand" unique_id=38238918]
+transform = Transform3D(1, 1.02445e-08, 0, -1.02445e-08, 1, 0, 0, 0, 1, 0.672049, 0.0189651, -1.97639)
+visible = false
+
+[node name="railgun" parent="Head/Camera3D/hand" unique_id=1153932825 instance=ExtResource("4")]
+transform = Transform3D(-0.03, 0, -4.52987e-09, 0, 0.03, 0, 4.52987e-09, 0, -0.03, 1.182, -1.307, -0.94)
+visible = false
+collision_layer = 0
+collision_mask = 0
+
+[node name="railgunfire" type="AudioStreamPlayer" parent="Head/Camera3D/hand/railgun" unique_id=602947808]
+stream = ExtResource("29")
+volume_db = 10.0
+
+[node name="railtimer" type="Timer" parent="Head/Camera3D/hand/railgun" unique_id=305303021]
+wait_time = 0.4
+
+[node name="MeshInstance2" parent="Head/Camera3D/hand/railgun" unique_id=920985486 instance=ExtResource("30")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1.19249e-08, -5.21253e-16, 1, -1, 4.37114e-08, 1.19249e-08, 0, 0, 0)
+mesh = ExtResource("48")
+
+[node name="laser" type="Node3D" parent="Head/Camera3D/hand/railgun" unique_id=1999535345]
+transform = Transform3D(0.999998, -1.21072e-08, 2.84217e-14, 1.21072e-08, 0.999998, 1.23069e-15, 2.98428e-13, 2.20496e-15, 0.999998, 3.05044, 34.9026, 121.583)
+script = ExtResource("39")
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D/hand/railgun/laser" unique_id=911851644]
+transform = Transform3D(50, 1.19209e-07, 4.54747e-13, -1.19209e-07, 50, 2.77715e-15, 0, -2.62628e-15, 50, 0, 0, 0)
+target_position = Vector3(0, 0, 1000)
+collision_mask = 2
+
+[node name="Scaler" type="Node3D" parent="Head/Camera3D/hand/railgun/laser" unique_id=1305710962]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/hand/railgun/laser/Scaler" unique_id=2020699527]
+transform = Transform3D(10, 2.98023e-08, 3.41061e-13, -2.98023e-08, 10, -5.10384e-16, 3.41061e-13, -1.19711e-16, 10, 0, 0, 1)
+mesh = SubResource("37")
+
+[node name="ShotgunRayContainer" type="Node3D" parent="Head/Camera3D/hand" unique_id=1267369450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.637509, 0.26003, 0)
+visible = false
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=1811354559]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast2" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=683274150]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast3" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=672787634]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast4" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=808039147]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast5" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=1283953659]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast6" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=1242804625]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast7" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=856585287]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast9" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=15789776]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast10" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=60424927]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast8" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=1586176917]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast11" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=145945716]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="RayCast12" type="RayCast3D" parent="Head/Camera3D/hand/ShotgunRayContainer" unique_id=1630319590]
+target_position = Vector3(0, 0, -200)
+collision_mask = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Head/Camera3D/hand" unique_id=1897413232]
+root_node = NodePath("../../../..")
+libraries/ = SubResource("AnimationLibrary_wsmr2")
+
+[node name="CrosshairRayCast" type="RayCast3D" parent="Head/Camera3D/hand" unique_id=216313562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.195, 0.502, 0)
+target_position = Vector3(0, 0, -1000)
+collision_mask = 6
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 0, 0, 1)
+
+[node name="scope" type="Control" parent="Head/Camera3D/hand" unique_id=1503560871]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -837.0
+offset_top = -505.0
+offset_right = -837.0
+offset_bottom = -505.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="scopepop" type="Popup" parent="Head/Camera3D/hand/scope" unique_id=1517354070]
+
+[node name="TextureRect" type="TextureRect" parent="Head/Camera3D/hand/scope/scopepop" unique_id=1751371645]
+offset_left = 741.0
+offset_top = 521.0
+offset_right = 2021.0
+offset_bottom = 1241.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("28")
+
+[node name="trailspawn" type="Node3D" parent="." unique_id=717782508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0.556376, -0.00201639, -1937.1)
+
+[node name="muzzletimer" type="Timer" parent="." unique_id=898113343]
+
+[node name="ChaosPawnHurt" type="AudioStreamPlayer" parent="." unique_id=1355841520]
+stream = ExtResource("7")
+
+[node name="Healthbar" parent="." unique_id=1366099475 instance=ExtResource("8")]
+process_mode = 3
+light_mask = 31
+offset_right = -2.0
+offset_bottom = -436.0
+
+[node name="firesound" type="AudioStreamPlayer" parent="." unique_id=795099727]
+stream = ExtResource("12_dm7xn")
+volume_db = 24.0
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=493442279]
+transform = Transform3D(0.987795, 0.155762, 8.63558e-08, 0.155762, -0.987795, 1.36172e-08, 8.74227e-08, 0, -0.999999, 0, 0, -65.6646)
+target_position = Vector3(0, 0, 2000)
+
+[node name="touch" type="Area3D" parent="." unique_id=638042878]
+collision_mask = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="touch" unique_id=68824058]
+transform = Transform3D(1, 1.86265e-09, 0, -1.86265e-09, 1, 0, 0, 0, 0.999999, 0.019, 1, 0)
+shape = SubResource("BoxShape3D_dtop0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=606076100]
+transform = Transform3D(0.999949, -0.0101472, 0, 0.0101472, 0.999949, 0, 0, 0, 1, 0.001, 1, 0)
+mesh = SubResource("CapsuleMesh_wb8pb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1253675052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_52tf1")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=2097449857]
+stream = ExtResource("34")
+volume_db = 10.0
+
+[node name="dash" type="AudioStreamPlayer" parent="." unique_id=786648363]
+stream = ExtResource("33")
+volume_db = 5.0
+
+[node name="text_timer" type="Timer" parent="." unique_id=1579802855]
+wait_time = 5.0
+
+[node name="clip" type="AudioStreamPlayer" parent="." unique_id=715210612]
+stream = ExtResource("21")
+volume_db = 24.0
+
+[node name="ching" type="AudioStreamPlayer2D" parent="." unique_id=1536404429]
+stream = ExtResource("20")
+
+[node name="press" type="AudioStreamPlayer" parent="." unique_id=682027325]
+stream = ExtResource("22")
+
+[node name="healthup" type="AudioStreamPlayer" parent="." unique_id=1542897308]
+stream = ExtResource("23")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2011241798]
+stream = ExtResource("24")
+volume_db = 5.0
+
+[node name="fiendhurt" type="AudioStreamPlayer" parent="." unique_id=962533259]
+stream = ExtResource("26")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." unique_id=631704263]
+stream = ExtResource("35")
+
+[node name="charge" type="AudioStreamPlayer" parent="." unique_id=1060291770]
+stream = ExtResource("37")
+
+[node name="kickDamageArea" type="Area3D" parent="." unique_id=299218726]
+transform = Transform3D(1, 9.31323e-10, 0, -9.31323e-10, 1, 0, 0, 0, 1, 0.00182471, 0.202746, 0)
+collision_mask = 6
+
+[node name="kickDamageBox" type="CollisionShape3D" parent="kickDamageArea" unique_id=1346563971]
+transform = Transform3D(1, 2.24449e-07, 0, -2.24449e-07, 1, 0, 0, 0, 0.999998, 0.00515674, -0.0164574, 0)
+shape = SubResource("30")
+
+[node name="burst_timer" type="Timer" parent="." unique_id=1835980451]
+wait_time = 0.7
+
+[node name="blast" type="AudioStreamPlayer" parent="." unique_id=118380871]
+stream = ExtResource("38")
+volume_db = 5.0
+
+[node name="Healthbar2" parent="." unique_id=918947934 instance=ExtResource("3")]
+
+[node name="Deathscreen" parent="." unique_id=1431455344 instance=ExtResource("10")]
+visible = false
+offset_top = 0.0
+
+[node name="Node" type="Node" parent="." unique_id=1343903621]
+script = ExtResource("31")
+
+[node name="ParryTimer" type="Timer" parent="." unique_id=1127502452]
+wait_time = 0.1
+
+[node name="Cross-potent-heraldry" type="Sprite2D" parent="." unique_id=1989217592]
+position = Vector2(326, 241.5)
+scale = Vector2(0.05, 0.0553571)
+texture = ExtResource("44_56c4m")
+
+[node name="Pausemenu" parent="." unique_id=635636284 instance=ExtResource("44")]
+visible = false
+
+[node name="Label" type="Label" parent="." unique_id=1191376401]
+offset_top = 48.0
+offset_right = 110.0
+offset_bottom = 71.0
+text = "dashing?: "
+
+[node name="Label3" type="Label" parent="." unique_id=504053589]
+offset_left = 1.0
+offset_top = 68.0
+offset_right = 111.0
+offset_bottom = 91.0
+text = "airdashUsed?:"
+
+[node name="Label2" type="Label" parent="." unique_id=1119532499]
+offset_left = 112.0
+offset_top = 48.0
+offset_right = 222.0
+offset_bottom = 71.0
+text = "0"
+
+[node name="Label4" type="Label" parent="." unique_id=90306026]
+offset_left = 112.0
+offset_top = 70.0
+offset_right = 222.0
+offset_bottom = 93.0
+text = "0"
+
+[connection signal="death" from="." to="Deathscreen" method="_on_FPS_death"]
+[connection signal="timeout" from="DashDuration" to="StateMachine/Dashing" method="_on_dash_duration_timeout"]
+[connection signal="timeout" from="Head/Camera3D/hand/Buster/Guntimer" to="." method="_on_Guntimer_timeout"]
+[connection signal="timeout" from="Head/Camera3D/hand/M9PulseRifleHR/m9_timer" to="." method="_on_m9_timer_timeout"]
+[connection signal="timeout" from="Head/Camera3D/hand/shotgun/shotgun_timer" to="." method="_on_shotgun_timer_timeout"]
+[connection signal="timeout" from="Head/Camera3D/hand/Stormcloud/stormtimer" to="." method="_on_stormtimer_timeout"]
+[connection signal="timeout" from="Head/Camera3D/hand/railgun/railtimer" to="." method="_on_railtimer_timeout"]
+[connection signal="timeout" from="muzzletimer" to="." method="_on_muzzletimer_timeout"]
+[connection signal="body_entered" from="touch" to="." method="_on_touch_body_entered"]
+[connection signal="timeout" from="text_timer" to="." method="_on_text_timer_timeout"]
+[connection signal="body_entered" from="kickDamageArea" to="." method="_on_kick_damage_area_body_entered"]
+[connection signal="timeout" from="burst_timer" to="." method="_on_burst_timer_timeout"]

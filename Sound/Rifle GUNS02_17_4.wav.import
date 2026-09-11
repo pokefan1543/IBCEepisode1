@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c8h05k2qurytn"
+path="res://.godot/imported/Rifle GUNS02_17_4.wav-df702acbd3a200fa85ae86fa4c5aeab8.sample"
+
+[deps]
+
+source_file="res://Sound/Rifle GUNS02_17_4.wav"
+dest_files=["res://.godot/imported/Rifle GUNS02_17_4.wav-df702acbd3a200fa85ae86fa4c5aeab8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

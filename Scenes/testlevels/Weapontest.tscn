@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://tdinwymfe58i"]
+
+[ext_resource type="PackedScene" uid="uid://1u5fwdymjfm4" path="res://scenes/player_scenes/Axel-1A.tscn" id="2"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="FPS" parent="." instance=ExtResource("2")]
+transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 0.003, 0, 26.0185, 13.5376)
+
+[node name="lol" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43317, 0, 0)
+use_collision = true
+collision_layer = 7
+collision_mask = 7
+size = Vector3(194.036, 1, 157.624)

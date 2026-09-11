@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsd2fhbo6frl4"]
+
+[ext_resource type="Material" path="res://new_spatialmaterial.tres" id="1"]
+[ext_resource type="Material" path="res://Shotgun texture.tres" id="2"]
+[ext_resource type="ArrayMesh" uid="uid://uo1cvw0qkscg" path="res://assets/Weapons/Stormcloud.obj" id="3"]
+
+[sub_resource type="CapsuleShape3D" id="1"]
+radius = 0.118249
+height = 0.314532
+
+[node name="Stormcloud Shotgun" type="RigidBody3D" groups=["stormcloudshotgun", "weapon"]]
+collision_layer = 7
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, -0.0819878)
+shape = SubResource("1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, -8.74228e-10, -0.02, 0, 0.02, -8.74228e-10, 0, 0, 0)
+mesh = ExtResource("3")
+material/0 = ExtResource("2")
+material/1 = ExtResource("2")
+material/2 = ExtResource("2")
+material/3 = ExtResource("1")
