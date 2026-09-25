@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://clqhxytdnf1xb"]
+
+[ext_resource type="AudioStream" uid="uid://c406c7u3dmrx8" path="res://music/tutorial level test level.wav" id="1"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1")
+autoplay = true
+bus = "Music"

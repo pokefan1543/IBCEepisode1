@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxv068ynmsa4o"]
+
+[ext_resource type="PackedScene" uid="uid://1u5fwdymjfm4" path="res://scenes/player_scenes/Axel-1A.tscn" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://bxy0cbb34bmxd" path="res://assets/Weapons/Holy Shotgun.obj" id="3"]
+[ext_resource type="Script" uid="uid://bltlvi2jj8cfd" path="res://scenes/tutorials/GiantThing36.gd" id="4"]
+[ext_resource type="Material" path="res://assets/Textures/Whatever/Rock051_2K_Color.tres" id="5"]
+[ext_resource type="Script" uid="uid://b8jrbqga37vqk" path="res://scenes/tutorials/GiantThing37.gd" id="6"]
+[ext_resource type="Environment" uid="uid://cw254asc6dpdf" path="res://Space.tres" id="7"]
+[ext_resource type="PackedScene" uid="uid://pviix7juxgul" path="res://music/Tut1.5Music.tscn" id="8"]
+[ext_resource type="Material" path="res://assets/Textures/Whatever/container001-blue.tres" id="9"]
+[ext_resource type="PackedScene" uid="uid://b6ahp3wb4phlc" path="res://scenes/Crates.tscn" id="10"]
+
+
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(18.6088, 0.426816, 65.5118)
+
+[sub_resource type="BoxShape3D" id="3"]
+size = Vector3(77.8722, 15.4591, 65.9724)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RigidBody2" type="RigidBody3D" parent="." groups=["NPC", "Tut"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 118.517, -45.5736)
+mode = 1
+script = ExtResource("6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody2"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.0721261, -148, -71.3441)
+shape = SubResource("1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody2"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.255201, -4.11128, -20.0447)
+mesh = ExtResource("3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("7")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("8")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." groups=["NPC", "Tut"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0574098, 0)
+mode = 1
+script = ExtResource("4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" groups=["NPC", "Tut"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.46347, 0)
+shape = SubResource("3")
+
+[node name="FPS" parent="." instance=ExtResource("1")]
+transform = Transform3D(0.99996, -0.00899964, 0, 0.00899964, 0.99996, 0, 0, 0, 0.003, 0, 9.56944, 0)
+
+[node name="Crate" parent="." instance=ExtResource("10")]
+transform = Transform3D(0.309, 0, 0, 0, 0.308, 0, 0, 0, 0.308, 2.39707, -9.95839, -64.9022)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2648, -0.0374341, 42.132)
+width = 184.174
+height = 51.3594
+depth = 8.95294
+
+[node name="CSGBox6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2648, -0.0374341, -204.868)
+width = 184.174
+height = 51.3594
+depth = 262.873
+
+[node name="CSGBox4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.056, -19.2417, 34.5478)
+width = 31.4361
+height = 93.3823
+depth = 837.925
+
+[node name="CSGBox7" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.131, -19.2417, 34.5478)
+width = 134.176
+height = 93.3823
+depth = 837.925
+
+[node name="CSGBox2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32761, -37.4433, -12.7593)
+width = 124.832
+height = 11.8339
+depth = 903.881
+material = ExtResource("9")
+
+[node name="CSGBox5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32761, 30.903, -12.7593)
+width = 124.832
+height = 11.8339
+depth = 668.596
+material = ExtResource("5")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+width = 91.9455
+depth = 89.9656
+
+[connection signal="grounded" from="FPS" to="RigidBody2" method="_on_FPS_grounded"]
+[connection signal="grounded" from="FPS" to="RigidBody3D" method="_on_FPS_grounded"]

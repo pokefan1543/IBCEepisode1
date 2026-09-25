@@ -1,0 +1,11 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[ext_resource type="Texture" uid="uid://cqkyvn5g8is0h" path="res://assets/Textures/Whatever/container001-blue.png" id="1"]
+[ext_resource type="Texture" uid="uid://be423bhqgb1sb" path="res://assets/Textures/Whatever/container001-nm.png" id="2"]
+
+
+[resource]
+albedo_texture = ExtResource( 1 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 2 )

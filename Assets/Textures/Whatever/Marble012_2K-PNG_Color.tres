@@ -1,0 +1,24 @@
+[gd_resource type="SpatialMaterial" load_steps=5 format=2]
+
+[ext_resource type="Texture" uid="uid://501pc5uq2j0v" path="res://assets/Textures/Whatever/Marble012_2K-PNG_NormalGL.png" id="1"]
+[ext_resource type="Texture" uid="uid://d3p7k4o32jw4l" path="res://assets/Textures/Whatever/Marble012_2K-PNG_Color.png" id="2"]
+[ext_resource type="Texture" uid="uid://b1drvfvnwr1j8" path="res://assets/Textures/Whatever/Marble012_2K-PNG_Displacement.png" id="3"]
+[ext_resource type="Texture" uid="uid://boq3tqphdo0uw" path="res://assets/Textures/Whatever/Marble012_2K-PNG_Roughness.png" id="4"]
+
+
+[resource]
+albedo_texture = ExtResource( 2 )
+roughness_texture = ExtResource( 4 )
+normal_enabled = true
+normal_scale = -16.0
+normal_texture = ExtResource( 1 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+depth_texture = ExtResource( 3 )

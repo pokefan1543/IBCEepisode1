@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djuyv5ydk4fcp"
+path="res://.godot/imported/tutorial level wall climbing.wav-839f6c2a222c3e448e4657ceb3b71766.sample"
+
+[deps]
+
+source_file="res://Music/tutorial level wall climbing.wav"
+dest_files=["res://.godot/imported/tutorial level wall climbing.wav-839f6c2a222c3e448e4657ceb3b71766.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

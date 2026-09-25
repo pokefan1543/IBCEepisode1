@@ -1,0 +1,11 @@
+Diffuse textures are the same as Albedo or Color.
+
+In Unreal, I multiplied the roughness or metallic texture values to increase or decrease the effect. You may have to do something similar in Godot to achieve a better result if it doesn't look right. Any modified values can be seen in the .blend file.
+
+You can press "L" in Blender to easily select different parts of the mesh in order to edit something you might not like, the arm band for example I just threw in while freestyling.
+
+I haven't done hair before so you might have some trouble with it, I'm not sure. It'll look different in different engines anyway because of material setup. I couldn't use the normal texture for hair in Unreal but you might be able to.
+
+The hair also has two materials, one having opacity and the other not. To me this looked better but you can set both material slots to the same one if it looks better to you.
+
+No textures are handpainted other than the skin diffuse, you could easily make the clothes textures way better by learning how to texture paint and shading them in Blender.

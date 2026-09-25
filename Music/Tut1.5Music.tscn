@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://pviix7juxgul"]
+
+[ext_resource type="AudioStream" uid="uid://di0n8ter8aixl" path="res://music/tutorial level shooter tutorial.wav" id="1"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1")
+autoplay = true
+bus = "Music"

@@ -1,0 +1,231 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnhx6s0l5536n"]
+
+[ext_resource type="Texture2D" uid="uid://b0hlv37wo3ayp" path="res://assets/Textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp" id="1"]
+[ext_resource type="Script" uid="uid://bv0wo7i03xfmg" path="res://Results.gd" id="2"]
+[ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="3"]
+[ext_resource type="AudioStream" uid="uid://dod8wfe1qjc7c" path="res://sound/SELECT.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://dw7gysq8e78sh" path="res://sound/Tone.wav" id="5"]
+[ext_resource type="AudioStream" uid="uid://180srthm2snx" path="res://sound/m249.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://deums5wvcga45" path="res://sound/button.wav" id="7"]
+
+
+[node name="Score_Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(321, 241)
+scale = Vector2(1.047, 1.048)
+texture = ExtResource("1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 115.0
+offset_top = -10.0
+offset_right = 315.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+theme = ExtResource("3")
+text = "Level Complete!"
+scroll_active = false
+
+[node name="Click" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 211.0
+offset_top = 421.0
+offset_right = 426.0
+offset_bottom = 471.0
+theme = ExtResource("3")
+text = "Click to Continue"
+scroll_active = false
+
+[node name="defeats" type="RichTextLabel" parent="."]
+offset_left = 85.0
+offset_top = 82.0
+offset_right = 485.0
+offset_bottom = 122.0
+theme = ExtResource("3")
+text = "Defeats:"
+scroll_active = false
+
+[node name="defeatsText" type="RichTextLabel" parent="."]
+offset_left = 196.0
+offset_top = 91.0
+offset_right = 596.0
+offset_bottom = 131.0
+scale = Vector2(0.7, 0.7)
+theme = ExtResource("3")
+text = "0"
+scroll_active = false
+
+[node name="defeatsText2" type="RichTextLabel" parent="."]
+offset_left = 224.0
+offset_top = 88.0
+offset_right = 624.0
+offset_bottom = 128.0
+scale = Vector2(0.7, 0.8)
+theme = ExtResource("3")
+text = "/"
+scroll_active = false
+
+[node name="defeatsText3" type="RichTextLabel" parent="."]
+offset_left = 240.0
+offset_top = 91.0
+offset_right = 640.0
+offset_bottom = 131.0
+scale = Vector2(0.7, 0.7)
+theme = ExtResource("3")
+text = "0"
+scroll_active = false
+
+[node name="items" type="RichTextLabel" parent="."]
+offset_left = 85.0
+offset_top = 119.0
+offset_right = 285.0
+offset_bottom = 169.0
+theme = ExtResource("3")
+text = "Items:"
+scroll_active = false
+
+[node name="itemsText" type="RichTextLabel" parent="."]
+offset_left = 170.0
+offset_top = 129.0
+offset_right = 370.0
+offset_bottom = 179.0
+scale = Vector2(0.7, 0.7)
+theme = ExtResource("3")
+text = "0"
+scroll_active = false
+
+[node name="time" type="RichTextLabel" parent="."]
+offset_left = 85.0
+offset_top = 154.0
+offset_right = 285.0
+offset_bottom = 204.0
+theme = ExtResource("3")
+text = "Time:"
+scroll_active = false
+
+[node name="timeText" type="RichTextLabel" parent="."]
+offset_left = 157.0
+offset_top = 154.0
+offset_right = 357.0
+offset_bottom = 204.0
+theme = ExtResource("3")
+text = "0:00"
+scroll_active = false
+
+[node name="par" type="RichTextLabel" parent="."]
+offset_left = 250.0
+offset_top = 154.0
+offset_right = 450.0
+offset_bottom = 204.0
+theme = ExtResource("3")
+text = "Par:"
+scroll_active = false
+
+[node name="score" type="RichTextLabel" parent="."]
+offset_left = 87.0
+offset_top = 277.0
+offset_right = 287.0
+offset_bottom = 327.0
+theme = ExtResource("3")
+text = "Score:"
+scroll_active = false
+
+[node name="score2" type="RichTextLabel" parent="."]
+offset_left = 170.0
+offset_top = 277.0
+offset_right = 640.0
+offset_bottom = 377.0
+theme = ExtResource("3")
+text = "0"
+scroll_active = false
+
+[node name="parText" type="RichTextLabel" parent="."]
+offset_left = 307.0
+offset_top = 154.0
+offset_right = 507.0
+offset_bottom = 204.0
+theme = ExtResource("3")
+text = "300"
+scroll_active = false
+
+[node name="Text" type="TextEdit" parent="."]
+offset_left = 89.0
+offset_top = 193.0
+offset_right = 544.0
+offset_bottom = 283.0
+readonly = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true
+
+[node name="TextEdit" type="RichTextLabel" parent="."]
+offset_left = 87.0
+offset_top = 193.0
+offset_right = 544.0
+offset_bottom = 283.0
+scroll_active = false
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4")
+volume_db = 15.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5")
+volume_db = 5.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6")
+volume_db = 1.0
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7")
+volume_db = 5.0
+
+[node name="Container" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="nextLevel" type="RichTextLabel" parent="Container"]
+offset_left = 579.0
+offset_top = 366.0
+offset_right = 596.0
+offset_bottom = 406.0
+theme = ExtResource("3")
+text = "0"
+scroll_active = false
+
+[node name="Level2" type="RichTextLabel" parent="Container"]
+offset_left = 215.0
+offset_top = 326.0
+offset_right = 404.0
+offset_bottom = 366.0
+theme = ExtResource("3")
+text = "Level Progress"
+scroll_active = false
+
+[node name="Level" type="RichTextLabel" parent="Container"]
+offset_left = 40.0
+offset_top = 367.0
+offset_right = 57.0
+offset_bottom = 407.0
+theme = ExtResource("3")
+text = "0"
+scroll_active = false
+
+[node name="ProgressBar" type="ProgressBar" parent="Container"]
+offset_left = 70.0
+offset_top = 368.0
+offset_right = 570.0
+offset_bottom = 412.0
+theme = ExtResource("3")
+max_value = 1000.0
+step = 1.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

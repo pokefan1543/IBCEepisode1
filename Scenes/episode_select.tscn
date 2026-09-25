@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://b38xaayiriac4"]
+
+[ext_resource type="Theme" uid="uid://b383cb14jlcu3" path="res://TitlescreenTheme.tres" id="1"]
+[ext_resource type="Script" uid="uid://cy6m8p5gcnb72" path="res://scenes/episode_select.gd" id="2"]
+[ext_resource type="AudioStream" uid="uid://dod8wfe1qjc7c" path="res://sound/SELECT.wav" id="3"]
+[ext_resource type="Texture2D" uid="uid://08q7i0rno3tr" path="res://textures/Whatever/bird-in-flight-high-above-in-dramatic-sky-picture-id512336578.webp" id="4"]
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="5_4v03l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-350, 0)
+script = ExtResource("2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+offset_right = 639.0
+offset_bottom = 479.0
+texture = ExtResource("4")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 125.0
+offset_right = 273.0
+offset_bottom = 164.0
+scale = Vector2(3.275, 2.62)
+text = "Episode Select
+"
+scroll_active = false
+tab_size = 5
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+layout_mode = 2
+offset_right = 237.0
+offset_bottom = 20.0
+theme = ExtResource("1")
+text = "Episode 2: Phévgete Apó Tís Eidololatrías"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 195.0
+offset_top = 195.0
+offset_right = 401.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_4v03l")
+text = "Episode 1: Life is Peachy"
+
+[node name="Button5" type="Button" parent="."]
+layout_mode = 2
+offset_left = 271.0
+offset_top = 281.0
+offset_right = 311.0
+offset_bottom = 307.0
+scale = Vector2(1.1, 1.1)
+theme = ExtResource("5_4v03l")
+text = "Quit"
+
+[connection signal="button_down" from="Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Button5" to="." method="_on_Button5_button_down"]

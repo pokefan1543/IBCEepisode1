@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://cjr0f84oo3ckv"]
+
+[ext_resource type="Texture2D" uid="uid://6xc2bk6gaode" path="res://assets/Textures/metal/DiamondPlate008C_4K_Roughness.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://djscckxys5vqh" path="res://assets/Textures/metal/DiamondPlate008C_4K_Metalness.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cdopn8iuip35g" path="res://assets/Textures/metal/DiamondPlate008C_4K_NormalGL.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4hc6jeldvaqd" path="res://assets/Textures/metal/DiamondPlate008C_4K_AmbientOcclusion.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://sy3fpbx61ju5" path="res://assets/Textures/metal/DiamondPlate008C_4K_Displacement.png" id="5"]
+
+
+[sub_resource type="CapsuleMesh" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="3"]
+albedo_color = Color(0.00784314, 0.580392, 1, 1)
+metallic = 1.0
+metallic_texture = ExtResource("2")
+roughness_texture = ExtResource("1")
+normal_enabled = true
+normal_texture = ExtResource("3")
+ao_enabled = true
+ao_texture = ExtResource("4")
+heightmap_enabled = true
+heightmap_scale = 0.05
+heightmap_texture = ExtResource("5")
+heightmap_flip_texture = true
+
+[sub_resource type="CapsuleShape3D" id="2"]
+
+[node name="Bodyupgrade" type="RigidBody3D" groups=["trueupgrade", "upgrade"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["legupgrade"]]
+mesh = SubResource("1")
+material/0 = SubResource("3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("2")

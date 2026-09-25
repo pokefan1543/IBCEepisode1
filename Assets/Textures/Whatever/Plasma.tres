@@ -1,0 +1,12 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource type="Texture" uid="uid://cxf5ewapv3wib" path="res://assets/Textures/Whatever/Plasma.JPG" id="1"]
+
+
+[resource]
+albedo_texture = ExtResource( 1 )
+depth_enabled = true
+depth_scale = 0.0
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
