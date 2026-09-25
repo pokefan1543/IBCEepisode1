@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvklxa8uaj7bh"]
-
-[ext_resource type="AudioStream" uid="uid://djuyv5ydk4fcp" path="res://music/tutorial level wall climbing.wav" id="1"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
-process_mode = 3
-stream = ExtResource("1")
-autoplay = true
-bus = "Music"

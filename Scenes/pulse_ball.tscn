@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://uyxegggm1n08"]
+
+[ext_resource type="Script" uid="uid://bfyrifho1noft" path="res://Scripts/PulseBall.gd" id="1_ffkwh"]
+[ext_resource type="Material" uid="uid://go2opnbjab87" path="res://Assets/Textures/PulseBall.tres" id="2_pk30h"]
+
+[sub_resource type="SphereMesh" id="3"]
+material = ExtResource("2_pk30h")
+radius = 0.1
+height = 0.2
+
+[sub_resource type="SphereShape3D" id="1"]
+margin = 0.02
+radius = 0.1
+
+[node name="PulseBall" type="Node3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+script = ExtResource("1_ffkwh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("3")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("1")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

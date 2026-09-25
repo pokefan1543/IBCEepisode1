@@ -1,8 +1,0 @@
-{
-	"contains_albedo": false,
-	"resolution": 512,
-	"src": {
-		"a": "res://assets/textures/Stone/TexturesCom_Rock_Base7_2x2_512_roughness.png",
-		"rgb": "res://assets/textures/Stone/TexturesCom_Rock_Base7_2x2_512_normal.png"
-	}
-}
